@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a15tcpg236-2" LaunchTime="1580618999">
+  <File Type="ROUTE-BUS-SKEW" Name="mux2_top_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="mux2_top.dcp"/>
+  <File Type="OPT-HWDEF" Name="mux2_top.hwdef"/>
+  <File Type="ROUTE-PWR" Name="mux2_top_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="mux2_top.tcl"/>
+  <File Type="BITSTR-BMM" Name="mux2_top_bd.bmm"/>
+  <File Type="OPT-DCP" Name="mux2_top_opt.dcp"/>
+  <File Type="REPORTS-TCL" Name="mux2_top_reports.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="mux2_top_power_summary_routed.pb"/>
+  <File Type="OPT-DRC" Name="mux2_top_drc_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="mux2_top_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="mux2_top_placed.dcp"/>
+  <File Type="PLACE-IO" Name="mux2_top_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="mux2_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="mux2_top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="mux2_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="mux2_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="mux2_top_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="mux2_top.bin"/>
+  <File Type="PHYSOPT-DCP" Name="mux2_top_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="mux2_top.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="mux2_top_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="mux2_top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="mux2_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="mux2_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="mux2_top_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="mux2_top_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="mux2_top.ltx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="mux2_top_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="mux2_top.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="mux2_top_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="mux2_top_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="mux2_top.sysdef"/>
+  <File Type="ROUTE-PWR-RPX" Name="mux2_top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="mux2_top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="mux2_top_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="mux2_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="mux2_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="mux2_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-CLK" Name="mux2_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="mux2_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="mux2_top_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="mux2_top_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="mux2_top_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="mux2_top.bit"/>
+  <File Type="BITSTR-RBT" Name="mux2_top.rbt"/>
+  <File Type="BITSTR-NKY" Name="mux2_top.nky"/>
+  <File Type="BG-BGN" Name="mux2_top.bgn"/>
+  <File Type="BG-DRC" Name="mux2_top.drc"/>
+  <File Type="RDI-RDI" Name="mux2_top.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER/mux2.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mux2.v"/>
+        <Attr Name="ImportTime" Val="1577375809"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Tristate_buffer_from_example_4_10/tristate.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Tristate_buffer_from_example_4_10/tristate.v"/>
+        <Attr Name="ImportTime" Val="1579493724"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER/mux2.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mux2.sv"/>
+        <Attr Name="ImportTime" Val="1577375557"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Tristate_buffer_from_example_4_10/tristate.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Tristate_buffer_from_example_4_10/tristate.sv"/>
+        <Attr Name="ImportTime" Val="1579495277"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER/mux2.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mux2.vhd"/>
+        <Attr Name="ImportTime" Val="1577375673"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Tristate_buffer_from_example_4_10/tristate.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/Tristate_buffer_from_example_4_10/tristate.vhd"/>
+        <Attr Name="ImportTime" Val="1579495660"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER/mux2_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/mux2_top.vhd"/>
+        <Attr Name="ImportTime" Val="1580616620"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="mux2_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

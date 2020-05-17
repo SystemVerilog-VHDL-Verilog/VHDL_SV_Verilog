@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Sat Apr  4 10:16:21 2020
+# Process ID: 8248
+# Current directory: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.22 INVERTER USING always_process/HDL_Example_4_22_INVERTER_always/HDL_Example_4_22_INVERTER_always.runs/impl_1
+# Command line: vivado.exe -log inv_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source inv_top.tcl -notrace
+# Log file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.22 INVERTER USING always_process/HDL_Example_4_22_INVERTER_always/HDL_Example_4_22_INVERTER_always.runs/impl_1/inv_top.vdi
+# Journal file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.22 INVERTER USING always_process/HDL_Example_4_22_INVERTER_always/HDL_Example_4_22_INVERTER_always.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source inv_top.tcl -notrace

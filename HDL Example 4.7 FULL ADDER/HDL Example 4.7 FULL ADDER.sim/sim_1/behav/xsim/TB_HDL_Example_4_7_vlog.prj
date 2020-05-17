@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HDL Example 4.7 FULL ADDER.srcs/sources_1/imports/HDL Example 4.7 FULL ADDER/fulladder.v" \
+
+sv xil_defaultlib  \
+"../../../../HDL Example 4.7 FULL ADDER.srcs/sources_1/imports/HDL Example 4.7 FULL ADDER/fulladder.sv" \
+"../../../../HDL Example 4.7 FULL ADDER.srcs/sim_1/imports/HDL Example 4.7 FULL ADDER/TB_HDL Example 4_7.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

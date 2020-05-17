@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../HDL Example 4.1.srcs/sources_1/imports/HDL Example 4.1 COMBINATIONAL LOGIC/sillyfunction_top.vhd" \
+"../../../../HDL Example 4.1.srcs/sources_1/imports/HDL Example 4.1 COMBINATIONAL LOGIC/sillyfunction_vhd.vhd" \
+
+# Do not sort compile order
+nosort

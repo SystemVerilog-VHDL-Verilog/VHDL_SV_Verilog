@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../HDL Example 4.12 BIT SWIZZLING.srcs/sources_1/imports/HDL Example 4.12 BIT SWIZZLING/BIT_SWIZZLING.vhd" \
+"../../../../HDL Example 4.12 BIT SWIZZLING.srcs/sources_1/imports/HDL Example 4.12 BIT SWIZZLING/BIT_SWIZZLING_top.vhd" \
+
+# Do not sort compile order
+nosort

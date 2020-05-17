@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_HDL_Example_4_23_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_HDL_Example_4_23" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="97000001fs"></ZoomEndTime>
+      <Cursor1Time time="58773000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="358"></NameColumnWidth>
+      <ValueColumnWidth column_width="167"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/TB_HDL_Example_4_23/a_sv" type="logic">
+      <obj_property name="ElementShortName">a_sv</obj_property>
+      <obj_property name="ObjectShortName">a_sv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/b_sv" type="logic">
+      <obj_property name="ElementShortName">b_sv</obj_property>
+      <obj_property name="ObjectShortName">b_sv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/cin_sv" type="logic">
+      <obj_property name="ElementShortName">cin_sv</obj_property>
+      <obj_property name="ObjectShortName">cin_sv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/s_sv" type="logic">
+      <obj_property name="ElementShortName">s_sv</obj_property>
+      <obj_property name="ObjectShortName">s_sv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/cout_sv" type="logic">
+      <obj_property name="ElementShortName">cout_sv</obj_property>
+      <obj_property name="ObjectShortName">cout_sv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/a_v" type="logic">
+      <obj_property name="ElementShortName">a_v</obj_property>
+      <obj_property name="ObjectShortName">a_v</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/b_v" type="logic">
+      <obj_property name="ElementShortName">b_v</obj_property>
+      <obj_property name="ObjectShortName">b_v</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/cin_v" type="logic">
+      <obj_property name="ElementShortName">cin_v</obj_property>
+      <obj_property name="ObjectShortName">cin_v</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/s_v" type="logic">
+      <obj_property name="ElementShortName">s_v</obj_property>
+      <obj_property name="ObjectShortName">s_v</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/cout_v" type="logic">
+      <obj_property name="ElementShortName">cout_v</obj_property>
+      <obj_property name="ObjectShortName">cout_v</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/a_vhd" type="logic">
+      <obj_property name="ElementShortName">a_vhd</obj_property>
+      <obj_property name="ObjectShortName">a_vhd</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/b_vhd" type="logic">
+      <obj_property name="ElementShortName">b_vhd</obj_property>
+      <obj_property name="ObjectShortName">b_vhd</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/cin_vhd" type="logic">
+      <obj_property name="ElementShortName">cin_vhd</obj_property>
+      <obj_property name="ObjectShortName">cin_vhd</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/s_vhd" type="logic">
+      <obj_property name="ElementShortName">s_vhd</obj_property>
+      <obj_property name="ObjectShortName">s_vhd</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/cout_vhd" type="logic">
+      <obj_property name="ElementShortName">cout_vhd</obj_property>
+      <obj_property name="ObjectShortName">cout_vhd</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/s_yexpected" type="logic">
+      <obj_property name="ElementShortName">s_yexpected</obj_property>
+      <obj_property name="ObjectShortName">s_yexpected</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/cout_yexpected" type="logic">
+      <obj_property name="ElementShortName">cout_yexpected</obj_property>
+      <obj_property name="ObjectShortName">cout_yexpected</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/vectornum" type="array">
+      <obj_property name="ElementShortName">vectornum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">vectornum[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/errors" type="array">
+      <obj_property name="ElementShortName">errors[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errors[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/testvectors" type="array">
+      <obj_property name="ElementShortName">testvectors[15:0][4:0]</obj_property>
+      <obj_property name="ObjectShortName">testvectors[15:0][4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_23/test_net" type="array">
+      <obj_property name="ElementShortName">test_net[4:0]</obj_property>
+      <obj_property name="ObjectShortName">test_net[4:0]</obj_property>
+   </wvobject>
+</wave_config>

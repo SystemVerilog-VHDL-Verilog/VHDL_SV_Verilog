@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../divideby3FSM.v" \
+
+sv xil_defaultlib  \
+"../../../../divideby3FSM.sv" \
+"../../../../TB_HDL Example 4_29.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

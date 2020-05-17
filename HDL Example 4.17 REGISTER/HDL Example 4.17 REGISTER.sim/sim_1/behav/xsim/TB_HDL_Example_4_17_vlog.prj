@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HDL Example 4.17 REGISTER.srcs/sources_1/imports/HDL Example 4.17 REGISTER/flop.v" \
+
+sv xil_defaultlib  \
+"../../../../HDL Example 4.17 REGISTER.srcs/sources_1/imports/HDL Example 4.17 REGISTER/flop.sv" \
+"../../../../HDL Example 4.17 REGISTER.srcs/sim_1/imports/HDL Example 4.17 REGISTER/Simulation_flop.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_HDL_Example_4_29_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_HDL_Example_4_29" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="16349755fs"></ZoomStartTime>
+      <ZoomEndTime time="439172572fs"></ZoomEndTime>
+      <Cursor1Time time="6796000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="364"></NameColumnWidth>
+      <ValueColumnWidth column_width="233"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject fp_name="/TB_HDL_Example_4_29/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_29/d" type="logic">
+      <obj_property name="ElementShortName">d</obj_property>
+      <obj_property name="ObjectShortName">d</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_29/q_sv" type="logic">
+      <obj_property name="ElementShortName">q_sv</obj_property>
+      <obj_property name="ObjectShortName">q_sv</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_29/q_v" type="logic">
+      <obj_property name="ElementShortName">q_v</obj_property>
+      <obj_property name="ObjectShortName">q_v</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_29/q_vhd" type="logic">
+      <obj_property name="ElementShortName">q_vhd</obj_property>
+      <obj_property name="ObjectShortName">q_vhd</obj_property>
+   </wvobject>
+</wave_config>

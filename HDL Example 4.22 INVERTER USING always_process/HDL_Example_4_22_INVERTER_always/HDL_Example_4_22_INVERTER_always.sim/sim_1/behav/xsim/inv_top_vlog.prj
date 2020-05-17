@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HDL_Example_4_22_INVERTER_always.srcs/sources_1/imports/HDL Example 4.22 INVERTER USING always_process/inv.v" \
+
+sv xil_defaultlib  \
+"../../../../HDL_Example_4_22_INVERTER_always.srcs/sources_1/imports/HDL Example 4.22 INVERTER USING always_process/inv.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

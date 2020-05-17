@@ -1,0 +1,6 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../HDL Example 4_27 PRIORITY CIRCUIT USING casez.srcs/sources_1/imports/HDL Example 4.27 PRIORITY CIRCUIT USING casez/priority_casez_top.vhd" \
+
+# Do not sort compile order
+nosort

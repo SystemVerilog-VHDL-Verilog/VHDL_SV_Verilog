@@ -1,0 +1,10 @@
+0.6
+2019.1
+Jun 29 2019
+08:46:09
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/HDL Example 4.28 FULL ADDER NB.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/TB_HDL Example 4_28.sv,1587714783,systemVerilog,,,,TB_HDL_Example_4_28,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/fulladder_nb.sv,1587715757,systemVerilog,,C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/TB_HDL Example 4_28.sv,,fulladder_nb_sv,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/fulladder_nb.v,1587709792,verilog,,,,fulladder_nb_v,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/fulladder_nb.vhd,1587715024,vhdl2008,,,,fulladder_nb_vhd,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/fulladder_nb_top.vhd,1587709706,vhdl,,,,fulladder_nb_top,,,,,,,,

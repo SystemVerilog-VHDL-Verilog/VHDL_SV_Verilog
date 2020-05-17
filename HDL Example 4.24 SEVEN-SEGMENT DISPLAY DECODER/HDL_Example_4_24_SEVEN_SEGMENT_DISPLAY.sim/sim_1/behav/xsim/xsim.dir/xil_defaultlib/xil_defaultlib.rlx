@@ -1,0 +1,10 @@
+0.6
+2019.1
+Jun 29 2019
+08:46:09
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sim_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/TB_HDL Example 4_24.sv,1586421540,systemVerilog,,,,TB_HDL_Example_4_24,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sources_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/sevenseg.sv,1586418801,systemVerilog,,C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sim_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/TB_HDL Example 4_24.sv,,sevenseg_sv,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sources_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/sevenseg.v,1586418756,verilog,,,,sevenseg_v,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sources_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/sevenseg.vhd,1586418859,vhdl2008,,,,sevenseg_vhd,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sources_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/sevenseg_top.vhd,1586415521,vhdl,,,,sevenseg_top,,,,,,,,

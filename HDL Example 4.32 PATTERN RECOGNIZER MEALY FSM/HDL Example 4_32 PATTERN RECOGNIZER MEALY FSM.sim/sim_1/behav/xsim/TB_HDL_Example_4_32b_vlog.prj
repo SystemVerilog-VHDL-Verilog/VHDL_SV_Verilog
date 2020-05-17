@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../patternMealy.v" \
+
+sv xil_defaultlib  \
+"../../../../patternMealy.sv" \
+"../../../../HDL Example 4_32 PATTERN RECOGNIZER MEALY FSM.srcs/sim_1/new/TB_HDL Example 4_32b.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

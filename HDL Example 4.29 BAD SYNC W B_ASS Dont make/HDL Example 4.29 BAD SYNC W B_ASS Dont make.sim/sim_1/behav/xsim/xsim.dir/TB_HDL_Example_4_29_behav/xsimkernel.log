@@ -1,0 +1,7 @@
+Running: xsim.dir/TB_HDL_Example_4_29_behav/xsimk.exe -simmode gui -wdb TB_HDL_Example_4_29_behav.wdb -simrunnum 0 -socket 60213
+Design successfully loaded
+Design Loading Memory Usage: 5024 KB (Peak: 5024 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 5744 KB (Peak: 5744 KB)
+Simulation CPU Usage: 15 ms

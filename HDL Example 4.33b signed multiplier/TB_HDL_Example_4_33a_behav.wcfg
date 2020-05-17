@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_HDL_Example_4_33b_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_HDL_Example_4_33b" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2231933750fs"></ZoomStartTime>
+      <ZoomEndTime time="2640159356fs"></ZoomEndTime>
+      <Cursor1Time time="2570000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="364"></NameColumnWidth>
+      <ValueColumnWidth column_width="169"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/TB_HDL_Example_4_33b/a_sv" type="array">
+      <obj_property name="ElementShortName">a_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_sv[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/b_sv" type="array">
+      <obj_property name="ElementShortName">b_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b_sv[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/y_sv" type="array">
+      <obj_property name="ElementShortName">y_sv[7:0]</obj_property>
+      <obj_property name="ObjectShortName">y_sv[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/a_v" type="array">
+      <obj_property name="ElementShortName">a_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_v[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/b_v" type="array">
+      <obj_property name="ElementShortName">b_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b_v[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/y_v" type="array">
+      <obj_property name="ElementShortName">y_v[7:0]</obj_property>
+      <obj_property name="ObjectShortName">y_v[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/a_vhd" type="array">
+      <obj_property name="ElementShortName">a_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_vhd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/b_vhd" type="array">
+      <obj_property name="ElementShortName">b_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b_vhd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/y_vhd" type="array">
+      <obj_property name="ElementShortName">y_vhd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">y_vhd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/output_yexpected" type="array">
+      <obj_property name="ElementShortName">output_yexpected[7:0]</obj_property>
+      <obj_property name="ObjectShortName">output_yexpected[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/vectornum_index_a" type="array">
+      <obj_property name="ElementShortName">vectornum_index_a[3:0]</obj_property>
+      <obj_property name="ObjectShortName">vectornum_index_a[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/vectornum_index_b" type="array">
+      <obj_property name="ElementShortName">vectornum_index_b[3:0]</obj_property>
+      <obj_property name="ObjectShortName">vectornum_index_b[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/vectornum_index_y" type="array">
+      <obj_property name="ElementShortName">vectornum_index_y[7:0]</obj_property>
+      <obj_property name="ObjectShortName">vectornum_index_y[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/vectornum" type="array">
+      <obj_property name="ElementShortName">vectornum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">vectornum[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/errors" type="array">
+      <obj_property name="ElementShortName">errors[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errors[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/input_test_vectors" type="array">
+      <obj_property name="ElementShortName">input_test_vectors[15:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">input_test_vectors[15:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_33b/output_test_vectors" type="array">
+      <obj_property name="ElementShortName">output_test_vectors[255:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">output_test_vectors[255:0][7:0]</obj_property>
+   </wvobject>
+</wave_config>

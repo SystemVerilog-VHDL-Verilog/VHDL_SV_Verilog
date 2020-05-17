@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/syncbad.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module syncbad_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/TB_HDL Example 4_29.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_HDL_Example_4_29

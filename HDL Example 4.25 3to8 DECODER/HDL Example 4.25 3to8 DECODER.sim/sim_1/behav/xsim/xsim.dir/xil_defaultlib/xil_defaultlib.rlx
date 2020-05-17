@@ -1,0 +1,10 @@
+0.6
+2019.1
+Jun 29 2019
+08:46:09
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.25 3to8 DECODER/HDL Example 4.25 3to8 DECODER.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.25 3to8 DECODER/HDL Example 4.25 3to8 DECODER.srcs/sim_1/imports/HDL Example 4.25 3to8 DECODER/TB_HDL Example 4_25.sv,1586940202,systemVerilog,,,,TB_HDL_Example_4_25,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.25 3to8 DECODER/HDL Example 4.25 3to8 DECODER.srcs/sources_1/imports/HDL Example 4.25 3to8 DECODER/decoder3_8.sv,1586938238,systemVerilog,,C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.25 3to8 DECODER/HDL Example 4.25 3to8 DECODER.srcs/sim_1/imports/HDL Example 4.25 3to8 DECODER/TB_HDL Example 4_25.sv,,decoder3_8_sv,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.25 3to8 DECODER/HDL Example 4.25 3to8 DECODER.srcs/sources_1/imports/HDL Example 4.25 3to8 DECODER/decoder3_8.v,1586938467,verilog,,,,decoder3_8_v,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.25 3to8 DECODER/HDL Example 4.25 3to8 DECODER.srcs/sources_1/imports/HDL Example 4.25 3to8 DECODER/decoder3_8.vhd,1586938439,vhdl2008,,,,decoder3_8_vhd,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.25 3to8 DECODER/HDL Example 4.25 3to8 DECODER.srcs/sources_1/imports/HDL Example 4.25 3to8 DECODER/decoder3_8_top.vhd,1586936219,vhdl,,,,decoder3_8_top,,,,,,,,

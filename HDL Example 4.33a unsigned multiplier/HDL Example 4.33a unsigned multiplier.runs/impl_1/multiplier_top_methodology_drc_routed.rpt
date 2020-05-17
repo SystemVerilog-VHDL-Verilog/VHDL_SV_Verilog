@@ -1,0 +1,65 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1.1 (win64) Build 2580384 Sat Jun 29 08:12:21 MDT 2019
+| Date         : Wed May  6 11:08:04 2020
+| Host         : DESKTOP-6J0J3T6 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file multiplier_top_methodology_drc_routed.rpt -pb multiplier_top_methodology_drc_routed.pb -rpx multiplier_top_methodology_drc_routed.rpx
+| Design       : multiplier_top
+| Device       : xc7a15tcpg236-2
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 6
++---------+----------+------------------+------------+
+| Rule    | Severity | Description      | Violations |
++---------+----------+------------------+------------+
+| SYNTH-9 | Warning  | Small multiplier | 6          |
++---------+----------+------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+SYNTH-9#1 Warning
+Small multiplier  
+Detected multiplier at SV/y_sv_OBUF[3]_inst_i_1 of size 4x4, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#2 Warning
+Small multiplier  
+Detected multiplier at SV/y_sv_OBUF[7]_inst_i_1 of size 4x4, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#3 Warning
+Small multiplier  
+Detected multiplier at V/y_v_OBUF[3]_inst_i_1 of size 4x4, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#4 Warning
+Small multiplier  
+Detected multiplier at V/y_v_OBUF[7]_inst_i_1 of size 4x4, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#5 Warning
+Small multiplier  
+Detected multiplier at VHDL/y_vhd_OBUF[3]_inst_i_1 of size 4x4, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+SYNTH-9#6 Warning
+Small multiplier  
+Detected multiplier at VHDL/y_vhd_OBUF[7]_inst_i_1 of size 4x4, it is implemented as LUTs due to its small size. To force the multiplier onto a DSP block, use the USE_DSP48 attribute.
+Related violations: <none>
+
+

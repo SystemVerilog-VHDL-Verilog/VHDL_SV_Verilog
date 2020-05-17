@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../HDL Example 4.2.srcs/sources_1/imports/HDL Example 4.2 INVERTERS/inv.vhd" \
+"../../../../HDL Example 4.2.srcs/sources_1/imports/HDL Example 4.2 INVERTERS/inv_top.vhd" \
+
+# Do not sort compile order
+nosort

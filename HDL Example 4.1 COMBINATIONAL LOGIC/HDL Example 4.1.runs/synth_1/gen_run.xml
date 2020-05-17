@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a15tcpg236-1" LaunchTime="1577854107">
+  <File Type="PA-TCL" Name="sillyfunction_top.tcl"/>
+  <File Type="REPORTS-TCL" Name="sillyfunction_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="sillyfunction_top.vds"/>
+  <File Type="RDS-UTIL" Name="sillyfunction_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="sillyfunction_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="sillyfunction_top.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.1 COMBINATIONAL LOGIC/sillyfunction_v.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/sillyfunction_v.v"/>
+        <Attr Name="ImportTime" Val="1577852435"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.1 COMBINATIONAL LOGIC/sillyfunction_sv.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/sillyfunction_sv.sv"/>
+        <Attr Name="ImportTime" Val="1577852442"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.1 COMBINATIONAL LOGIC/sillyfunction_vhd.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/sillyfunction_vhd.vhd"/>
+        <Attr Name="ImportTime" Val="1577852439"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.1 COMBINATIONAL LOGIC/sillyfunction_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/sillyfunction_top.vhd"/>
+        <Attr Name="ImportTime" Val="1577853593"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="sillyfunction_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

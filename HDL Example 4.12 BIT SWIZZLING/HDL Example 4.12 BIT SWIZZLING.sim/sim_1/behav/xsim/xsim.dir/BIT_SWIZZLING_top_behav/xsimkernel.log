@@ -1,0 +1,7 @@
+Running: xsim.dir/BIT_SWIZZLING_top_behav/xsimk.exe -simmode gui -wdb BIT_SWIZZLING_top_behav.wdb -simrunnum 0 -socket 56397
+Design successfully loaded
+Design Loading Memory Usage: 5648 KB (Peak: 5648 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 6336 KB (Peak: 6336 KB)
+Simulation CPU Usage: 46 ms

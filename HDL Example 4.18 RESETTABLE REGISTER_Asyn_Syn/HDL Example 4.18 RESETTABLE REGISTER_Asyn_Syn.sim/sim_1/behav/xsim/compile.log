@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn.srcs/sources_1/imports/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn/flop_ar.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flop_ar_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn.srcs/sources_1/imports/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn/flop_sr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module flopr_sr_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn.srcs/sim_1/imports/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn/Simulation_flopr.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_HDL_Example_4_17

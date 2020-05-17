@@ -1,0 +1,10 @@
+0.6
+2019.1
+Jun 29 2019
+08:46:09
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.35 PARAMETERIZED Nto2N DECODER/HDL Example 4.35 PARAM Nto2N DECODER.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.35 PARAMETERIZED Nto2N DECODER/TB_HDL Example 4_35.sv,1589011715,systemVerilog,,,,TB_HDL_Example_4_35,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.35 PARAMETERIZED Nto2N DECODER/decoder.sv,1589009601,systemVerilog,,C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.35 PARAMETERIZED Nto2N DECODER/TB_HDL Example 4_35.sv,,decoder_sv,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.35 PARAMETERIZED Nto2N DECODER/decoder.v,1589009669,verilog,,,,decoder_v,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.35 PARAMETERIZED Nto2N DECODER/decoder.vhd,1589012510,vhdl2008,,,,decoder_vhd,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.35 PARAMETERIZED Nto2N DECODER/decoder_top.vhd,1589006876,vhdl,,,,decoder_top,,,,,,,,

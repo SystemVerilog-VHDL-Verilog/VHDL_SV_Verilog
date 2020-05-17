@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../HDL Example 4.19 RESETTABLE ENABLED REGISTER.srcs/sources_1/imports/HDL Example 4.19 RESETTABLE ENABLED REGISTER/flopenr_top.vhd" \
+"../../../../HDL Example 4.19 RESETTABLE ENABLED REGISTER.srcs/sources_1/imports/HDL Example 4.19 RESETTABLE ENABLED REGISTER/flopr.vhd" \
+
+# Do not sort compile order
+nosort

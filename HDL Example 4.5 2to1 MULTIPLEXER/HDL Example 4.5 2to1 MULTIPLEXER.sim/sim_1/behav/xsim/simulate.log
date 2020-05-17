@@ -1,0 +1,8 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Error: 000 failed.
+Time: 0 ps  Iteration: 0  Process: /TB_HDL_Example_4_5/Initial18_0  File: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.5 2to1 MULTIPLEXER/HDL Example 4.5 2to1 MULTIPLEXER.srcs/sim_1/imports/HDL Example 4.5 2to1 MULTIPLEXER/TB_HDL Example 4_5.sv
+Error: 000 failed.
+Time: 0 ps  Iteration: 0  Process: /TB_HDL_Example_4_5/Initial18_0  File: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.5 2to1 MULTIPLEXER/HDL Example 4.5 2to1 MULTIPLEXER.srcs/sim_1/imports/HDL Example 4.5 2to1 MULTIPLEXER/TB_HDL Example 4_5.sv
+Error: 000 failed.
+Time: 0 ps  Iteration: 0  Process: /TB_HDL_Example_4_5/Initial18_0  File: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.5 2to1 MULTIPLEXER/HDL Example 4.5 2to1 MULTIPLEXER.srcs/sim_1/imports/HDL Example 4.5 2to1 MULTIPLEXER/TB_HDL Example 4_5.sv

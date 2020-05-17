@@ -1,0 +1,274 @@
+
+*** Running vivado
+    with args -log divideby3FSM_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source divideby3FSM_top.tcl
+
+
+****** Vivado v2019.1.1 (64-bit)
+  **** SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
+  **** IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source divideby3FSM_top.tcl -notrace
+Command: synth_design -top divideby3FSM_top -part xc7a15tcpg236-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a15t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a15t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 12924 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 463.895 ; gain = 166.727
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'divideby3FSM_top' [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM_top.vhd:18]
+INFO: [Synth 8-3491] module 'divideby3FSM_sv' declared at 'C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM.sv:1' bound to instance 'SV' of component 'divideby3FSM_sv' [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM_top.vhd:51]
+INFO: [Synth 8-6157] synthesizing module 'divideby3FSM_sv' [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM.sv:1]
+INFO: [Synth 8-6155] done synthesizing module 'divideby3FSM_sv' (1#1) [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM.sv:1]
+INFO: [Synth 8-3491] module 'divideby3FSM_v' declared at 'C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM.v:1' bound to instance 'V' of component 'divideby3FSM_v' [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM_top.vhd:60]
+INFO: [Synth 8-6157] synthesizing module 'divideby3FSM_v' [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM.v:1]
+	Parameter S0 bound to: 2'b00 
+	Parameter S1 bound to: 2'b01 
+	Parameter S2 bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'divideby3FSM_v' (2#1) [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM.v:1]
+INFO: [Synth 8-3491] module 'divideby3FSM_vhd' declared at 'C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM.vhd:2' bound to instance 'VHDL' of component 'divideby3FSM_vhd' [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM_top.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'divideby3FSM_vhd' [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'divideby3FSM_vhd' (3#1) [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'divideby3FSM_top' (4#1) [C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM_top.vhd:18]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 528.297 ; gain = 231.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 528.297 ; gain = 231.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a15tcpg236-2
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a15tcpg236-2
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 528.297 ; gain = 231.129
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'divideby3FSM_v'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'divideby3FSM_vhd'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      S0 |                              001 |                               00
+                      S1 |                              010 |                               01
+                      S2 |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'divideby3FSM_v'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                              001 |                               00
+                 iSTATE1 |                              010 |                               01
+                  iSTATE |                              100 |                               10
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'divideby3FSM_vhd'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 528.297 ; gain = 231.129
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module divideby3FSM_sv 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+Module divideby3FSM_vhd 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      3 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 45 (col length:60)
+BRAMs: 50 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'SV/state_reg[1][1]' (FDC) to 'SV/state_reg[1][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\SV/state_reg[1][0] )
+WARNING: [Synth 8-3332] Sequential element (VHDL/FSM_onehot_state_reg[2]) is unused and will be removed from module divideby3FSM_top.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 664.707 ; gain = 367.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 668.395 ; gain = 371.227
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 668.395 ; gain = 371.227
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 668.398 ; gain = 371.230
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 668.398 ; gain = 371.230
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 668.398 ; gain = 371.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 668.398 ; gain = 371.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 668.398 ; gain = 371.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 668.398 ; gain = 371.230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT2 |     3|
+|3     |FDCE |     5|
+|4     |FDPE |     2|
+|5     |IBUF |     2|
+|6     |OBUF |     3|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-----------------+------+
+|      |Instance |Module           |Cells |
++------+---------+-----------------+------+
+|1     |top      |                 |    16|
+|2     |  SV     |divideby3FSM_sv  |     4|
+|3     |  V      |divideby3FSM_v   |     3|
+|4     |  VHDL   |divideby3FSM_vhd |     3|
++------+---------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 668.398 ; gain = 371.230
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 668.398 ; gain = 371.230
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 668.398 ; gain = 371.230
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 780.957 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+24 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 780.957 ; gain = 483.789
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 780.957 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE.runs/synth_1/divideby3FSM_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file divideby3FSM_top_utilization_synth.rpt -pb divideby3FSM_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 15:14:39 2020...

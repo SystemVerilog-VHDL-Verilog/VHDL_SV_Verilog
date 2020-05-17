@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Sun Jan 26 06:10:26 2020
+# Process ID: 576
+# Current directory: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.10 TRISTATE BUFFER/HDL Example 4.10 TRISTATE BUFFER.runs/synth_1
+# Command line: vivado.exe -log tristate_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tristate_top.tcl
+# Log file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.10 TRISTATE BUFFER/HDL Example 4.10 TRISTATE BUFFER.runs/synth_1/tristate_top.vds
+# Journal file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.10 TRISTATE BUFFER/HDL Example 4.10 TRISTATE BUFFER.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source tristate_top.tcl -notrace

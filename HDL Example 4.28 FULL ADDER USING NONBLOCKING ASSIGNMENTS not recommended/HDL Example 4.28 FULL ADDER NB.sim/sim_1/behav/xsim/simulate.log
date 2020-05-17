@@ -1,0 +1,3 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+WARNING: File example.bin referenced on C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/TB_HDL Example 4_28.sv at line 38 cannot be opened for reading. Please ensure that this file is available in the current working directory.

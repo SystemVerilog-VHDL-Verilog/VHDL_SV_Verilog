@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a15tcpg236-2" LaunchTime="1583424967">
+  <File Type="PA-TCL" Name="flopenr_top.tcl"/>
+  <File Type="REPORTS-TCL" Name="flopenr_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="flopenr_top.vds"/>
+  <File Type="RDS-UTIL" Name="flopenr_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="flopenr_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="flopenr_top.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.19 RESETTABLE ENABLED REGISTER/flopr.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/flopr.v"/>
+        <Attr Name="ImportTime" Val="1583423310"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.19 RESETTABLE ENABLED REGISTER/flopr.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/flopr.sv"/>
+        <Attr Name="ImportTime" Val="1583423280"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.19 RESETTABLE ENABLED REGISTER/flopr.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/flopr.vhd"/>
+        <Attr Name="ImportTime" Val="1583423359"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.19 RESETTABLE ENABLED REGISTER/flopenr_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/flopenr_top.vhd"/>
+        <Attr Name="ImportTime" Val="1583424006"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="flopenr_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

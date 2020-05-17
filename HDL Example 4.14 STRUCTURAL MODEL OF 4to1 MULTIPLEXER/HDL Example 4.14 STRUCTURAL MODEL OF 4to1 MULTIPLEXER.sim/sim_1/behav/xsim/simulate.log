@@ -1,0 +1,15 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+WARNING: Too many words specified in data file InputData.bin
+Error: inputs = 000001011010111101
+ outputs = 0101 (0000 expected)
+Error: inputs = 000001011010111110
+ outputs = 1010 (0000 expected)
+Error: inputs = 000001011010111111
+ outputs = 1111 (0000 expected)
+Error: inputs = 000z01011010111100
+ outputs = 000z (0000 expected)
+Error: inputs = 0000010z1010111101
+ outputs = 010z (0000 expected)
+Error: inputs = 00000101101z111110
+ outputs = 101z (0000 expected)

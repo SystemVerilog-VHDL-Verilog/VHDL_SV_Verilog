@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Fri Apr 17 10:22:36 2020
+# Process ID: 7932
+# Current directory: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.27 PRIORITY CIRCUIT USING casez/HDL Example 4_27 PRIORITY CIRCUIT USING casez.runs/impl_1
+# Command line: vivado.exe -log priority_casez_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source priority_casez_top.tcl -notrace
+# Log file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.27 PRIORITY CIRCUIT USING casez/HDL Example 4_27 PRIORITY CIRCUIT USING casez.runs/impl_1/priority_casez_top.vdi
+# Journal file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.27 PRIORITY CIRCUIT USING casez/HDL Example 4_27 PRIORITY CIRCUIT USING casez.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source priority_casez_top.tcl -notrace

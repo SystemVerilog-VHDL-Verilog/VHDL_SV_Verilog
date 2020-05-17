@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_HDL_Example_4_17_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_HDL_Example_4_17" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="94500001fs"></ZoomEndTime>
+      <Cursor1Time time="180000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="358"></NameColumnWidth>
+      <ValueColumnWidth column_width="430"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/TB_HDL_Example_4_17/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/data_in" type="array">
+      <obj_property name="ElementShortName">data_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/q_a_sv" type="array">
+      <obj_property name="ElementShortName">q_a_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">q_a_sv[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/q_a_v" type="array">
+      <obj_property name="ElementShortName">q_a_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">q_a_v[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/q_a_vhd" type="array">
+      <obj_property name="ElementShortName">q_a_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">q_a_vhd[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/q_s_sv" type="array">
+      <obj_property name="ElementShortName">q_s_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">q_s_sv[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/q_s_v" type="array">
+      <obj_property name="ElementShortName">q_s_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">q_s_v[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/q_s_vhd" type="array">
+      <obj_property name="ElementShortName">q_s_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">q_s_vhd[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/y_yexpected" type="array">
+      <obj_property name="ElementShortName">y_yexpected[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y_yexpected[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/vectornum" type="array">
+      <obj_property name="ElementShortName">vectornum[31:0]</obj_property>
+      <obj_property name="ObjectShortName">vectornum[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/errors" type="array">
+      <obj_property name="ElementShortName">errors[31:0]</obj_property>
+      <obj_property name="ObjectShortName">errors[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/testvectors" type="array">
+      <obj_property name="ElementShortName">testvectors[16:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">testvectors[16:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_17/test_net" type="array">
+      <obj_property name="ElementShortName">test_net[3:0]</obj_property>
+      <obj_property name="ObjectShortName">test_net[3:0]</obj_property>
+   </wvobject>
+</wave_config>

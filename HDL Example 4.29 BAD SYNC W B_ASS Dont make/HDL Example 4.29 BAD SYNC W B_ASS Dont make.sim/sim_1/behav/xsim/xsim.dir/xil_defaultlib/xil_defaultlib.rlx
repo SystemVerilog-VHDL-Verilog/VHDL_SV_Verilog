@@ -1,0 +1,10 @@
+0.6
+2019.1
+Jun 29 2019
+08:46:09
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/HDL Example 4.29 BAD SYNC W B_ASS Dont make.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/TB_HDL Example 4_29.sv,1587809178,systemVerilog,,,,TB_HDL_Example_4_29,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/syncbad.sv,1587803914,systemVerilog,,C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/TB_HDL Example 4_29.sv,,syncbad_sv,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/syncbad.v,1587718084,verilog,,,,syncbad_v,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/syncbad.vhd,1587804155,vhdl,,,,syncbad_vhd,,,,,,,,
+C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/syncbad_top.vhd,1587804555,vhdl,,,,syncbad_top,,,,,,,,

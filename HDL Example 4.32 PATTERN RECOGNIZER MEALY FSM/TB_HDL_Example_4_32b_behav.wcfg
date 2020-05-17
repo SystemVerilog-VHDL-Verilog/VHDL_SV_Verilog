@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_HDL_Example_4_32b_time_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_HDL_Example_4_32b" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1180000fs"></ZoomStartTime>
+      <ZoomEndTime time="515380001fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="364"></NameColumnWidth>
+      <ValueColumnWidth column_width="193"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/SV/state" type="array">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/SV/nextstate" type="array">
+      <obj_property name="ElementShortName">nextstate[1:0]</obj_property>
+      <obj_property name="ObjectShortName">nextstate[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/V/state" type="array">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/V/nextstate" type="array">
+      <obj_property name="ElementShortName">nextstate[1:0]</obj_property>
+      <obj_property name="ObjectShortName">nextstate[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/VHDL/state" type="array">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/VHDL/nextstate" type="array">
+      <obj_property name="ElementShortName">nextstate[1:0]</obj_property>
+      <obj_property name="ObjectShortName">nextstate[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/a" type="logic">
+      <obj_property name="ElementShortName">a</obj_property>
+      <obj_property name="ObjectShortName">a</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/y_sv" type="logic">
+      <obj_property name="ElementShortName">y_sv</obj_property>
+      <obj_property name="ObjectShortName">y_sv</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/y_v" type="logic">
+      <obj_property name="ElementShortName">y_v</obj_property>
+      <obj_property name="ObjectShortName">y_v</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_32b/dut/y_vhd" type="logic">
+      <obj_property name="ElementShortName">y_vhd</obj_property>
+      <obj_property name="ObjectShortName">y_vhd</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+</wave_config>

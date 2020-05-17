@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/fulladder_nb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fulladder_nb_v
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/fulladder_nb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fulladder_nb_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/TB_HDL Example 4_28.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_HDL_Example_4_28
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/HDL Example 4.28 FULL ADDER NB.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/fulladder_nb_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fulladder_nb_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended/fulladder_nb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fulladder_nb_vhd'

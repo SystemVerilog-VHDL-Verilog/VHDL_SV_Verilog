@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HDL Example 4.19 RESETTABLE ENABLED REGISTER.srcs/sources_1/imports/HDL Example 4.19 RESETTABLE ENABLED REGISTER/flopr.v" \
+
+sv xil_defaultlib  \
+"../../../../HDL Example 4.19 RESETTABLE ENABLED REGISTER.srcs/sources_1/imports/HDL Example 4.19 RESETTABLE ENABLED REGISTER/flopr.sv" \
+"../../../../HDL Example 4.19 RESETTABLE ENABLED REGISTER.srcs/sim_1/imports/HDL Example 4.19 RESETTABLE ENABLED REGISTER/Simulation_flopenr.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

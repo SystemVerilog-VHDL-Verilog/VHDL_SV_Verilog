@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TB_HDL_Example_4_3_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TB_HDL_Example_4_3" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="222000001fs"></ZoomEndTime>
+      <Cursor1Time time="10000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="232"></NameColumnWidth>
+      <ValueColumnWidth column_width="173"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/TB_HDL_Example_4_3/a_sv" type="array">
+      <obj_property name="ElementShortName">a_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_sv[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/b_sv" type="array">
+      <obj_property name="ElementShortName">b_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b_sv[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y1_sv" type="array">
+      <obj_property name="ElementShortName">y1_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y1_sv[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y2_sv" type="array">
+      <obj_property name="ElementShortName">y2_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y2_sv[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y3_sv" type="array">
+      <obj_property name="ElementShortName">y3_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y3_sv[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y4_sv" type="array">
+      <obj_property name="ElementShortName">y4_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y4_sv[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y5_sv" type="array">
+      <obj_property name="ElementShortName">y5_sv[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y5_sv[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/a_v" type="array">
+      <obj_property name="ElementShortName">a_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_v[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/b_v" type="array">
+      <obj_property name="ElementShortName">b_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b_v[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y1_v" type="array">
+      <obj_property name="ElementShortName">y1_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y1_v[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y2_v" type="array">
+      <obj_property name="ElementShortName">y2_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y2_v[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y3_v" type="array">
+      <obj_property name="ElementShortName">y3_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y3_v[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y4_v" type="array">
+      <obj_property name="ElementShortName">y4_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y4_v[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y5_v" type="array">
+      <obj_property name="ElementShortName">y5_v[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y5_v[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/a_vhd" type="array">
+      <obj_property name="ElementShortName">a_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">a_vhd[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/b_vhd" type="array">
+      <obj_property name="ElementShortName">b_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">b_vhd[3:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y1_vhd" type="array">
+      <obj_property name="ElementShortName">y1_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y1_vhd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y2_vhd" type="array">
+      <obj_property name="ElementShortName">y2_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y2_vhd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y3_vhd" type="array">
+      <obj_property name="ElementShortName">y3_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y3_vhd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y4_vhd" type="array">
+      <obj_property name="ElementShortName">y4_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y4_vhd[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TB_HDL_Example_4_3/y5_vhd" type="array">
+      <obj_property name="ElementShortName">y5_vhd[3:0]</obj_property>
+      <obj_property name="ObjectShortName">y5_vhd[3:0]</obj_property>
+   </wvobject>
+</wave_config>

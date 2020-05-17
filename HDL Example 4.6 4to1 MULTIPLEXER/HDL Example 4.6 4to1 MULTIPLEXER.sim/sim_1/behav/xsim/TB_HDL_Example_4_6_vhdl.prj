@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../HDL Example 4.6 4to1 MULTIPLEXER.srcs/sources_1/imports/HDL Example 4.6 4to1 MULTIPLEXER/mux4.vhd" \
+"../../../../HDL Example 4.6 4to1 MULTIPLEXER.srcs/sources_1/imports/HDL Example 4.6 4to1 MULTIPLEXER/mux4_top.vhd" \
+
+# Do not sort compile order
+nosort

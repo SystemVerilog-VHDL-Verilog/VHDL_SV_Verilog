@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HDL Example 4.21 Latches Do not do that.srcs/sources_1/imports/HDL Example 4.21 Latches Do not do that/Latch.v" \
+
+sv xil_defaultlib  \
+"../../../../HDL Example 4.21 Latches Do not do that.srcs/sources_1/imports/HDL Example 4.21 Latches Do not do that/Latch.sv" \
+"../../../../HDL Example 4.21 Latches Do not do that.srcs/sim_1/imports/HDL Example 4.21 Latches Do not do that/Simulation_Latch.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

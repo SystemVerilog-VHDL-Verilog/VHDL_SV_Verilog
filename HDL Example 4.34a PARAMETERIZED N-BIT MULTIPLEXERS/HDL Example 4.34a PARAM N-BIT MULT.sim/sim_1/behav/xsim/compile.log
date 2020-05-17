@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS/mux2/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS/mux4_8.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux4_8_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS/TB_HDL Example 4_34a.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_HDL_Example_4_34a

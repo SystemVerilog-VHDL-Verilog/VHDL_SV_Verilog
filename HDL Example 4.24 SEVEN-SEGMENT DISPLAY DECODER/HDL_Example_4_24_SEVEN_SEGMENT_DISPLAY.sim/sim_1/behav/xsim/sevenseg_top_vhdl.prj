@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sources_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/sevenseg.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sources_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/sevenseg_top.vhd" \
+
+# Do not sort compile order
+nosort

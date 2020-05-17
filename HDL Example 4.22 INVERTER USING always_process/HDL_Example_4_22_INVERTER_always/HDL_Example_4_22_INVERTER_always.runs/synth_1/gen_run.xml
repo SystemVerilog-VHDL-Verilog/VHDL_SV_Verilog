@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a15tcpg236-2" LaunchTime="1585984541">
+  <File Type="PA-TCL" Name="inv_top.tcl"/>
+  <File Type="REPORTS-TCL" Name="inv_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="inv_top.vds"/>
+  <File Type="RDS-UTIL" Name="inv_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="inv_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="inv_top.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.22 INVERTER USING always_process/inv.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inv.v"/>
+        <Attr Name="ImportTime" Val="1585983668"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.22 INVERTER USING always_process/inv.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inv.sv"/>
+        <Attr Name="ImportTime" Val="1585982878"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.22 INVERTER USING always_process/inv.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inv.vhd"/>
+        <Attr Name="ImportTime" Val="1585984025"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.22 INVERTER USING always_process/inv_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../inv_top.vhd"/>
+        <Attr Name="ImportTime" Val="1578204942"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="inv_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

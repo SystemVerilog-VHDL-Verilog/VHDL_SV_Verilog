@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Sat Apr 25 13:06:32 2020
+# Process ID: 16156
+# Current directory: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/HDL Example 4.29 BAD SYNC W B_ASS Dont make.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/HDL Example 4.29 BAD SYNC W B_ASS Dont make.sim/sim_1/behav/xsim/xsim.dir/TB_HDL_Example_4_29_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/HDL Example 4.29 BAD SYNC W B_ASS Dont make.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.29 BAD SYNC W B_ASS Dont make/HDL Example 4.29 BAD SYNC W B_ASS Dont make.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Zynq_Book/VHDL_SV_Verilog/HDL -notrace

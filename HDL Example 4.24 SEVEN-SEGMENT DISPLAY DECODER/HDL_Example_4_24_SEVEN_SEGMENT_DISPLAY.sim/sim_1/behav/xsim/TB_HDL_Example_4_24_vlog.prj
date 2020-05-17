@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sources_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/sevenseg.v" \
+
+sv xil_defaultlib  \
+"../../../../HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sources_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/sevenseg.sv" \
+"../../../../HDL_Example_4_24_SEVEN_SEGMENT_DISPLAY.srcs/sim_1/imports/HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER/TB_HDL Example 4_24.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Fri Apr  3 09:54:23 2020
+# Process ID: 17056
+# Current directory: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.21 Latches Do not do that/HDL Example 4.21 Latches Do not do that/HDL Example 4.21 Latches Do not do that.runs/synth_1
+# Command line: vivado.exe -log Latch_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Latch_top.tcl
+# Log file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.21 Latches Do not do that/HDL Example 4.21 Latches Do not do that/HDL Example 4.21 Latches Do not do that.runs/synth_1/Latch_top.vds
+# Journal file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.21 Latches Do not do that/HDL Example 4.21 Latches Do not do that/HDL Example 4.21 Latches Do not do that.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Latch_top.tcl -notrace

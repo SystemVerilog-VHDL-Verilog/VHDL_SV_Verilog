@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER.srcs/sources_1/imports/HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER/mux2/mux2.v" \
+"../../../../HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER.srcs/sources_1/imports/HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER/mux4.v" \
+
+sv xil_defaultlib  \
+"../../../../HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER.srcs/sources_1/imports/HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER/mux2/mux2.sv" \
+"../../../../HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER.srcs/sources_1/imports/HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER/mux4.sv" \
+"../../../../HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER.srcs/sim_1/imports/HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER/Simulation_mux4.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

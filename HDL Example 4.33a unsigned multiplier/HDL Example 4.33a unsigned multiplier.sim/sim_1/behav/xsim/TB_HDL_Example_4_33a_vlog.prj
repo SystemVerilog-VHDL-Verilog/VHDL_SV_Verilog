@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../multiplier.v" \
+
+sv xil_defaultlib  \
+"../../../../multiplier.sv" \
+"../../../../TB_HDL Example 4_33a.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

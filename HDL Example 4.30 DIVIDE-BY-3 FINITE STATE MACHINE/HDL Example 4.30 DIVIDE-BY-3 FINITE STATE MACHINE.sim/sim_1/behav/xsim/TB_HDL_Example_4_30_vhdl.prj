@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../divideby3FSM_top.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../divideby3FSM.vhd" \
+
+# Do not sort compile order
+nosort

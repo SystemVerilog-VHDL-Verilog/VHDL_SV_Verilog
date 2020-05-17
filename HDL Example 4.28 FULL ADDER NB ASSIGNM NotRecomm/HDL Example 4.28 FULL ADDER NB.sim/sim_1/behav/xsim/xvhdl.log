@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER NB ASSIGNM NotRecomm/fulladder_nb_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fulladder_nb_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.28 FULL ADDER NB ASSIGNM NotRecomm/fulladder_nb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fulladder_nb_vhd'

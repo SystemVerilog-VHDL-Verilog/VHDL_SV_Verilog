@@ -1,0 +1,20 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 1b60be09f61746988cd5f824bc1e2424 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_HDL_Example_4_36_behav xil_defaultlib.TB_HDL_Example_4_36 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE/HDL Example 4.36 PARAM N-INPUT AND GATE.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling module xil_defaultlib.andN_sv(width=8)
+Compiling module xil_defaultlib.andN_v(width=8)
+Compiling architecture synth of entity xil_defaultlib.andN_vhd [andn_vhd_default]
+Compiling architecture synth of entity xil_defaultlib.andN_top [andn_top_default]
+Compiling module xil_defaultlib.TB_HDL_Example_4_36
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TB_HDL_Example_4_36_behav

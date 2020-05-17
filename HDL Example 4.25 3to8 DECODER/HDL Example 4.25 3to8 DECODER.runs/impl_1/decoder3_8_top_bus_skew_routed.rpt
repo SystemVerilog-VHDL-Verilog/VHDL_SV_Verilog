@@ -1,0 +1,15 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1.1 (win64) Build 2580384 Sat Jun 29 08:12:21 MDT 2019
+| Date         : Wed Apr 15 11:25:58 2020
+| Host         : DESKTOP-6J0J3T6 running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file decoder3_8_top_bus_skew_routed.rpt -pb decoder3_8_top_bus_skew_routed.pb -rpx decoder3_8_top_bus_skew_routed.rpx
+| Design       : decoder3_8_top
+| Device       : 7a15t-cpg236
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

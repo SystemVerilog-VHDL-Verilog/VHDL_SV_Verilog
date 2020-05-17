@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7a15tcpg236-2" LaunchTime="1586938477">
+  <File Type="PA-TCL" Name="decoder3_8_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="decoder3_8_top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="decoder3_8_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="decoder3_8_top.vds"/>
+  <File Type="RDS-UTIL" Name="decoder3_8_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="decoder3_8_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="decoder3_8_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="decoder3_8_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="decoder3_8_top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.25 3to8 DECODER/decoder3_8.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/decoder3_8.v"/>
+        <Attr Name="ImportTime" Val="1586938163"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.25 3to8 DECODER/decoder3_8.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/decoder3_8.sv"/>
+        <Attr Name="ImportTime" Val="1586938096"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.25 3to8 DECODER/decoder3_8.vhd">
+      <FileInfo SFType="VHDL2008">
+        <Attr Name="ImportPath" Val="$PPRDIR/decoder3_8.vhd"/>
+        <Attr Name="ImportTime" Val="1586935763"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/HDL Example 4.25 3to8 DECODER/decoder3_8_top.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/decoder3_8_top.vhd"/>
+        <Attr Name="ImportTime" Val="1586936219"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="decoder3_8_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

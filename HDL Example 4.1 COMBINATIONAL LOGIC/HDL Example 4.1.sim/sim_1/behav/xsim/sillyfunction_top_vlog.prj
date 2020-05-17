@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HDL Example 4.1.srcs/sources_1/imports/HDL Example 4.1 COMBINATIONAL LOGIC/sillyfunction_v.v" \
+
+sv xil_defaultlib  \
+"../../../../HDL Example 4.1.srcs/sources_1/imports/HDL Example 4.1 COMBINATIONAL LOGIC/sillyfunction_sv.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

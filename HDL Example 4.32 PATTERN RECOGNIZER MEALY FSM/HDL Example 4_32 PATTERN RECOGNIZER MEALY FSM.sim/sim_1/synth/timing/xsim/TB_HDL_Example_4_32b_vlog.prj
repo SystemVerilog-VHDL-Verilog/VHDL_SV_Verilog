@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"TB_HDL_Example_4_32b_time_synth.v" \
+
+sv xil_defaultlib  \
+"../../../../../HDL Example 4_32 PATTERN RECOGNIZER MEALY FSM.srcs/sim_1/new/TB_HDL Example 4_32b.sv" \
+
+# Do not sort compile order
+nosort

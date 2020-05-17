@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE/andN.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module andN_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE/TB_HDL Example 4_36.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_HDL_Example_4_36

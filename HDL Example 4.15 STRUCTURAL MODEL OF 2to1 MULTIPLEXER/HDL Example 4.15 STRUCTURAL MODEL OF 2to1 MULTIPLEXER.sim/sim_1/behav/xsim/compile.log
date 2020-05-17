@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER.srcs/sources_1/imports/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER/mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux2_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER.srcs/sources_1/imports/Tristate_buffer_from_example_4_10/tristate.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tristate_sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER.srcs/sim_1/imports/HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER/Simulation_mux2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module TB_HDL_Example_4_15

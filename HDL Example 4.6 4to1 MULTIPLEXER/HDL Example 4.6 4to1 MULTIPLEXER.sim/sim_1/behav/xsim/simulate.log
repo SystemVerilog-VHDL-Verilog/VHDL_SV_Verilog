@@ -1,0 +1,4 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Error: F failed.
+Time: 30 ns  Iteration: 0  Process: /TB_HDL_Example_4_6/Initial18_0  File: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.6 4to1 MULTIPLEXER/HDL Example 4.6 4to1 MULTIPLEXER.srcs/sim_1/imports/HDL Example 4.6 4to1 MULTIPLEXER/TB_HDL Example 4_6.sv

@@ -1,0 +1,12 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+Error: inputs = 0101
+ outputs = 0101 (0101 expected)
+Error: inputs = 0110
+ outputs = 0110 (0110 expected)
+Error: inputs = 0111
+ outputs = 0111 (0111 expected)
+Error: inputs = 1101
+ outputs = 1101 (1101 expected)
+Error: inputs = 1110
+ outputs = 1110 (1110 expected)

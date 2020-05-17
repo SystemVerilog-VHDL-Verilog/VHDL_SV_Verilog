@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HDL Example 4.4.srcs/sources_1/imports/HDL Example 4.4 EIGHT-INPUT AND/and8.v" \
+
+sv xil_defaultlib  \
+"../../../../HDL Example 4.4.srcs/sources_1/imports/HDL Example 4.4 EIGHT-INPUT AND/and8.sv" \
+"../../../../HDL Example 4.4.srcs/sim_1/imports/HDL Example 4.4 EIGHT-INPUT AND/TB_HDL Example 4_4.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Tue Jan 28 10:30:02 2020
+# Process ID: 9012
+# Current directory: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.12 BIT SWIZZLING/HDL Example 4.12 BIT SWIZZLING.runs/synth_1
+# Command line: vivado.exe -log BIT_SWIZZLING_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source BIT_SWIZZLING_top.tcl
+# Log file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.12 BIT SWIZZLING/HDL Example 4.12 BIT SWIZZLING.runs/synth_1/BIT_SWIZZLING_top.vds
+# Journal file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.12 BIT SWIZZLING/HDL Example 4.12 BIT SWIZZLING.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source BIT_SWIZZLING_top.tcl -notrace

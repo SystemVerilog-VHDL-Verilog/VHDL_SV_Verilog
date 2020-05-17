@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a15tcpg236-2" LaunchTime="1588404755">
+  <File Type="BITSTR-BMM" Name="patternMealy_top_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="patternMealy_top_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="patternMealy_top_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="patternMealy_top_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="patternMealy_top.tcl"/>
+  <File Type="OPT-TIMING" Name="patternMealy_top_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="patternMealy_top_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="patternMealy_top_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="patternMealy_top_reports.tcl"/>
+  <File Type="OPT-DRC" Name="patternMealy_top_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="patternMealy_top.hwdef"/>
+  <File Type="PWROPT-DCP" Name="patternMealy_top_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="patternMealy_top_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="patternMealy_top_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="patternMealy_top_placed.dcp"/>
+  <File Type="PLACE-IO" Name="patternMealy_top_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="patternMealy_top_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="patternMealy_top_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="patternMealy_top_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="patternMealy_top_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="patternMealy_top_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="patternMealy_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="patternMealy_top.bgn"/>
+  <File Type="PLACE-TIMING" Name="patternMealy_top_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="patternMealy_top_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="patternMealy_top.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="patternMealy_top_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="patternMealy_top_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="patternMealy_top_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="patternMealy_top.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="patternMealy_top_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="patternMealy_top_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="patternMealy_top_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="patternMealy_top_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="patternMealy_top_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="patternMealy_top_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="patternMealy_top.ltx"/>
+  <File Type="ROUTE-DRC-RPX" Name="patternMealy_top_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="patternMealy_top.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="patternMealy_top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="patternMealy_top_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-SYSDEF" Name="patternMealy_top.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="patternMealy_top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="patternMealy_top_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="patternMealy_top_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="patternMealy_top_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="patternMealy_top_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="patternMealy_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="patternMealy_top_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="patternMealy_top_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="patternMealy_top_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="patternMealy_top_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="patternMealy_top_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="patternMealy_top_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="patternMealy_top_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="patternMealy_top_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="patternMealy_top_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="patternMealy_top_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="patternMealy_top_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="patternMealy_top_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="patternMealy_top_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="patternMealy_top.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="patternMealy_top_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="patternMealy_top.rbt"/>
+  <File Type="BITSTR-NKY" Name="patternMealy_top.nky"/>
+  <File Type="BG-DRC" Name="patternMealy_top.drc"/>
+  <File Type="RDI-RDI" Name="patternMealy_top.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/patternMealy.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/patternMealy.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/patternMealy.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/patternMealy_top.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="patternMealy_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

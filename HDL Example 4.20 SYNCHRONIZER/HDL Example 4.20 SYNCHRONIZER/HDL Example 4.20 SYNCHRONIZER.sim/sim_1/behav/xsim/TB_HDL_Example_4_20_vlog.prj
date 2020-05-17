@@ -1,0 +1,13 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../HDL Example 4.20 SYNCHRONIZER.srcs/sources_1/imports/HDL Example 4.20 SYNCHRONIZER/sync.v" \
+
+sv xil_defaultlib  \
+"../../../../HDL Example 4.20 SYNCHRONIZER.srcs/sources_1/imports/HDL Example 4.20 SYNCHRONIZER/sync.sv" \
+"../../../../HDL Example 4.20 SYNCHRONIZER.srcs/sim_1/imports/HDL Example 4.20 SYNCHRONIZER/Simulation_sync.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1.1 (64-bit)
+# SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
+# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+# Start of session at: Fri May  8 11:06:19 2020
+# Process ID: 15308
+# Current directory: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS/HDL Example 4.34a PARAM N-BIT MULT.runs/synth_2
+# Command line: vivado.exe -log mux4_8_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mux4_8_top.tcl
+# Log file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS/HDL Example 4.34a PARAM N-BIT MULT.runs/synth_2/mux4_8_top.vds
+# Journal file: C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS/HDL Example 4.34a PARAM N-BIT MULT.runs/synth_2\vivado.jou
+#-----------------------------------------------------------
+source mux4_8_top.tcl -notrace

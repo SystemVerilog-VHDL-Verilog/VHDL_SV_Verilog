@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.34b PARAMETERIZED N-BIT MULTIPLEXERS/mux2/mux2 .vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux2_vhd'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.34b PARAMETERIZED N-BIT MULTIPLEXERS/mux4_12.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux4_12_vhd'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.34b PARAMETERIZED N-BIT MULTIPLEXERS/mux4_12_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mux4_12_top'

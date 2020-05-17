@@ -1,0 +1,1 @@
+-wto "c266bf8ef25f45779a81b6b872618d26" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "TB_HDL_Example_4_21_Latches_Do_not_do_that_behav" "xil_defaultlib.TB_HDL_Example_4_21_Latches_Do_not_do_that" "xil_defaultlib.glbl" -log "elaborate.log" 

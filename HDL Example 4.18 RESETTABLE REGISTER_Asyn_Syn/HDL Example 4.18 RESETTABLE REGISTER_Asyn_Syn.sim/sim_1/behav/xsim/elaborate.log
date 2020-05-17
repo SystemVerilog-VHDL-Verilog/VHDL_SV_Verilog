@@ -1,0 +1,23 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 0d0659030aea48899926202e349a39e8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TB_HDL_Example_4_17_behav xil_defaultlib.TB_HDL_Example_4_17 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn/HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling module xil_defaultlib.flop_ar_sv
+Compiling module xil_defaultlib.flopr_sr_sv
+Compiling module xil_defaultlib.flop_ar_v
+Compiling module xil_defaultlib.flopr_sr_v
+Compiling architecture synchronous of entity xil_defaultlib.flop_ar_vhd [flop_ar_vhd_default]
+Compiling architecture synchronous of entity xil_defaultlib.flopr_sr_vhd [flopr_sr_vhd_default]
+Compiling architecture synth of entity xil_defaultlib.flopr_top [flopr_top_default]
+Compiling module xil_defaultlib.TB_HDL_Example_4_17
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot TB_HDL_Example_4_17_behav

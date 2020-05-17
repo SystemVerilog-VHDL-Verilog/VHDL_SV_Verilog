@@ -1,0 +1,19 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+WARNING: Too many words specified in data file expected_outputs.bin
+         x tests completed with          0 errors
+Error: inputs = e1
+ outputs = 11100001 (00000000 y_sv)
+         x tests completed with          1 errors
+Error: inputs = e1
+ outputs = 11100001 (00000000 y_sv)
+         x tests completed with          2 errors
+Error: inputs = e1
+ outputs = 11100001 (00000000 y_sv)
+         x tests completed with          3 errors
+Error: inputs = e1
+ outputs = 11100001 (00000000 y_sv)
+WARNING: Too many words specified in data file expected_outputs.bin
+         x tests completed with          0 errors
+Error: inputs = e1
+ outputs = 11100001 (00000000 y_sv)

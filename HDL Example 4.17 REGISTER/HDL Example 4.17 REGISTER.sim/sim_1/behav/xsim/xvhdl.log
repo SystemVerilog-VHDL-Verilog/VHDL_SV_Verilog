@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.17 REGISTER/HDL Example 4.17 REGISTER.srcs/sources_1/imports/HDL Example 4.17 REGISTER/flop.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'flop_vhd'
