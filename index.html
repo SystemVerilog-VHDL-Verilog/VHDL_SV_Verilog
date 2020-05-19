@@ -1,0 +1,161 @@
+<p><strong>The same designs make using SystemVerilog VHDL and Verilog</strong></p>
+<p>Every design contains top module + 3&nbsp;modules that have the same functionality but written on&nbsp;SystemVerilog, VHDL, and Verilog:</p>
+<ul style="list-style-type: disc;">
+<li>VHDL top Entity that contains 3&nbsp;component</li>
+<li>SystemVerilog&nbsp;component</li>
+<li>Verilog&nbsp;component</li>
+<li>VHDL&nbsp;component</li>
+</ul>
+<p>The simulation was written on SystemVerilog. Some simulation projects contain external stimulus files and files with expected simulation results.&nbsp;&nbsp;</p>
+<p>In additionals presents&nbsp;</p>
+<ul style="list-style-type: disc;">
+<li>RTL schematics</li>
+<li>Synthesis schematics</li>
+<li>Implementation schematics</li>
+<li>Simulations waveforms</li>
+</ul>
+<p>All projects are available in&nbsp;<a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog">https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog</a></p>
+<p>The projects made in&nbsp;Vivado v2019.1.1 (64-bit)</p>
+<p>The unexpected results of RTL, Synthesis, Implementation, or Simulations marked by Orange <span style="color: #ff6600;">color</span>.</p>
+<p>&nbsp;</p>
+<table style="width: 1540px; border-color: black; float: left;" border="3" cellspacing="10">
+<tbody>
+<tr>
+<td style="width: 300px;"><strong>Description</strong></td>
+<td style="width: 380px;"><strong>System Verilog</strong></td>
+<td style="width: 380px;"><strong>Verilog</strong></td>
+<td style="width: 380px;"><strong>VHDL</strong></td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.1 COMBINATIONAL LOGIC</p>
+<p>HDL Example 4.1 illustrates behavioral descriptions of a module that computes the Boolean function<br />y = ~a &amp; ~b &amp; ~c | a &amp; ~b &amp; ~c | a &amp; ~b &amp; c<br />~ - not<br />&amp; - and<br />| - or</p>
+<ul>
+<li><a href="HDL%20Example 4.1 COMBINATIONAL LOGIC\HDL Example 4.1 COMBINATIONAL LOGIC RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li>Synthesis schematics</li>
+<li>Implementation schematics</li>
+<li><a href="HDL%20Example 4.1 COMBINATIONAL LOGIC\HDL Example 4.1 COMBINATIONAL LOGIC Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.1%20COMBINATIONAL%20LOGIC" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">module sillyfunction_sv<br />(<br /> input logic a, b, c, <br /> output logic y<br />);<br /> assign y = ~a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; c;<br />endmodule</td>
+<td style="width: 380px;">module sillyfunction_v <br />(<br /> input a, b, c,<br /> output y<br />);<br /> assign y = ~a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; c;<br />endmodule</td>
+<td style="width: 380px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;
+<p>entity sillyfunction_vhd is</p>
+<p>port<br />(<br /> a, b, c: in STD_LOGIC;<br /> y: out STD_LOGIC<br />);<br />end;</p>
+<p>architecture synth of sillyfunction_vhd is<br />begin<br /> y &lt;= (not a and not b and not c) or<br /> (a and not b and not c) or<br /> (a and not b and c);<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.2 INVERTERS</p>
+<p>HDL Example 4.2 describes four inverters<br />connected to 4-bit busses.&nbsp;Bitwise operators</p>
+<ul>
+<li><a href="HDL Example 4.2 INVERTERS\HDL Example 4.2 INVERTERS RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li>Synthesis schematics</li>
+<li>Implementation schematics</li>
+<li><a href="HDL Example 4.2 INVERTERS\HDL Example 4.2 INVERTERS Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.2%20INVERTERS" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">
+<p>module inv_sv<br />(<br /> input logic [3:0] a,<br /> output logic [3:0] y<br />);</p>
+<p>assign y = ~a;</p>
+<p>endmodule</p>
+&nbsp;</td>
+<td style="width: 380px;">&nbsp;module inv_v
+<p>(<br /> input [3:0] a,<br /> output [3:0] y<br />);</p>
+<p>assign y = ~a;</p>
+<p>endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;
+<p>entity inv_vhd is<br />port<br />(<br /> a: in STD_LOGIC_VECTOR(3 downto 0);<br /> y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p>architecture synth of inv_vhd is<br /> begin<br /> y &lt;= not a;<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;
+<p>&nbsp;HDL Example 4.3 LOGIC GATES</p>
+<p>HDL Example 4.3 demonstrates bitwise operations acting on 4-bit busses for other basic logic functions.</p>
+<p><br />A complete command such as assign y4 = ~(a &amp; b); is called a statement.<br />assign out = in1 op in2; is called a continuous assignment statement.</p>
+<ul>
+<li><a href="HDL Example 4.3 LOGIC GATES\HDL Example 4.3 LOGIC GATES RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li>Synthesis schematics</li>
+<li>Implementation schematics</li>
+<li><a href="HDL Example 4.3 LOGIC GATES\HDL Example 4.3 LOGIC GATES Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.3%20LOGIC%20GATES" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">&nbsp;module gates_sv
+<p>(<br />input logic [3:0] a, b,<br />output logic [3:0] y1, y2, y3, y4, y5<br />);</p>
+<p><br />/*five different two-input logic<br />gates acting on 4-bit busses */<br /> assign y1 = a &amp; b; // AND<br /> assign y2 = a | b; // OR<br /> assign y3 = a ^ b; // XOR<br /> assign y4 = ~(a &amp; b); // NAND<br /> assign y5 = ~(a |b); // NOR<br />endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;module gates_v&nbsp;
+<p>(<br /> input [3:0] a, b,<br /> output [3:0] y1, y2, y3, y4, y5<br />);</p>
+<p><br />/* Five different two-input logic<br />gates acting on 4 bit busses */<br />assign y1 = a &amp; b; // AND<br />assign y2 = a | b; // OR<br />assign y3 = a ^ b; // XOR<br />assign y4 = ~(a &amp; b); // NAND<br />assign y5 = ~(a | b); // NOR<br />endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity gates_vhd is<br />port<br />(<br />a, b: in STD_LOGIC_VECTOR(3 downto 0);<br />y1, y2, y3, y4, y5: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;<br />architecture synth of gates_vhd is<br />begin<br />-- five different two-input logic gates<br />-- acting on 4-bit busses<br /> y1 &lt;= a and b;<br /> y2 &lt;= a or b;<br /> y3 &lt;= a xor b;<br /> y4 &lt;= a nand b;<br /> y5 &lt;= a nor b;<br />end;</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>HDL Example 4.4 EIGHT-INPUT AND</p>
+<p>As one would expect, |, ^, ~&amp;, and ~ | reduction operators are available for OR, XOR, NAND, and NOR as well.<br />Recall that a multi-input XOR performs parity, returning TRUE if an odd number of inputs are TRUE.</p>
+<p>&nbsp;</p>
+<ul>
+<li><span style="color: #ff6600;"><a style="color: #ff6600;" href="HDL Example 4.4 EIGHT-INPUT AND\HDL Example 4.4 EIGHT-INPUT AND RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></span></li>
+<li><span style="color: #ff6600;"><a style="color: #ff6600;" href="HDL%20Example 4.4 EIGHT-INPUT AND\HDL Example 4.4 EIGHT-INPUT AND RTL add Y1.PNG" target="_blank" rel="noopener">RTL schematics&nbsp;with y1 (SV)</a></span></li>
+<li>Synthesis schematics</li>
+<li><a href="HDL%20Example 4.4 EIGHT-INPUT AND\HDL Example 4.4 EIGHT-INPUT AND Implementation Schematic.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><span style="color: #ff6600;"><a style="color: #ff6600;" href="HDL%20Example 4.4 EIGHT-INPUT AND\HDL Example 4.4 EIGHT-INPUT AND Implementation Schematic add Y1.PNG" target="_blank" rel="noopener">Implementation schematics with y1 (SV)</a></span></li>
+<li><a href="HDL Example 4.4 EIGHT-INPUT AND\HDL Example 4.4 EIGHT-INPUT AND Simulation add Y1.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.4%20EIGHT-INPUT%20AND" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">
+<p>module and8_sv<br />(<br />input logic [7:0] a,<br />output logic y, y1<br />);</p>
+<p>assign y = &amp;a;<br />// &amp;a is much easier to write than<br /> assign y1 = a[7] &amp; a[6] &amp; a[5] &amp; a[4] &amp; a[3] &amp; a[2] &amp; a[1] &amp; a[0];<br />endmodule</p>
+<p>&nbsp;</p>
+</td>
+<td style="width: 380px;">module and8_v <br />(<br />input [7:0] a,<br />output y<br />);<br />assign y = &amp;a;<br />// &amp;a is much easier to write than<br />// assign y a[7] &amp; a[6] &amp; a[5] &amp; a[4] &amp;<br />// a[3] &amp; a[2] &amp; a[1] &amp; a[0];<br />endmodule
+<p>&nbsp;</p>
+</td>
+<td style="width: 380px;">library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity and8_vhd is<br />port<br />(<br /> a: in STD_LOGIC_VECTOR(7 downto 0);<br /> y: out STD_LOGIC<br />);<br />end;<br />architecture synth of and8_vhd is<br />begin<br />y &lt;= a(7) and a(6) and a(5) and a(4) and a(3) and a(2) and a(1) and a(0);<br />end;&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.5 2to1 MULTIPLEXER</p>
+<p>HDL Example 4.5 illustrates a 2:1 multiplexer using a conditional assignment.<br />Conditional assignments select the output from among alternatives based on an input called the condition.</p>
+<ul>
+<li><a href="HDL Example 4.5 2to1 MULTIPLEXER\HDL Example 4.5 2to1 MULTIPLEXER RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li>Synthesis schematics</li>
+<li><a href="HDL%20Example 4.5 2to1 MULTIPLEXER\HDL Example 4.5 2to1 MULTIPLEXER implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.5 2to1 MULTIPLEXER\HDL Example 4.5 2to1 MULTIPLEXER Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.5%202to1%20MULTIPLEXER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">module mux2_sv<br />(<br />input logic [3:0] d0, d1,<br />input logic s,<br />output logic [3:0] y<br />);<br />assign y = s ? d1 : d0;<br />endmodule</td>
+<td style="width: 380px;">&nbsp;module mux2_v <br />(<br />input [3:0] d0, d1,<br />input s,<br />output [3:0] y<br />);<br />assign y = s ? d1 : d0;<br />endmodule</td>
+<td style="width: 380px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux2_vhd is<br />port<br />(<br />d0, d1: in STD_LOGIC_VECTOR(3 downto 0);<br />s: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;<br />architecture synth of mux2_vhd is<br />begin<br />y &lt;= d1 when s = '0' else d0;<br />end;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
