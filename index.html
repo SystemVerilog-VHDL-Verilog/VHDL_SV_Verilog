@@ -94,7 +94,10 @@
 <p>(<br /> input [3:0] a, b,<br /> output [3:0] y1, y2, y3, y4, y5<br />);</p>
 <p><br />/* Five different two-input logic<br />gates acting on 4 bit busses */<br />assign y1 = a &amp; b; // AND<br />assign y2 = a | b; // OR<br />assign y3 = a ^ b; // XOR<br />assign y4 = ~(a &amp; b); // NAND<br />assign y5 = ~(a | b); // NOR<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity gates_vhd is<br />port<br />(<br />a, b: in STD_LOGIC_VECTOR(3 downto 0);<br />y1, y2, y3, y4, y5: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;<br />architecture synth of gates_vhd is<br />begin<br />-- five different two-input logic gates<br />-- acting on 4-bit busses<br /> y1 &lt;= a and b;<br /> y2 &lt;= a or b;<br /> y3 &lt;= a xor b;<br /> y4 &lt;= a nand b;<br /> y5 &lt;= a nor b;<br />end;</td>
+<td style="width: 380px;">
+<p>&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity gates_vhd is<br />port<br />(<br />a, b: in STD_LOGIC_VECTOR(3 downto 0);<br />y1, y2, y3, y4, y5: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p><br />architecture synth of gates_vhd is<br />begin<br />-- five different two-input logic gates<br />-- acting on 4-bit busses<br /> y1 &lt;= a and b;<br /> y2 &lt;= a or b;<br /> y3 &lt;= a xor b;<br /> y4 &lt;= a nand b;<br /> y5 &lt;= a nor b;<br />end;</p>
+</td>
 </tr>
 <tr>
 <td style="width: 300px;">
@@ -119,7 +122,10 @@
 <td style="width: 380px;">module and8_v <br />(<br />input [7:0] a,<br />output y<br />);<br />assign y = &amp;a;<br />// &amp;a is much easier to write than<br />// assign y a[7] &amp; a[6] &amp; a[5] &amp; a[4] &amp;<br />// a[3] &amp; a[2] &amp; a[1] &amp; a[0];<br />endmodule
 <p>&nbsp;</p>
 </td>
-<td style="width: 380px;">library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity and8_vhd is<br />port<br />(<br /> a: in STD_LOGIC_VECTOR(7 downto 0);<br /> y: out STD_LOGIC<br />);<br />end;<br />architecture synth of and8_vhd is<br />begin<br />y &lt;= a(7) and a(6) and a(5) and a(4) and a(3) and a(2) and a(1) and a(0);<br />end;&nbsp;</td>
+<td style="width: 380px;">
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity and8_vhd is<br />port<br />(<br /> a: in STD_LOGIC_VECTOR(7 downto 0);<br /> y: out STD_LOGIC<br />);<br />end;</p>
+<p><br />architecture synth of and8_vhd is<br />begin<br />y &lt;= a(7) and a(6) and a(5) and a(4) and a(3) and a(2) and a(1) and a(0);<br />end;&nbsp;</p>
+</td>
 </tr>
 <tr>
 <td style="width: 300px;">
@@ -138,10 +144,148 @@
 <td style="width: 380px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux2_vhd is<br />port<br />(<br />d0, d1: in STD_LOGIC_VECTOR(3 downto 0);<br />s: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;<br />architecture synth of mux2_vhd is<br />begin<br />y &lt;= d1 when s = '0' else d0;<br />end;</td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.6 4to1 MULTIPLEXER</p>
+<p>The multiplexer has multiple data (d) and one-hot enable (e) inputs. When one of the enables is asserted, the associated data is passed to the output.</p>
+<ul>
+<li><a href="HDL Example 4.6 4to1 MULTIPLEXER\HDL Example 4.6 4to1 MULTIPLEXER RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL%20Example 4.6 4to1 MULTIPLEXER\HDL Example 4.6 4to1 MULTIPLEXER Implementation SV.PNG" target="_blank" rel="noopener">Implementation schematics&nbsp;SV</a></li>
+<li><a href="HDL%20Example 4.6 4to1 MULTIPLEXER\HDL Example 4.6 4to1 MULTIPLEXER Implementation V.PNG" target="_blank" rel="noopener">Implementation schematics&nbsp;V</a></li>
+<li><a href="HDL Example 4.6 4to1 MULTIPLEXER\HDL Example 4.6 4to1 MULTIPLEXER Implementation VHDL.PNG" target="_blank" rel="noopener">Implementation schematics VHDL</a></li>
+<li><a href="HDL Example 4.6 4to1 MULTIPLEXER\HDL Example 4.6 4to1 MULTIPLEXER Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.6%204to1%20MULTIPLEXER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">
+<p>&nbsp;module mux4_sv<br />(<br />input logic [3:0] d0, d1, d2, d3,<br />input logic [1:0] s,<br />output logic [3:0] y<br />);<br />assign y = s[1] ? (s[0] ? d3 : d2): (s[0] ? d1 : d0);<br />endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;module mux4_v<br />(<br />input [3:0] d0, d1, d2, d3,<br />input [1:0] s,<br />output [3:0] y<br />);<br />assign y = s[1] ? (s[0] ? d3 : d2) : (s[0] ? d1 : d0);<br />endmodule</td>
+<td style="width: 380px;">
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux4_vhd is<br />port(<br />d0, d1,d2, d3: in STD_LOGIC_VECTOR(3 downto 0);<br />s: in STD_LOGIC_VECTOR(1 downto 0);<br />y: out STD_LOGIC_VECTOR(3 downto 0)--;<br />--y_1: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p><br />architecture synth1 of mux4_vhd is<br />begin<br />y &lt;= d0 when s = "00" <br />else d1 when s = "01" <br />else d2 when s = "10" <br />else d3;</p>
+<p>-- next code make uncorrect RTL and Synthesis<br />--with s select y_1 &lt;=<br />-- d0 when "00",<br />-- d1 when "01",<br />-- d2 when "10",<br />-- d3 when others;<br /> <br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.7 FULL ADDER</p>
+<p>P and G are called internal variables, because they are neither inputs nor outputs but are used only internal to the module. They are similar to local variables in programming languages.</p>
+<ul>
+<li><a href="HDL Example 4.7 FULL ADDER\HDL Example 4.7 FULL ADDER RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li>Synthesis schematics</li>
+<li><a href="HDL Example 4.7 FULL ADDER\HDL Example 4.7 FULL ADDER implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.7 FULL ADDER\HDL Example 4.7 FULL ADDER Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.7%20FULL%20ADDER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">
+<p>module fulladder_sv<br />(<br />input logic a, b, cin,<br />output logic s, cout<br />);</p>
+<p><br />logic p, g;</p>
+<p><br />assign p = a ^ b;<br />assign g = a &amp; b;<br />assign s = p ^ cin;<br />assign cout = g |(p &amp; cin);<br />endmodule</p>
+</td>
+<td style="width: 380px;">
+<p>module fulladder_v<br />(<br />input a, b, cin,<br />output s, cout<br />);</p>
+<p><br />wire p, g;</p>
+<p><br />assign p = a ^ b;<br />assign g = a &amp; b;<br />assign s = p ^ cin;<br />assign cout = g | (p &amp; cin);<br />endmodule</p>
+</td>
+<td style="width: 380px;">
+<p>&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity fulladder_vhd is<br />port<br />(<br />a, b, cin: in STD_LOGIC;<br />s, cout: out STD_LOGIC<br />);<br />end;</p>
+<p><br />architecture synth of fulladder_vhd is</p>
+<p><br />signal p, g: STD_LOGIC;</p>
+<p><br />begin<br />p &lt;= a xor b;<br />g &lt;= a and b;<br />s &lt;= p xor cin;<br />cout &lt;= g or (p and cin);<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>HDL Example 4.10 TRISTATE BUFFER</p>
+<p>&nbsp;HDLs use x to indicate an invalid logic level. If a bus is simultaneously driven to 0 and 1 by two enabled tristate buffers (or other gates), the result is x, indicating contention. If all the tristate buffers driving a bus are simultaneously OFF, the bus will float, indicated by z.<br /><br /></p>
+<ul>
+<li><a href="HDL Example 4.10 TRISTATE BUFFER\HDL Example 4.10 TRISTATE BUFFER RTL.PNG.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li>Synthesis schematics</li>
+<li><a href="HDL Example 4.10 TRISTATE BUFFER\HDL Example 4.10 TRISTATE BUFFER Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.10 TRISTATE BUFFER\HDL Example 4.10 TRISTATE BUFFER Simulation Full.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="HDL%20Example 4.10 TRISTATE BUFFER\HDL Example 4.10 TRISTATE BUFFER Simulation 1.PNG" target="_blank" rel="noopener">Simulations waveforms&nbsp;Zoom</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.10%20TRISTATE%20BUFFER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">&nbsp;module tristate_sv<br />(<br />input logic [3:0] a,<br />input logic en,<br />output tri [3:0] y<br />);<br />assign y = en ? a : 4'bz;<br />endmodule</td>
+<td style="width: 380px;">&nbsp;module tristate_v <br />(<br />input [3:0] a,<br />input en,<br />output [3:0] y<br />);<br />assign y = en ? a : 4'bz;<br />endmodule</td>
+<td style="width: 380px;">
+<p>&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity tristate_vhd is<br />port<br />(<br />a: in STD_LOGIC_VECTOR(3 downto 0);<br />en: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p><br />architecture synth of tristate_vhd is<br />begin<br />y &lt;= a when en = '1' else "ZZZZ";<br />--y &lt;= "ZZZZ" when en = '0' else a;<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.12 BIT SWIZZLING</p>
+<p>Often it is necessary to operate on a subset of a bus or to concatenate (join together) signals to form busses. These operations are collectively known as bit swizzling.</p>
+<ul>
+<li><a href="HDL Example 4.12 BIT SWIZZLING\HDL Example 4.12 BIT SWIZZLING RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li>Synthesis schematics</li>
+<li><a href="HDL Example 4.12 BIT SWIZZLING\HDL Example 4.12 BIT SWIZZLING Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.12 BIT SWIZZLING\HDL Example 4.12 BIT SWIZZLING Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.12%20BIT%20SWIZZLING" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>//HDL Example 4.12 BIT SWIZZLING</p>
+<p>module BIT_SWIZZLING_sv <br />(<br /> input logic [4:0] C,<br /> input logic [4:0] D,<br /> output logic [8:0] Y<br />);</p>
+<p>assign Y = {C[2:1], {3{D[0]}}, C[0], 3'b101}; //y = c2c1d0d0d0c0101 3'b101 - constant</p>
+<p>endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>//HDL Example 4.12 BIT SWIZZLING</p>
+<p>module BIT_SWIZZLING_v <br />(<br /> input [4:0] C,<br /> input [4:0] D,<br /> output [8:0] Y<br />);</p>
+<p>assign Y = {C[2:1], {3{D[0]}}, C[0], 3'b101}; //y = c2c1d0d0d0c0101 3'b101 - constant</p>
+<p>endmodule</p>
+</td>
+<td style="width: 380px;">
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity BIT_SWIZZLING_vhd is<br />port<br />(<br />C: in STD_LOGIC_VECTOR(4 downto 0);<br />D: in STD_LOGIC_VECTOR(4 downto 0);<br />Y: out STD_LOGIC_VECTOR(8 downto 0)<br />);<br />end;</p>
+<p><br />architecture synth of BIT_SWIZZLING_vhd is<br />begin<br />Y &lt;= C(2 downto 1) &amp; D(0) &amp; D(0) &amp; D(0) &amp; C(0) &amp; "101";<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER</p>
+<p>HDL Example 4.14 shows how to assemble a 4:1 multiplexer from three 2:1 multiplexers. Each copy of the 2:1 multiplexer is called an instance. Multiple instances of the same module are distinguished by distinct names, in this case lowmux, highmux, and finalmux.<br />This is an example of regularity, in which the 2:1 multiplexer is reused many times.</p>
+<ul>
+<li><a href="HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER\HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL%20Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER\HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER Synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics All</a></li>
+<li><a href="HDL%20Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER\HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER Synthesis SV.PNG" target="_blank" rel="noopener">Synthesis schematics SV Zoom</a></li>
+<li><a href="HDL%20Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER\HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER Synthesis V.PNG" target="_blank" rel="noopener">Synthesis schematics V Zoom</a></li>
+<li><a href="HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER\HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.14%20STRUCTURAL%20MODEL%20OF%204to1%20MULTIPLEXER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module mux4_sv<br />(<br />input logic [3:0] d0, d1, d2, d3,<br />input logic [1:0] s,<br />output logic [3:0] y<br />);</p>
+<p>logic [3:0] low, high;</p>
+<p>mux2_sv lowmux(d0, d1, s[0], low);<br />mux2_sv highmux(d2, d3, s[0], high);<br />mux2_sv finalmux(low, high, s[1], y);</p>
+<p>endmodule</p>
+<p>---------------------------------------------------------</p>
+<p>module mux2_sv<br /> (<br /> input [3:0] d0,<br /> input [3:0] d1,<br /> input s,<br /> output [3:0] y<br /> );<br /> assign y = s ? d1 : d0;<br />endmodule</p>
+<p>&nbsp;</p>
+</td>
+<td style="width: 380px;">
+<p>&nbsp;module mux4_v<br />(<br />input [3:0] d0, d1, d2, d3,<br />input [1:0] s,<br />output [3:0] y<br />);</p>
+<p>wire [3:0] low, high;</p>
+<p>mux2_v lowmux (d0, d1, s[0], low);<br />mux2_v highmux (d2, d3, s[0], high);<br />mux2_v finalmux (low, high, s[1], y);</p>
+<p>endmodule</p>
+<p>---------------------------------------------------------</p>
+<p>module mux2_v<br /> (<br /> input [3:0] d0,<br /> input [3:0] d1,<br /> input s,<br /> output [3:0] y<br /> );<br /> assign y = s ? d1 : d0;<br />endmodule</p>
+</td>
+<td style="width: 380px;">
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux4_vhd is<br />port <br />(<br />d0, d1, d2, d3: in STD_LOGIC_VECTOR (3 downto 0);<br />s: in STD_LOGIC_VECTOR (1 downto 0);<br />y: out STD_LOGIC_VECTOR (3 downto 0)<br />);<br />end;</p>
+<p>architecture struct of mux4_vhd is</p>
+<p>component mux2_vhd<br />port <br />( <br />d0, d1 : in STD_LOGIC_VECTOR (3 downto 0);<br />s: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR (3 downto 0)<br />);<br />end component;</p>
+<p>signal low, high: STD_LOGIC_VECTOR (3 downto 0);</p>
+<p>begin</p>
+<p>lowmux: mux2_vhd <br />port map (<br /> d0 =&gt; d0,<br /> d1 =&gt; d1, <br /> s =&gt; s(0),<br /> y =&gt; low<br />);<br />highmux: mux2_vhd port map (d2, d3, s(0), high);<br />finalmux: mux2_vhd port map (low, high, s(1), y);</p>
+<p>end;</p>
+<p>&nbsp;---------------------------------------------------------</p>
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux2_vhd is<br />port <br />(<br />d0: in STD_LOGIC_VECTOR (3 downto 0);<br />d1: in STD_LOGIC_VECTOR (3 downto 0);<br />s: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR (3 downto 0)<br />;<br />end;</p>
+<p>architecture synth of mux2_vhd is<br />begin<br />y &lt;= d0 when s = '0' else d1;<br />end;</p>
+</td>
 </tr>
 <tr>
 <td style="width: 300px;">&nbsp;</td>
