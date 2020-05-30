@@ -288,10 +288,144 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER</p>
+<p><span class="fontstyle0">The structural modeling to construct a 2:1<br />multiplexer from a pair of tristate buffers.</span></p>
+<ul>
+<li><a href="HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER\HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li>Synthesis schematics</li>
+<li><a href="HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER\HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER\HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.15%20STRUCTURAL%20MODEL%20OF%202to1%20MULTIPLEXER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">
+<p>&nbsp;module mux2_sv<br />(<br />input logic [3:0] d0, d1,<br />input logic s,<br />output tri [3:0] y<br />);<br />tristate_sv t0(d0, ~s, y);<br />tristate_sv t1(d1, s, y);<br />endmodule</p>
+<p>---------------------------------------------------------</p>
+<p>&nbsp;module tristate_sv<br />(<br />input logic [3:0] a,<br />input logic en,<br />output tri [3:0] y<br />);<br />assign y = en ? a : 4'bz;<br />endmodule</p>
+</td>
+<td style="width: 380px;">
+<p>&nbsp;</p>
+<p>module mux2_v <br />(<br />input [3:0] d0, d1,<br />input s,<br />output [3:0] y<br />);</p>
+<p>tristate_v t0 (d0, ~s, y);<br />tristate_v t1 (d1, s, y);<br />endmodule&nbsp;</p>
+<p>---------------------------------------------------------</p>
+<p>&nbsp;module tristate_v <br />(<br />input [3:0] a,<br />input en,<br />output [3:0] y<br />);<br />assign y = en ? a : 4'bz;<br />endmodule</p>
+<p>&nbsp;</p>
+</td>
+<td style="width: 380px;">
+<p>&nbsp;</p>
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;</p>
+<p>entity mux2_vhd is<br />port<br />(<br /> d0, d1: in STD_LOGIC_VECTOR(3 downto 0);<br /> s: in STD_LOGIC;<br /> y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p>architecture struct of mux2_vhd is</p>
+<p>component tristate_vhd<br />port<br />(<br /> a: in STD_LOGIC_VECTOR(3 downto 0);<br /> en: in STD_LOGIC;<br /> y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end component;</p>
+<p>signal sbar: STD_LOGIC;</p>
+<p>begin</p>
+<p>sbar &lt;= not s;<br />t0: tristate_vhd port map(d0, sbar, y);<br />t1: tristate_vhd port map(d1, s, y);<br />end;&nbsp;</p>
+<p>---------------------------------------------------------</p>
+<p>&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity tristate_vhd is<br />port<br />(<br />a: in STD_LOGIC_VECTOR(3 downto 0);<br />en: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;<br />architecture synth of tristate_vhd is<br />begin<br />y &lt;= a when en = '1' else "ZZZZ";<br />--y &lt;= "ZZZZ" when en = '0' else a;<br />end;</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;
+<p>HDL Example 4.16 ACCESSING PARTS OF BUSSES</p>
+<p><span class="fontstyle0">shows how modules can access part of a bus. An<br />8-bit wide 2:1 multiplexer is built using two of the 4-bit 2:1 multiplexers<br />already defined, operating on the low and high nibbles of the byte.<br />In general, complex systems are designed </span><span class="fontstyle2">hierarchically. </span><span class="fontstyle0">The overall<br />system is described structurally by instantiating its major components.<br />Each of these components is described structurally from its building<br />blocks, and so forth recursively until the pieces are simple enough to<br />describe behaviorally. It is good style to avoid (or at least to minimize)<br />mixing structural and behavioral descriptions within a single module.</span></p>
+<ul>
+<li><a href="HDL Example 4.16 ACCESSING PARTS OF BUSSES\HDL Example 4.16 ACCESSING PARTS OF BUSSES RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li>Synthesis schematics</li>
+<li><a href="HDL Example 4.16 ACCESSING PARTS OF BUSSES\HDL Example 4.16 ACCESSING PARTS OF BUSSES Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.16 ACCESSING PARTS OF BUSSES\HDL Example 4.16 ACCESSING PARTS OF BUSSES Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.16%20ACCESSING%20PARTS%20OF%20BUSSES" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module mux2_8_sv<br />(<br />input logic [7:0] d0, d1,<br />input logic s,<br />output logic [7:0] y<br />);</p>
+<p>mux2_sv lsbmux(d0[3:0], d1[3:0], s, y[3:0]);<br />mux2_sv msbmux(d0[7:4], d1[7:4], s, y[7:4]);</p>
+<p>endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module mux2_8_v <br />(<br />input [7:0] d0, d1,<br />input s,<br />output [7:0] y<br />);</p>
+<p>mux2_v lsbmux (d0[3:0], d1[3:0], s, y[3:0]);<br />mux2_v msbmux (d0[7:4], d1[7:4], s, y[7:4]);</p>
+<p>endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux2_8_vhd is<br />port<br />(<br /> d0, d1: in STD_LOGIC_VECTOR(7 downto 0);<br /> s: in STD_LOGIC;<br /> y: out STD_LOGIC_VECTOR(7 downto 0)<br />);<br />end;</p>
+<p>architecture struct of mux2_8_vhd is</p>
+<p>component mux2_vhd<br />port<br />(<br /> d0, d1: in STD_LOGIC_VECTOR(3 downto 0);<br /> s: in STD_LOGIC;<br /> y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end component;</p>
+<p>begin</p>
+<p>lsbmux: mux2_vhd port map<br />(<br /> d0 =&gt; d0(3 downto 0), <br /> d1 =&gt; d1(3 downto 0),<br /> s =&gt; s, <br /> y =&gt; y(3 downto 0)<br />);</p>
+<p>msbmux: mux2_vhd port map<br />(<br /> d0 =&gt; d0(7 downto 4), <br /> d1 =&gt; d1(7 downto 4),<br /> s =&gt; s, <br /> y =&gt; y(7 downto 4)<br />);</p>
+<p>end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.17 REGISTER</p>
+<p><span class="fontstyle0">The flip-flop includes only </span><span class="fontstyle2">clk </span><span class="fontstyle0">in the sensitive list. It remembers its old value of </span><span class="fontstyle2">q </span><span class="fontstyle0">until the next rising edge of the </span><span class="fontstyle2">clk</span><span class="fontstyle0">, even if&nbsp;</span><span class="fontstyle2">d </span><span class="fontstyle0">changes in the interim.<br />In contrast, Verilog continuous assignment statements (</span><span class="fontstyle2">assign</span><span class="fontstyle0">) and VHDL concurrent assignment statements (&lt;=</span><span class="fontstyle0">) are reevaluated any time any of the inputs on the right-hand side changes. Therefore, such code necessarily describes combinational logic.</span></p>
+<ul>
+<li><a href="HDL Example 4.17 REGISTER\HDL Example 4.17 REGISTER RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li>Synthesis schematics</li>
+<li><a href="HDL Example 4.17 REGISTER\HDL Example 4.17 REGISTER Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.17 REGISTER\HDL Example 4.17 REGISTER Simulation fail.PNG" target="_blank" rel="noopener">Simulations waveforms Fail</a></li>
+<li><a href="HDL Example 4.17 REGISTER\HDL Example 4.17 REGISTER Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.17%20REGISTER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module flop_sv<br />(<br />input logic clk,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);</p>
+<p>always_ff @(posedge clk)<br />q &lt;= d;</p>
+<p>endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module flop_v<br />(<br />input clk,<br />input [3:0] d,<br />output reg [3:0] q<br />);</p>
+<p>always @ (posedge clk)<br />q &lt;= d;</p>
+<p>endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>library IEEE; <br />use IEEE.STD_LOGIC_1164.all;<br />entity flop_vhd is<br />port<br />(<br />clk: in STD_LOGIC;<br />d: in STD_LOGIC_VECTOR(3 downto 0);<br />q: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p>architecture synth of flop_vhd is</p>
+<p>begin<br />process(clk) begin<br /> if rising_edge(clk) then<br />-- if clk'event and clk = '1' then<br /> q &lt;= d;<br />end if;<br />end process;</p>
+<p>end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp; <span class="fontstyle0">HDL Example 4.18&nbsp;</span><span class="fontstyle2">RESETTABLE REGISTER</span> </p>
+<p>Generally, it is good practice to use resettable registers so that on powerup you can put your system in a known state. The reset may be either asynchronous or synchronous. Recall that asynchronous reset occurs immediately, whereas synchronous reset clears the output only on the next rising edge of the clock.</p>
+<ul>
+<li><a href="HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn\HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn_RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL%20Example 4.18 RESETTABLE REGISTER_Asyn_Syn\HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn_Synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics</a></li>
+<li><a href="HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn\HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn_Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn\HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn_Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.18%20RESETTABLE%20REGISTER_Asyn_Syn" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">
+<p>&nbsp;module flop_ar_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);<br />// asynchronous reset<br />always_ff @(posedge clk, posedge reset)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
+<p>---------------------------------------------------------</p>
+<p>module flopr_sr_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);<br />// synchronous reset<br />always_ff @(posedge clk)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
+</td>
+<td style="width: 380px;">
+<p>&nbsp;</p>
+<p>module flop_ar_v<br />(<br />input clk,<br />input reset,<br />input [3:0] d,<br />output reg [3:0] q<br />);<br />// asynchronous reset<br />always @ (posedge clk, posedge reset)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
+<p>---------------------------------------------------------</p>
+<p>module flopr_sr_v <br />(<br />input clk,<br />input reset,<br />input [3:0] d,<br />output reg [3:0] q<br />);<br />// synchronous reset<br />always @ (posedge clk)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
+<p>&nbsp;</p>
+</td>
+<td style="width: 380px;">
+<p>&nbsp;</p>
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity flopr_as_vhd is</p>
+<p>port<br />(<br />clk, reset: in STD_LOGIC;<br />d: in STD_LOGIC_VECTOR(3 downto 0);<br />q: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p>architecture asynchronous of flopr_as_vhd is</p>
+<p>begin</p>
+<p>process(clk, reset) begin<br />if reset = '1' then<br /> q &lt;= "0000";<br />elsif rising_edge(clk) then<br /> q &lt;= d;<br />end if;<br />end process;<br />end;</p>
+<p>---------------------------------------------------------</p>
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity flopr_sr_vhd is</p>
+<p>port<br />(<br /> clk, reset: in STD_LOGIC;<br /> d: in STD_LOGIC_VECTOR(3 downto 0);<br /> q: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p>architecture synchronous of flopr_sr_vhd is</p>
+<p>begin</p>
+<p>process(clk) begin<br />if rising_edge(clk) then<br />if reset = '1' then <br /> q &lt;= "0000";<br />else <br /> q &lt;= d;<br />end if;<br />end if;<br />end process;<br />end;</p>
+</td>
 </tr>
 <tr>
 <td style="width: 300px;">&nbsp;</td>
