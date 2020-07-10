@@ -390,7 +390,7 @@
 </tr>
 <tr>
 <td style="width: 300px;">
-<p>&nbsp; <span class="fontstyle0">HDL Example 4.18&nbsp;</span><span class="fontstyle2">RESETTABLE REGISTER</span> </p>
+<p>&nbsp; <span class="fontstyle0">HDL Example 4.18&nbsp;</span><span class="fontstyle2">RESETTABLE REGISTER</span></p>
 <p>Generally, it is good practice to use resettable registers so that on powerup you can put your system in a known state. The reset may be either asynchronous or synchronous. Recall that asynchronous reset occurs immediately, whereas synchronous reset clears the output only on the next rising edge of the clock.</p>
 <ul>
 <li><a href="HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn\HDL Example 4.18 RESETTABLE REGISTER_Asyn_Syn_RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
@@ -428,8 +428,51 @@
 </td>
 </tr>
 <tr>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.19 RESETTABLE ENABLED REGISTER</p>
+<p><span class="fontstyle0">Enabled registers respond to the clock only when the enable is asserted.<br />It is retains its old value if both </span><span class="fontstyle2">reset </span><span class="fontstyle0">and </span><span class="fontstyle2">en </span><span class="fontstyle0">are FALSE.</span> </p>
+<ul>
+<li><a href="HDL Example 4.19 RESETTABLE ENABLED REGISTER\HDL Example 4.19 RESETTABLE ENABLED REGISTER_RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL Example 4.19 RESETTABLE ENABLED REGISTER\HDL Example 4.19 RESETTABLE ENABLED REGISTER_Synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics</a></li>
+<li><a href="HDL Example 4.19 RESETTABLE ENABLED REGISTER\HDL Example 4.19 RESETTABLE ENABLED REGISTER_Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.19 RESETTABLE ENABLED REGISTER\HDL Example 4.19 RESETTABLE ENABLED REGISTER_Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.19%20RESETTABLE%20ENABLED%20REGISTER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+<p>&nbsp;</p>
+</td>
+<td style="width: 380px;">
+<p>&nbsp;module flopenr_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic en,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);<br />// asynchronous reset<br />always_ff @(posedge clk, posedge reset)<br /> if (reset) q &lt;= 4'b0;<br /> else if (en) q &lt;= d;<br />endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;module flopenr_v<br />(<br />input clk,<br />input reset,<br />input en,<br />input [3:0] d,<br />output reg[3:0] q<br />);<br />// asynchronous reset<br />always @(posedge clk, posedge reset)<br /> if (reset) q &lt;= 4'b0;<br /> else if (en) q &lt;= d;<br />endmodule</td>
+<td style="width: 380px;">&nbsp;
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity flopenr_vhd is<br />port<br />(<br /> clk, reset, en: in STD_LOGIC;<br /> d: in STD_LOGIC_VECTOR(3 downto 0);<br /> q: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p>architecture asynchronous of flopenr_vhd is<br />-- asynchronous reset<br />begin<br />process(clk, reset) begin<br /> if reset = '1' then<br /> q &lt;= "0000";<br /> elsif rising_edge(clk) then<br /> if en ='1' then<br /> q &lt;= d;<br /> end if;<br /> end if;<br />end process;<br />end;</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
 <td style="width: 300px;">&nbsp;</td>
 <td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;
+<p>&nbsp;</p>
+</td>
 <td style="width: 380px;">&nbsp;</td>
 <td style="width: 380px;">&nbsp;</td>
 </tr>
