@@ -401,13 +401,15 @@
 </ul>
 </td>
 <td style="width: 380px;">
-<p>&nbsp;module flop_ar_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);<br />// asynchronous reset<br />always_ff @(posedge clk, posedge reset)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
+<p>&nbsp;module flop_ar_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);<br />// asynchronous reset</p>
+<p><br />always_ff @(posedge clk, posedge reset)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
 <p>---------------------------------------------------------</p>
 <p>module flopr_sr_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);<br />// synchronous reset<br />always_ff @(posedge clk)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
 </td>
 <td style="width: 380px;">
 <p>&nbsp;</p>
-<p>module flop_ar_v<br />(<br />input clk,<br />input reset,<br />input [3:0] d,<br />output reg [3:0] q<br />);<br />// asynchronous reset<br />always @ (posedge clk, posedge reset)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
+<p>module flop_ar_v<br />(<br />input clk,<br />input reset,<br />input [3:0] d,<br />output reg [3:0] q<br />);<br />// asynchronous reset</p>
+<p><br />always @ (posedge clk, posedge reset)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
 <p>---------------------------------------------------------</p>
 <p>module flopr_sr_v <br />(<br />input clk,<br />input reset,<br />input [3:0] d,<br />output reg [3:0] q<br />);<br />// synchronous reset<br />always @ (posedge clk)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
 <p>&nbsp;</p>
@@ -451,28 +453,149 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.20 SYNCHRONIZER</p>
+<p>A single always/process statement can be used to describe multiple pieces of hardware. For example, consider the synchronizer made of two back-to-back flip-flops. On the rising edge of<br />clk, d is copied to n1. At the same time, n1 is copied to q.</p>
+<ul>
+<li><a href="HDL Example 4.20 SYNCHRONIZER\HDL Example 4.20 SYNCHRONIZER_RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL Example 4.20 SYNCHRONIZER\HDL Example 4.20 SYNCHRONIZER_synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics</a></li>
+<li><a href="HDL Example 4.20 SYNCHRONIZER\HDL Example 4.20 SYNCHRONIZER_implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.20 SYNCHRONIZER\HDL Example 4.20 SYNCHRONIZER_Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.20%20SYNCHRONIZER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">
+<p>module sync_sv<br />(<br />input logic clk,<br />input logic d,<br />output logic q<br />);<br />logic n1;<br />always_ff @(posedge clk)<br />begin<br />n1 &lt;= d; // nonblocking<br />q &lt;= n1; // nonblocking<br />end<br />endmodule</p>
+</td>
+<td style="width: 380px;">
+<p>module sync_v <br />(<br />input clk, <br />input d,<br />output reg q<br />);</p>
+<p>reg n1;</p>
+<p>always @ (posedge clk)<br />begin<br />n1 &lt;= d;<br />q &lt;= n1;<br />end<br />endmodule</p>
+</td>
+<td style="width: 380px;">library IEEE; <br />use IEEE.STD_LOGIC_1164.all;<br />library IEEE; <br />use IEEE.STD_LOGIC_1164.all;<br />entity sync_vhd is port <br />( <br />clk: in <br />STD_LOGIC; <br />d: in STD_LOGIC; <br />q: out STD_LOGIC <br />);<br />end;<br />architecture good of sync_vhd is<br />signal n1: STD_LOGIC;<br />begin process(clk) <br />begin <br />if rising_edge(clk) then <br />n1 &lt;= d; <br />q &lt;= n1; <br />end if; <br />end process;<br />end;</td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-</tr>
-<tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-</tr>
-<tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.21 Latches Do not do that</p>
+<p>A D latch is transparent when the clock is HIGH, allowing data to flow from input to output. The latch becomes opaque when the clock is LOW, retaining its old state. HDL Example 4.22 shows the idiom for a D latch.<br />Not all synthesis tools support latches well. Unless you know that your tool does support latches and you have a good reason to use them, avoid them, and use edge-triggered flip-flops instead. Furthermore, take care that your HDL does not imply any unintended latches, something that is easy to do if you aren&rsquo;t attentive. Many synthesis tools warn you when a latch is created; if you didn&rsquo;t expect one, track down the bug in your HDL</p>
+<ul>
+<li><a href="VHDL_SV_Verilog\HDL Example 4.21 Latches Do not do that\Latches Do not do that RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="VHDL_SV_Verilog\HDL Example 4.21 Latches Do not do that\Latches Do not do that Synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics</a></li>
+<li><a href="VHDL_SV_Verilog\HDL Example 4.21 Latches Do not do that\Latches Do not do that Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="VHDL_SV_Verilog\HDL Example 4.21 Latches Do not do that\Latches Do not do that Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.21%20Latches%20Do%20not%20do%20that" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
 <p>&nbsp;</p>
 </td>
+<td style="width: 380px;">&nbsp;
+<p>module latch_sv<br />(<br />input logic clk,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);</p>
+<p>always_latch // it is similar to always @(clk, d)<br />if (clk) q &lt;= d;<br />endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module latch_v <br />(<br />input clk,<br />input [3:0] d,<br />output reg [3:0] q<br />);</p>
+<p>always @ (clk, d)<br />if (clk) q &lt;= d;<br />endmodule</p>
+</td>
+<td style="width: 380px;">
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;</p>
+<p>entity latch_vhd is<br />port<br />(<br />clk: in STD_LOGIC;<br />d: in STD_LOGIC_VECTOR(3 downto 0);<br />q: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p>architecture synth of latch_vhd is<br />begin<br />process(clk, d) <br />begin<br />if clk = '1' then<br />q &lt;= d;<br />end if;<br />end process;<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.22 INVERTER USING always_process</p>
+<p>&nbsp;However, always/process statements can also be used to describe combinational logic behaviorally if the sensitivity list is written to respond to changes in all of the inputs and the body prescribes the output value for every possible input combination. HDL Example 4.22 uses always/process statements to describe a bank of four inverters.</p>
+<ul>
+<li><a href="HDL Example 4.22 INVERTER USING always_process\HDL Example 4.22 INVERTER USING always_process_RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL Example 4.22 INVERTER USING always_process\HDL Example 4.22 INVERTER USING always_process_Synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics</a></li>
+<li><a href="HDL Example 4.22 INVERTER USING always_process\HDL Example 4.22 INVERTER USING always_process_Synthesis.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.22 INVERTER USING always_process\HDL Example 4.22 INVERTER USING always_process_Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.22%20INVERTER%20USING%20always_process" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+<p>The example is poor applications of always/process statements for modeling combinational logic because they require more lines than the equivalent approach with assignment statements. Moreover, they pose the risk of inadvertently implying sequential logic if the inputs are left out of the sensitivity list. However, case and if statements are convenient for modeling more complicated combinational logic. case and if statements must appear within always/process statements and are examined in the next sections.</p>
+</td>
+<td style="width: 380px;">
+<p>module inv_sv<br />(<br />input logic [3:0] a,<br />output logic[3:0] y<br />);</p>
+<p>always_comb<br />y = ~a;<br />endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module inv_v <br />(<br />input [3:0] a,<br />output reg [3:0] y<br />);</p>
+<p>always @ (*)<br />y = ~a;</p>
+<p>endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity inv_vhd is<br />port<br />(<br />a: in STD_LOGIC_VECTOR(3 downto 0);<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
+<p>architecture proc of inv_vhd is</p>
+<p>begin<br />--process(all) begin -- supported in VHDL 1076-2008<br />process (a) begin<br />y &lt;= not a;<br />end process;<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp;</p>
+<p>HDL Example 4.23 FULL ADDER USING always_process</p>
+<p><span class="fontstyle0">Full adder using intermediate signals<br /></span><span class="fontstyle2">p </span><span class="fontstyle0">and </span><span class="fontstyle2">g </span><span class="fontstyle0">to compute </span><span class="fontstyle2">s </span><span class="fontstyle0">and </span><span class="fontstyle2">cout</span><span class="fontstyle0">. It produces the same circuit from<br />Figure 4.8, but uses </span><span class="fontstyle2">always/process </span><span class="fontstyle0">statements in place of assignment<br />statements.</span> </p>
+<ul>
+<li><a href="HDL Example 4.23 FULL ADDER USING always_process\HDL Example 4.23 FULL ADDER USING always_process_RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL Example 4.23 FULL ADDER USING always_process\HDL Example 4.23 FULL ADDER USING always_process_Synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics</a></li>
+<li><a href="HDL Example 4.23 FULL ADDER USING always_process\HDL Example 4.23 FULL ADDER USING always_process_Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.23 FULL ADDER USING always_process\HDL Example 4.23 FULL ADDER USING always_process_Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.23%20FULL%20ADDER%20USING%20always_process" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+<p>The example is poor applications of always/process statements for modeling combinational logic because they require more lines than the equivalent approach with assignment statements. Moreover, they pose the risk of inadvertently implying sequential logic if the inputs are left out of the sensitivity list. However, case and if statements are convenient for modeling more complicated combinational logic. case and if statements must appear within always/process statements and are examined in the next sections.</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module fulladder_sv<br />(<br />input logic a, b, cin,<br />output logic s, cout<br />);</p>
+<p>logic p, g;</p>
+<p>always_comb<br />begin<br />p = a ^ b; // blocking<br />g = a &amp; b; // blocking<br />s = p ^ cin; // blocking<br />cout = g |(p &amp; cin); // blocking<br />end<br />endmodule</p>
+<p>&nbsp;</p>
+</td>
+<td style="width: 380px;">module fulladder_v<br />(<br />input a, b, cin,<br />output reg s, cout<br />);<br />reg p, g;<br />always @ (*)<br />begin<br />p = a ^ b;// blocking<br />g = a &amp; b;// blocking<br />s = p ^ cin;// blocking<br />cout = g | (p &amp; cin);// blocking<br />end<br />endmodule</td>
+<td style="width: 380px;">&nbsp;
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity fulladder_vhd is</p>
+<p>port<br />(<br />a, b, cin: in STD_LOGIC;<br />s, cout: out STD_LOGIC<br />);<br />end;</p>
+<p>architecture synth of fulladder_vhd is<br />begin<br />process(all) -- supported in VHDL 1076-2008<br />--process (a, b, cin)<br />variable p, g: STD_LOGIC;<br />begin<br />p := a xor b; -- blocking<br />g := a and b; -- blocking<br />s &lt;= p xor cin;<br />cout &lt;= g or (p and cin);<br />end process;<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER</p>
+<p>A better application of using the always/process statement for combinational logic is a seven-segment display decoder that takes advantage of the case statement that must appear inside an always/process statement.<br />The case statement performs different actions depending on the value of its input. A case statement implies combinational logic if all possible input combinations are defined; otherwise, it implies sequential logic, because the output will keep its old value in the undefined cases.</p>
+<ul>
+<li><a href="HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER\HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER_RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER\HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER_Synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics</a></li>
+<li><a href="HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER\HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER_Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER\HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER_Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.24%20SEVEN-SEGMENT%20DISPLAY%20DECODER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module sevenseg_sv<br />(<br />input logic [3:0] data,<br />output logic [6:0] segments<br />);</p>
+<p>always_comb<br />case(data)<br />// abc_defg<br />0: segments = 7'b111_1110;<br />1: segments = 7'b011_0000;<br />2: segments = 7'b110_1101;<br />3: segments = 7'b111_1001;<br />4: segments = 7'b011_0011;<br />5: segments = 7'b101_1011;<br />6: segments = 7'b101_1111;<br />7: segments = 7'b111_0000;<br />8: segments = 7'b111_1111;<br />9: segments = 7'b111_0011;<br />default: segments = 7'b000_0000;<br />endcase<br />endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module sevenseg_v <br />(<br />input [3:0] data,<br />output reg [6:0] segments<br />);</p>
+<p>always @ (*)<br />case (data)<br />// abc_defg<br />0: segments = 7'b111_1110;<br />1: segments = 7'b011_0000;<br />2: segments = 7'b110_1101;<br />3: segments = 7'b111_1001;<br />4: segments = 7'b011_0011;<br />5: segments = 7'b101_1011;<br />6: segments = 7'b101_1111;<br />7: segments = 7'b111_0000;<br />8: segments = 7'b111_1111;<br />9: segments = 7'b111_1011;<br />default: segments = 7'b000_0000;<br />endcase<br />endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity sevenseg_vhd is<br />port<br />(<br />data: in STD_LOGIC_VECTOR(3 downto 0);<br />segments: out STD_LOGIC_VECTOR(6 downto 0)<br />);<br />end;</p>
+<p>architecture synth of sevenseg_vhd is<br />begin<br />process(all) begin --(VHDL 2008)<br />case data is<br />-- abcdefg<br />when X"0" =&gt; segments &lt;= "1111110";<br />when X"1" =&gt; segments &lt;= "0110000";<br />when X"2" =&gt; segments &lt;= "1101101";<br />when X"3" =&gt; segments &lt;= "1111001";<br />when X"4" =&gt; segments &lt;= "0110011";<br />when X"5" =&gt; segments &lt;= "1011011";<br />when X"6" =&gt; segments &lt;= "1011111";<br />when X"7" =&gt; segments &lt;= "1110000";<br />when X"8" =&gt; segments &lt;= "1111111";<br />when X"9" =&gt; segments &lt;= "1110011";<br />when others =&gt; segments &lt;= "0000000";<br />end case;<br />end process;<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
 <td style="width: 380px;">&nbsp;</td>
 <td style="width: 380px;">&nbsp;</td>
 </tr>
