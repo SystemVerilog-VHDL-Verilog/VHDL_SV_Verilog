@@ -873,10 +873,81 @@
 <p>assign y = a * b;<br />endmodule</p>
 </td>
 <td style="width: 380px;">&nbsp;
-<p>-- 4.33(b): signed multiplier-- 4.33(b): signed multiplierlibrary IEEE; use IEEE.STD_LOGIC_1164.all;use IEEE.NUMERIC_STD.all;use IEEE.STD_LOGIC_SIGNED.ALL;--use ieee.std_logic_arith.all ;--Use numeric_std or std_logic_arith, but never both&nbsp;<br />entity multiplier_vhd isport(-- a: in SIGNED STD_LOGIC_VECTOR(3 downto 0);-- b: in SIGNED STD_LOGIC_VECTOR(3 downto 0);-- y: out SIGNED STD_LOGIC_VECTOR(7 downto 0)&nbsp;a: in STD_LOGIC_VECTOR(3 downto 0);&nbsp;b: in STD_LOGIC_VECTOR(3 downto 0);&nbsp;y: out STD_LOGIC_VECTOR(7 downto 0));end;</p>
-<p><br />architecture synth of multiplier_vhd is<br />signal a_signed : signed(3 downto 0);signal b_signed : signed(3 downto 0);signal y_signed : signed(7 downto 0);<br />begina_signed &lt;= signed(a);b_signed &lt;= signed(b);y &lt;= a * b;y &lt;= std_logic_vector(y_signed);<br />end;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>--4.33(b): signed multiplier<br />library IEEE; use IEEE.STD_LOGIC_1164.all;<br />use IEEE.NUMERIC_STD.all;<br />use IEEE.STD_LOGIC_SIGNED.ALL;<br />--use ieee.std_logic_arith.all ;<br />--Use numeric_std or std_logic_arith, but never both</p>
+<p><br />entity multiplier_vhd is<br />port<br />(<br />-- a: in SIGNED STD_LOGIC_VECTOR(3 downto 0);<br />-- b: in SIGNED STD_LOGIC_VECTOR(3 downto 0);<br />-- y: out SIGNED STD_LOGIC_VECTOR(7 downto 0)<br /> a: in STD_LOGIC_VECTOR(3 downto 0);<br /> b: in STD_LOGIC_VECTOR(3 downto 0);<br /> y: out STD_LOGIC_VECTOR(7 downto 0)<br />);<br />end;</p>
+<p>architecture synth of multiplier_vhd is</p>
+<p>signal a_signed : signed(3 downto 0);<br />signal b_signed : signed(3 downto 0);<br />signal y_signed : signed(7 downto 0);</p>
+<p>begin<br />a_signed &lt;= signed(a);<br />b_signed &lt;= signed(b);<br />y &lt;= a * b;<br />y &lt;= std_logic_vector(y_signed);</p>
+<p>end;</p>
 <p>&nbsp;</p>
 </td>
+</tr>
+<tr>
+<td style="width: 300px;">
+<p>&nbsp;HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS</p>
+<ul>
+<li><a href="HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS\HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS\HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS RTL with error in Verilog block.PNG" target="_blank" rel="noopener">RTL schematics with error in Verilog block</a></li>
+<li><a href="HDL%20Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS\HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS Error in Verilog code.PNG">Error in Verilog code</a></li>
+<li><a href="HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS\HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS Synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics</a></li>
+<li><a href="HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS\HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS Synthesis Zoom.PNG" target="_blank" rel="noopener">Synthesis schematics Zoom</a></li>
+<li><a href="HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS\HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS\HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS Implementation Zoom.PNG" target="_blank" rel="noopener">Implementation schematics Zoom</a></li>
+<li><a href="HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS\HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS Simulation.PNG" target="_blank" rel="noopener">Simulations waveforms</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.34a%20PARAMETERIZED%20N-BIT%20MULTIPLEXERS" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module mux4_8_sv<br />(<br />input logic [7:0] d0,<br />input logic [7:0] d1,<br />input logic [7:0] d2,<br />input logic [7:0] d3,<br />input logic [1:0] s,<br />output logic [7:0] y<br />);</p>
+<p>logic [7:0] low, hi;</p>
+<p>mux2_sv lowmux(d0, d1, s[0], low);<br />mux2_sv himux(d2, d3, s[0], hi);<br />mux2_sv outmux(low, hi, s[1], y);</p>
+<p>endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>module mux4_8_v <br />(<br />input [7:0] d0,<br />input [7:0] d1, <br />input [7:0] d2,<br />input [7:0] d3,<br />input [1:0] s,<br />output [7:0] y<br />);</p>
+<p>wire [7:0] low, hi;</p>
+<p>mux2_v lowmux (d0, d1, s[0], low);<br />mux2_v himux (d2, d3, s[0], hi);<br />mux2_v outmux (low, hi, s[1], y);</p>
+<p><br />endmodule</p>
+</td>
+<td style="width: 380px;">&nbsp;
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux4_8_vhd is<br />port<br />(<br />d0: in STD_LOGIC_VECTOR(7 downto 0); <br />d1: in STD_LOGIC_VECTOR(7 downto 0); <br />d2: in STD_LOGIC_VECTOR(7 downto 0);<br />d3: in STD_LOGIC_VECTOR(7 downto 0);<br />s: in STD_LOGIC_VECTOR(1 downto 0);<br />y: out STD_LOGIC_VECTOR(7 downto 0)<br />);<br />end;</p>
+<p>architecture struct of mux4_8_vhd is</p>
+<p>component mux2_vhd<br />generic(width: integer := 8);<br />port(<br />d0: in STD_LOGIC_VECTOR(width-1 downto 0);<br />d1: in STD_LOGIC_VECTOR(width-1 downto 0);<br />s: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR(width-1 downto 0)<br />);<br />end component;</p>
+<p>signal low, hi: STD_LOGIC_VECTOR(7 downto 0);</p>
+<p>begin<br />lowmux: mux2_vhd port map(d0, d1, s(0), low);<br />himux: mux2_vhd port map(d2, d3, s(0), hi);<br />outmux: mux2_vhd port map(low, hi, s(1), y);<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="width: 300px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
+<td style="width: 380px;">&nbsp;</td>
 </tr>
 <tr>
 <td style="width: 300px;">&nbsp;</td>
