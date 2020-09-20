@@ -18,16 +18,16 @@
 <p>The projects made in&nbsp;Vivado v2019.1.1 (64-bit)</p>
 <p>The unexpected results of RTL, Synthesis, Implementation, or Simulations marked by Orange <span style="color: #ff6600;">color</span>.</p>
 <p>&nbsp;</p>
-<table style="width: 1540px; border-color: black; float: left;" border="3" cellspacing="10">
+<table style="width: 1767px; border-color: black; float: left; height: 23797px;" border="3" cellspacing="10">
 <tbody>
 <tr>
-<td style="width: 300px;"><strong>Description</strong></td>
-<td style="width: 380px;"><strong>System Verilog</strong></td>
-<td style="width: 380px;"><strong>Verilog</strong></td>
-<td style="width: 380px;"><strong>VHDL</strong></td>
+<td style="width: 353px;"><strong>Description</strong></td>
+<td style="width: 396px;"><strong>System Verilog</strong></td>
+<td style="width: 365px;"><strong>Verilog</strong></td>
+<td style="width: 581px;"><strong>VHDL</strong></td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.1 COMBINATIONAL LOGIC</p>
 <p>HDL Example 4.1 illustrates behavioral descriptions of a module that computes the Boolean function<br />y = ~a &amp; ~b &amp; ~c | a &amp; ~b &amp; ~c | a &amp; ~b &amp; c<br />~ - not<br />&amp; - and<br />| - or</p>
 <ul>
@@ -38,16 +38,16 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.1%20COMBINATIONAL%20LOGIC" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">module sillyfunction_sv<br />(<br /> input logic a, b, c, <br /> output logic y<br />);<br /> assign y = ~a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; c;<br />endmodule</td>
-<td style="width: 380px;">module sillyfunction_v <br />(<br /> input a, b, c,<br /> output y<br />);<br /> assign y = ~a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; c;<br />endmodule</td>
-<td style="width: 380px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;
+<td style="width: 396px;">module sillyfunction_sv<br />(<br /> input logic a, b, c, <br /> output logic y<br />);<br /> assign y = ~a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; c;<br />endmodule</td>
+<td style="width: 365px;">module sillyfunction_v <br />(<br /> input a, b, c,<br /> output y<br />);<br /> assign y = ~a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; ~c |<br /> a &amp; ~b &amp; c;<br />endmodule</td>
+<td style="width: 581px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;
 <p>entity sillyfunction_vhd is</p>
 <p>port<br />(<br /> a, b, c: in STD_LOGIC;<br /> y: out STD_LOGIC<br />);<br />end;</p>
 <p>architecture synth of sillyfunction_vhd is<br />begin<br /> y &lt;= (not a and not b and not c) or<br /> (a and not b and not c) or<br /> (a and not b and c);<br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.2 INVERTERS</p>
 <p>HDL Example 4.2 describes four inverters<br />connected to 4-bit busses.&nbsp;Bitwise operators</p>
 <ul>
@@ -58,23 +58,23 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.2%20INVERTERS" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">
+<td style="width: 396px;">
 <p>module inv_sv<br />(<br /> input logic [3:0] a,<br /> output logic [3:0] y<br />);</p>
 <p>assign y = ~a;</p>
 <p>endmodule</p>
 &nbsp;</td>
-<td style="width: 380px;">&nbsp;module inv_v
+<td style="width: 365px;">&nbsp;module inv_v
 <p>(<br /> input [3:0] a,<br /> output [3:0] y<br />);</p>
 <p>assign y = ~a;</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;
+<td style="width: 581px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;
 <p>entity inv_vhd is<br />port<br />(<br /> a: in STD_LOGIC_VECTOR(3 downto 0);<br /> y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
 <p>architecture synth of inv_vhd is<br /> begin<br /> y &lt;= not a;<br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;
+<td style="width: 353px;">&nbsp;
 <p>&nbsp;HDL Example 4.3 LOGIC GATES</p>
 <p>HDL Example 4.3 demonstrates bitwise operations acting on 4-bit busses for other basic logic functions.</p>
 <p><br />A complete command such as assign y4 = ~(a &amp; b); is called a statement.<br />assign out = in1 op in2; is called a continuous assignment statement.</p>
@@ -86,21 +86,21 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.3%20LOGIC%20GATES" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;module gates_sv
+<td style="width: 396px;">&nbsp;module gates_sv
 <p>(<br />input logic [3:0] a, b,<br />output logic [3:0] y1, y2, y3, y4, y5<br />);</p>
 <p><br />/*five different two-input logic<br />gates acting on 4-bit busses */<br /> assign y1 = a &amp; b; // AND<br /> assign y2 = a | b; // OR<br /> assign y3 = a ^ b; // XOR<br /> assign y4 = ~(a &amp; b); // NAND<br /> assign y5 = ~(a |b); // NOR<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;module gates_v&nbsp;
+<td style="width: 365px;">&nbsp;module gates_v&nbsp;
 <p>(<br /> input [3:0] a, b,<br /> output [3:0] y1, y2, y3, y4, y5<br />);</p>
 <p><br />/* Five different two-input logic<br />gates acting on 4 bit busses */<br />assign y1 = a &amp; b; // AND<br />assign y2 = a | b; // OR<br />assign y3 = a ^ b; // XOR<br />assign y4 = ~(a &amp; b); // NAND<br />assign y5 = ~(a | b); // NOR<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 581px;">
 <p>&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity gates_vhd is<br />port<br />(<br />a, b: in STD_LOGIC_VECTOR(3 downto 0);<br />y1, y2, y3, y4, y5: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
 <p><br />architecture synth of gates_vhd is<br />begin<br />-- five different two-input logic gates<br />-- acting on 4-bit busses<br /> y1 &lt;= a and b;<br /> y2 &lt;= a or b;<br /> y3 &lt;= a xor b;<br /> y4 &lt;= a nand b;<br /> y5 &lt;= a nor b;<br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>HDL Example 4.4 EIGHT-INPUT AND</p>
 <p>As one would expect, |, ^, ~&amp;, and ~ | reduction operators are available for OR, XOR, NAND, and NOR as well.<br />Recall that a multi-input XOR performs parity, returning TRUE if an odd number of inputs are TRUE.</p>
 <p>&nbsp;</p>
@@ -114,21 +114,21 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.4%20EIGHT-INPUT%20AND" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">
+<td style="width: 396px;">
 <p>module and8_sv<br />(<br />input logic [7:0] a,<br />output logic y, y1<br />);</p>
 <p>assign y = &amp;a;<br />// &amp;a is much easier to write than<br /> assign y1 = a[7] &amp; a[6] &amp; a[5] &amp; a[4] &amp; a[3] &amp; a[2] &amp; a[1] &amp; a[0];<br />endmodule</p>
 <p>&nbsp;</p>
 </td>
-<td style="width: 380px;">module and8_v <br />(<br />input [7:0] a,<br />output y<br />);<br />assign y = &amp;a;<br />// &amp;a is much easier to write than<br />// assign y a[7] &amp; a[6] &amp; a[5] &amp; a[4] &amp;<br />// a[3] &amp; a[2] &amp; a[1] &amp; a[0];<br />endmodule
+<td style="width: 365px;">module and8_v <br />(<br />input [7:0] a,<br />output y<br />);<br />assign y = &amp;a;<br />// &amp;a is much easier to write than<br />// assign y a[7] &amp; a[6] &amp; a[5] &amp; a[4] &amp;<br />// a[3] &amp; a[2] &amp; a[1] &amp; a[0];<br />endmodule
 <p>&nbsp;</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 581px;">
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity and8_vhd is<br />port<br />(<br /> a: in STD_LOGIC_VECTOR(7 downto 0);<br /> y: out STD_LOGIC<br />);<br />end;</p>
 <p><br />architecture synth of and8_vhd is<br />begin<br />y &lt;= a(7) and a(6) and a(5) and a(4) and a(3) and a(2) and a(1) and a(0);<br />end;&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.5 2to1 MULTIPLEXER</p>
 <p>HDL Example 4.5 illustrates a 2:1 multiplexer using a conditional assignment.<br />Conditional assignments select the output from among alternatives based on an input called the condition.</p>
 <ul>
@@ -139,12 +139,12 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.5%202to1%20MULTIPLEXER" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">module mux2_sv<br />(<br />input logic [3:0] d0, d1,<br />input logic s,<br />output logic [3:0] y<br />);<br />assign y = s ? d1 : d0;<br />endmodule</td>
-<td style="width: 380px;">&nbsp;module mux2_v <br />(<br />input [3:0] d0, d1,<br />input s,<br />output [3:0] y<br />);<br />assign y = s ? d1 : d0;<br />endmodule</td>
-<td style="width: 380px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux2_vhd is<br />port<br />(<br />d0, d1: in STD_LOGIC_VECTOR(3 downto 0);<br />s: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;<br />architecture synth of mux2_vhd is<br />begin<br />y &lt;= d1 when s = '0' else d0;<br />end;</td>
+<td style="width: 396px;">module mux2_sv<br />(<br />input logic [3:0] d0, d1,<br />input logic s,<br />output logic [3:0] y<br />);<br />assign y = s ? d1 : d0;<br />endmodule</td>
+<td style="width: 365px;">&nbsp;module mux2_v <br />(<br />input [3:0] d0, d1,<br />input s,<br />output [3:0] y<br />);<br />assign y = s ? d1 : d0;<br />endmodule</td>
+<td style="width: 581px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux2_vhd is<br />port<br />(<br />d0, d1: in STD_LOGIC_VECTOR(3 downto 0);<br />s: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;<br />architecture synth of mux2_vhd is<br />begin<br />y &lt;= d1 when s = '0' else d0;<br />end;</td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.6 4to1 MULTIPLEXER</p>
 <p>The multiplexer has multiple data (d) and one-hot enable (e) inputs. When one of the enables is asserted, the associated data is passed to the output.</p>
 <ul>
@@ -156,18 +156,18 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.6%204to1%20MULTIPLEXER" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">
+<td style="width: 396px;">
 <p>&nbsp;module mux4_sv<br />(<br />input logic [3:0] d0, d1, d2, d3,<br />input logic [1:0] s,<br />output logic [3:0] y<br />);<br />assign y = s[1] ? (s[0] ? d3 : d2): (s[0] ? d1 : d0);<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;module mux4_v<br />(<br />input [3:0] d0, d1, d2, d3,<br />input [1:0] s,<br />output [3:0] y<br />);<br />assign y = s[1] ? (s[0] ? d3 : d2) : (s[0] ? d1 : d0);<br />endmodule</td>
-<td style="width: 380px;">
+<td style="width: 365px;">&nbsp;module mux4_v<br />(<br />input [3:0] d0, d1, d2, d3,<br />input [1:0] s,<br />output [3:0] y<br />);<br />assign y = s[1] ? (s[0] ? d3 : d2) : (s[0] ? d1 : d0);<br />endmodule</td>
+<td style="width: 581px;">
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux4_vhd is<br />port(<br />d0, d1,d2, d3: in STD_LOGIC_VECTOR(3 downto 0);<br />s: in STD_LOGIC_VECTOR(1 downto 0);<br />y: out STD_LOGIC_VECTOR(3 downto 0)--;<br />--y_1: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
 <p><br />architecture synth1 of mux4_vhd is<br />begin<br />y &lt;= d0 when s = "00" <br />else d1 when s = "01" <br />else d2 when s = "10" <br />else d3;</p>
 <p>-- next code make uncorrect RTL and Synthesis<br />--with s select y_1 &lt;=<br />-- d0 when "00",<br />-- d1 when "01",<br />-- d2 when "10",<br />-- d3 when others;<br /> <br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.7 FULL ADDER</p>
 <p>P and G are called internal variables, because they are neither inputs nor outputs but are used only internal to the module. They are similar to local variables in programming languages.</p>
 <ul>
@@ -178,17 +178,17 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.7%20FULL%20ADDER" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">
+<td style="width: 396px;">
 <p>module fulladder_sv<br />(<br />input logic a, b, cin,<br />output logic s, cout<br />);</p>
 <p><br />logic p, g;</p>
 <p><br />assign p = a ^ b;<br />assign g = a &amp; b;<br />assign s = p ^ cin;<br />assign cout = g |(p &amp; cin);<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 365px;">
 <p>module fulladder_v<br />(<br />input a, b, cin,<br />output s, cout<br />);</p>
 <p><br />wire p, g;</p>
 <p><br />assign p = a ^ b;<br />assign g = a &amp; b;<br />assign s = p ^ cin;<br />assign cout = g | (p &amp; cin);<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 581px;">
 <p>&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity fulladder_vhd is<br />port<br />(<br />a, b, cin: in STD_LOGIC;<br />s, cout: out STD_LOGIC<br />);<br />end;</p>
 <p><br />architecture synth of fulladder_vhd is</p>
 <p><br />signal p, g: STD_LOGIC;</p>
@@ -196,7 +196,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>HDL Example 4.10 TRISTATE BUFFER</p>
 <p>&nbsp;HDLs use x to indicate an invalid logic level. If a bus is simultaneously driven to 0 and 1 by two enabled tristate buffers (or other gates), the result is x, indicating contention. If all the tristate buffers driving a bus are simultaneously OFF, the bus will float, indicated by z.<br /><br /></p>
 <ul>
@@ -208,15 +208,15 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.10%20TRISTATE%20BUFFER" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;module tristate_sv<br />(<br />input logic [3:0] a,<br />input logic en,<br />output tri [3:0] y<br />);<br />assign y = en ? a : 4'bz;<br />endmodule</td>
-<td style="width: 380px;">&nbsp;module tristate_v <br />(<br />input [3:0] a,<br />input en,<br />output [3:0] y<br />);<br />assign y = en ? a : 4'bz;<br />endmodule</td>
-<td style="width: 380px;">
+<td style="width: 396px;">&nbsp;module tristate_sv<br />(<br />input logic [3:0] a,<br />input logic en,<br />output tri [3:0] y<br />);<br />assign y = en ? a : 4'bz;<br />endmodule</td>
+<td style="width: 365px;">&nbsp;module tristate_v <br />(<br />input [3:0] a,<br />input en,<br />output [3:0] y<br />);<br />assign y = en ? a : 4'bz;<br />endmodule</td>
+<td style="width: 581px;">
 <p>&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity tristate_vhd is<br />port<br />(<br />a: in STD_LOGIC_VECTOR(3 downto 0);<br />en: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
 <p><br />architecture synth of tristate_vhd is<br />begin<br />y &lt;= a when en = '1' else "ZZZZ";<br />--y &lt;= "ZZZZ" when en = '0' else a;<br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.12 BIT SWIZZLING</p>
 <p>Often it is necessary to operate on a subset of a bus or to concatenate (join together) signals to form busses. These operations are collectively known as bit swizzling.</p>
 <ul>
@@ -227,25 +227,25 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.12%20BIT%20SWIZZLING" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>//HDL Example 4.12 BIT SWIZZLING</p>
 <p>module BIT_SWIZZLING_sv <br />(<br /> input logic [4:0] C,<br /> input logic [4:0] D,<br /> output logic [8:0] Y<br />);</p>
 <p>assign Y = {C[2:1], {3{D[0]}}, C[0], 3'b101}; //y = c2c1d0d0d0c0101 3'b101 - constant</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>//HDL Example 4.12 BIT SWIZZLING</p>
 <p>module BIT_SWIZZLING_v <br />(<br /> input [4:0] C,<br /> input [4:0] D,<br /> output [8:0] Y<br />);</p>
 <p>assign Y = {C[2:1], {3{D[0]}}, C[0], 3'b101}; //y = c2c1d0d0d0c0101 3'b101 - constant</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 581px;">
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity BIT_SWIZZLING_vhd is<br />port<br />(<br />C: in STD_LOGIC_VECTOR(4 downto 0);<br />D: in STD_LOGIC_VECTOR(4 downto 0);<br />Y: out STD_LOGIC_VECTOR(8 downto 0)<br />);<br />end;</p>
 <p><br />architecture synth of BIT_SWIZZLING_vhd is<br />begin<br />Y &lt;= C(2 downto 1) &amp; D(0) &amp; D(0) &amp; D(0) &amp; C(0) &amp; "101";<br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.14 STRUCTURAL MODEL OF 4to1 MULTIPLEXER</p>
 <p>HDL Example 4.14 shows how to assemble a 4:1 multiplexer from three 2:1 multiplexers. Each copy of the 2:1 multiplexer is called an instance. Multiple instances of the same module are distinguished by distinct names, in this case lowmux, highmux, and finalmux.<br />This is an example of regularity, in which the 2:1 multiplexer is reused many times.</p>
 <ul>
@@ -257,7 +257,7 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.14%20STRUCTURAL%20MODEL%20OF%204to1%20MULTIPLEXER" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>module mux4_sv<br />(<br />input logic [3:0] d0, d1, d2, d3,<br />input logic [1:0] s,<br />output logic [3:0] y<br />);</p>
 <p>logic [3:0] low, high;</p>
 <p>mux2_sv lowmux(d0, d1, s[0], low);<br />mux2_sv highmux(d2, d3, s[0], high);<br />mux2_sv finalmux(low, high, s[1], y);</p>
@@ -266,7 +266,7 @@
 <p>module mux2_sv<br /> (<br /> input [3:0] d0,<br /> input [3:0] d1,<br /> input s,<br /> output [3:0] y<br /> );<br /> assign y = s ? d1 : d0;<br />endmodule</p>
 <p>&nbsp;</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 365px;">
 <p>&nbsp;module mux4_v<br />(<br />input [3:0] d0, d1, d2, d3,<br />input [1:0] s,<br />output [3:0] y<br />);</p>
 <p>wire [3:0] low, high;</p>
 <p>mux2_v lowmux (d0, d1, s[0], low);<br />mux2_v highmux (d2, d3, s[0], high);<br />mux2_v finalmux (low, high, s[1], y);</p>
@@ -274,7 +274,7 @@
 <p>---------------------------------------------------------</p>
 <p>module mux2_v<br /> (<br /> input [3:0] d0,<br /> input [3:0] d1,<br /> input s,<br /> output [3:0] y<br /> );<br /> assign y = s ? d1 : d0;<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 581px;">
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux4_vhd is<br />port <br />(<br />d0, d1, d2, d3: in STD_LOGIC_VECTOR (3 downto 0);<br />s: in STD_LOGIC_VECTOR (1 downto 0);<br />y: out STD_LOGIC_VECTOR (3 downto 0)<br />);<br />end;</p>
 <p>architecture struct of mux4_vhd is</p>
 <p>component mux2_vhd<br />port <br />( <br />d0, d1 : in STD_LOGIC_VECTOR (3 downto 0);<br />s: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR (3 downto 0)<br />);<br />end component;</p>
@@ -288,7 +288,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.15 STRUCTURAL MODEL OF 2to1 MULTIPLEXER</p>
 <p><span class="fontstyle0">The structural modeling to construct a 2:1<br />multiplexer from a pair of tristate buffers.</span></p>
 <ul>
@@ -299,12 +299,12 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.15%20STRUCTURAL%20MODEL%20OF%202to1%20MULTIPLEXER" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">
+<td style="width: 396px;">
 <p>&nbsp;module mux2_sv<br />(<br />input logic [3:0] d0, d1,<br />input logic s,<br />output tri [3:0] y<br />);<br />tristate_sv t0(d0, ~s, y);<br />tristate_sv t1(d1, s, y);<br />endmodule</p>
 <p>---------------------------------------------------------</p>
 <p>&nbsp;module tristate_sv<br />(<br />input logic [3:0] a,<br />input logic en,<br />output tri [3:0] y<br />);<br />assign y = en ? a : 4'bz;<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 365px;">
 <p>&nbsp;</p>
 <p>module mux2_v <br />(<br />input [3:0] d0, d1,<br />input s,<br />output [3:0] y<br />);</p>
 <p>tristate_v t0 (d0, ~s, y);<br />tristate_v t1 (d1, s, y);<br />endmodule&nbsp;</p>
@@ -312,7 +312,7 @@
 <p>&nbsp;module tristate_v <br />(<br />input [3:0] a,<br />input en,<br />output [3:0] y<br />);<br />assign y = en ? a : 4'bz;<br />endmodule</p>
 <p>&nbsp;</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 581px;">
 <p>&nbsp;</p>
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;</p>
 <p>entity mux2_vhd is<br />port<br />(<br /> d0, d1: in STD_LOGIC_VECTOR(3 downto 0);<br /> s: in STD_LOGIC;<br /> y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
@@ -327,7 +327,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;
+<td style="width: 353px;">&nbsp;
 <p>HDL Example 4.16 ACCESSING PARTS OF BUSSES</p>
 <p><span class="fontstyle0">shows how modules can access part of a bus. An<br />8-bit wide 2:1 multiplexer is built using two of the 4-bit 2:1 multiplexers<br />already defined, operating on the low and high nibbles of the byte.<br />In general, complex systems are designed </span><span class="fontstyle2">hierarchically. </span><span class="fontstyle0">The overall<br />system is described structurally by instantiating its major components.<br />Each of these components is described structurally from its building<br />blocks, and so forth recursively until the pieces are simple enough to<br />describe behaviorally. It is good style to avoid (or at least to minimize)<br />mixing structural and behavioral descriptions within a single module.</span></p>
 <ul>
@@ -338,17 +338,17 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.16%20ACCESSING%20PARTS%20OF%20BUSSES" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>module mux2_8_sv<br />(<br />input logic [7:0] d0, d1,<br />input logic s,<br />output logic [7:0] y<br />);</p>
 <p>mux2_sv lsbmux(d0[3:0], d1[3:0], s, y[3:0]);<br />mux2_sv msbmux(d0[7:4], d1[7:4], s, y[7:4]);</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>module mux2_8_v <br />(<br />input [7:0] d0, d1,<br />input s,<br />output [7:0] y<br />);</p>
 <p>mux2_v lsbmux (d0[3:0], d1[3:0], s, y[3:0]);<br />mux2_v msbmux (d0[7:4], d1[7:4], s, y[7:4]);</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 581px;">&nbsp;
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux2_8_vhd is<br />port<br />(<br /> d0, d1: in STD_LOGIC_VECTOR(7 downto 0);<br /> s: in STD_LOGIC;<br /> y: out STD_LOGIC_VECTOR(7 downto 0)<br />);<br />end;</p>
 <p>architecture struct of mux2_8_vhd is</p>
 <p>component mux2_vhd<br />port<br />(<br /> d0, d1: in STD_LOGIC_VECTOR(3 downto 0);<br /> s: in STD_LOGIC;<br /> y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end component;</p>
@@ -359,7 +359,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.17 REGISTER</p>
 <p><span class="fontstyle0">The flip-flop includes only </span><span class="fontstyle2">clk </span><span class="fontstyle0">in the sensitive list. It remembers its old value of </span><span class="fontstyle2">q </span><span class="fontstyle0">until the next rising edge of the </span><span class="fontstyle2">clk</span><span class="fontstyle0">, even if&nbsp;</span><span class="fontstyle2">d </span><span class="fontstyle0">changes in the interim.<br />In contrast, Verilog continuous assignment statements (</span><span class="fontstyle2">assign</span><span class="fontstyle0">) and VHDL concurrent assignment statements (&lt;=</span><span class="fontstyle0">) are reevaluated any time any of the inputs on the right-hand side changes. Therefore, such code necessarily describes combinational logic.</span></p>
 <ul>
@@ -371,17 +371,17 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.17%20REGISTER" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>module flop_sv<br />(<br />input logic clk,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);</p>
 <p>always_ff @(posedge clk)<br />q &lt;= d;</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>module flop_v<br />(<br />input clk,<br />input [3:0] d,<br />output reg [3:0] q<br />);</p>
 <p>always @ (posedge clk)<br />q &lt;= d;</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 581px;">&nbsp;
 <p>library IEEE; <br />use IEEE.STD_LOGIC_1164.all;<br />entity flop_vhd is<br />port<br />(<br />clk: in STD_LOGIC;<br />d: in STD_LOGIC_VECTOR(3 downto 0);<br />q: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
 <p>architecture synth of flop_vhd is</p>
 <p>begin<br />process(clk) begin<br /> if rising_edge(clk) then<br />-- if clk'event and clk = '1' then<br /> q &lt;= d;<br />end if;<br />end process;</p>
@@ -389,7 +389,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp; <span class="fontstyle0">HDL Example 4.18&nbsp;</span><span class="fontstyle2">RESETTABLE REGISTER</span></p>
 <p>Generally, it is good practice to use resettable registers so that on powerup you can put your system in a known state. The reset may be either asynchronous or synchronous. Recall that asynchronous reset occurs immediately, whereas synchronous reset clears the output only on the next rising edge of the clock.</p>
 <ul>
@@ -400,13 +400,13 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.18%20RESETTABLE%20REGISTER_Asyn_Syn" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">
+<td style="width: 396px;">
 <p>&nbsp;module flop_ar_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);<br />// asynchronous reset</p>
 <p><br />always_ff @(posedge clk, posedge reset)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
 <p>---------------------------------------------------------</p>
 <p>module flopr_sr_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);<br />// synchronous reset<br />always_ff @(posedge clk)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 365px;">
 <p>&nbsp;</p>
 <p>module flop_ar_v<br />(<br />input clk,<br />input reset,<br />input [3:0] d,<br />output reg [3:0] q<br />);<br />// asynchronous reset</p>
 <p><br />always @ (posedge clk, posedge reset)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
@@ -414,7 +414,7 @@
 <p>module flopr_sr_v <br />(<br />input clk,<br />input reset,<br />input [3:0] d,<br />output reg [3:0] q<br />);<br />// synchronous reset<br />always @ (posedge clk)<br />if (reset) <br /> q &lt;= 4'b0;<br />else <br /> q &lt;= d;<br />endmodule</p>
 <p>&nbsp;</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 581px;">
 <p>&nbsp;</p>
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity flopr_as_vhd is</p>
 <p>port<br />(<br />clk, reset: in STD_LOGIC;<br />d: in STD_LOGIC_VECTOR(3 downto 0);<br />q: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
@@ -430,7 +430,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.19 RESETTABLE ENABLED REGISTER</p>
 <p><span class="fontstyle0">Enabled registers respond to the clock only when the enable is asserted.<br />It is retains its old value if both </span><span class="fontstyle2">reset </span><span class="fontstyle0">and </span><span class="fontstyle2">en </span><span class="fontstyle0">are FALSE.</span></p>
 <ul>
@@ -442,18 +442,18 @@
 </ul>
 <p>&nbsp;</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 396px;">
 <p>&nbsp;module flopenr_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic en,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);<br />// asynchronous reset<br />always_ff @(posedge clk, posedge reset)<br /> if (reset) q &lt;= 4'b0;<br /> else if (en) q &lt;= d;<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;module flopenr_v<br />(<br />input clk,<br />input reset,<br />input en,<br />input [3:0] d,<br />output reg[3:0] q<br />);<br />// asynchronous reset<br />always @(posedge clk, posedge reset)<br /> if (reset) q &lt;= 4'b0;<br /> else if (en) q &lt;= d;<br />endmodule</td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;module flopenr_v<br />(<br />input clk,<br />input reset,<br />input en,<br />input [3:0] d,<br />output reg[3:0] q<br />);<br />// asynchronous reset<br />always @(posedge clk, posedge reset)<br /> if (reset) q &lt;= 4'b0;<br /> else if (en) q &lt;= d;<br />endmodule</td>
+<td style="width: 581px;">&nbsp;
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity flopenr_vhd is<br />port<br />(<br /> clk, reset, en: in STD_LOGIC;<br /> d: in STD_LOGIC_VECTOR(3 downto 0);<br /> q: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
 <p>architecture asynchronous of flopenr_vhd is<br />-- asynchronous reset<br />begin<br />process(clk, reset) begin<br /> if reset = '1' then<br /> q &lt;= "0000";<br /> elsif rising_edge(clk) then<br /> if en ='1' then<br /> q &lt;= d;<br /> end if;<br /> end if;<br />end process;<br />end;</p>
 <p>&nbsp;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.20 SYNCHRONIZER</p>
 <p>A single always/process statement can be used to describe multiple pieces of hardware. For example, consider the synchronizer made of two back-to-back flip-flops. On the rising edge of<br />clk, d is copied to n1. At the same time, n1 is copied to q.</p>
 <ul>
@@ -464,18 +464,18 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.20%20SYNCHRONIZER" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">
+<td style="width: 396px;">
 <p>module sync_sv<br />(<br />input logic clk,<br />input logic d,<br />output logic q<br />);<br />logic n1;<br />always_ff @(posedge clk)<br />begin<br />n1 &lt;= d; // nonblocking<br />q &lt;= n1; // nonblocking<br />end<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 365px;">
 <p>module sync_v <br />(<br />input clk, <br />input d,<br />output reg q<br />);</p>
 <p>reg n1;</p>
 <p>always @ (posedge clk)<br />begin<br />n1 &lt;= d;<br />q &lt;= n1;<br />end<br />endmodule</p>
 </td>
-<td style="width: 380px;">library IEEE; <br />use IEEE.STD_LOGIC_1164.all;<br />library IEEE; <br />use IEEE.STD_LOGIC_1164.all;<br />entity sync_vhd is port <br />( <br />clk: in <br />STD_LOGIC; <br />d: in STD_LOGIC; <br />q: out STD_LOGIC <br />);<br />end;<br />architecture good of sync_vhd is<br />signal n1: STD_LOGIC;<br />begin process(clk) <br />begin <br />if rising_edge(clk) then <br />n1 &lt;= d; <br />q &lt;= n1; <br />end if; <br />end process;<br />end;</td>
+<td style="width: 581px;">library IEEE; <br />use IEEE.STD_LOGIC_1164.all;<br />library IEEE; <br />use IEEE.STD_LOGIC_1164.all;<br />entity sync_vhd is port <br />( <br />clk: in <br />STD_LOGIC; <br />d: in STD_LOGIC; <br />q: out STD_LOGIC <br />);<br />end;<br />architecture good of sync_vhd is<br />signal n1: STD_LOGIC;<br />begin process(clk) <br />begin <br />if rising_edge(clk) then <br />n1 &lt;= d; <br />q &lt;= n1; <br />end if; <br />end process;<br />end;</td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.21 Latches Do not do that</p>
 <p>A D latch is transparent when the clock is HIGH, allowing data to flow from input to output. The latch becomes opaque when the clock is LOW, retaining its old state. HDL Example 4.22 shows the idiom for a D latch.<br />Not all synthesis tools support latches well. Unless you know that your tool does support latches and you have a good reason to use them, avoid them, and use edge-triggered flip-flops instead. Furthermore, take care that your HDL does not imply any unintended latches, something that is easy to do if you aren&rsquo;t attentive. Many synthesis tools warn you when a latch is created; if you didn&rsquo;t expect one, track down the bug in your HDL</p>
 <ul>
@@ -487,22 +487,22 @@
 </ul>
 <p>&nbsp;</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>module latch_sv<br />(<br />input logic clk,<br />input logic [3:0] d,<br />output logic [3:0] q<br />);</p>
 <p>always_latch // it is similar to always @(clk, d)<br />if (clk) q &lt;= d;<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>module latch_v <br />(<br />input clk,<br />input [3:0] d,<br />output reg [3:0] q<br />);</p>
 <p>always @ (clk, d)<br />if (clk) q &lt;= d;<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 581px;">
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;</p>
 <p>entity latch_vhd is<br />port<br />(<br />clk: in STD_LOGIC;<br />d: in STD_LOGIC_VECTOR(3 downto 0);<br />q: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
 <p>architecture synth of latch_vhd is<br />begin<br />process(clk, d) <br />begin<br />if clk = '1' then<br />q &lt;= d;<br />end if;<br />end process;<br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.22 INVERTER USING always_process</p>
 <p>&nbsp;However, always/process statements can also be used to describe combinational logic behaviorally if the sensitivity list is written to respond to changes in all of the inputs and the body prescribes the output value for every possible input combination. HDL Example 4.22 uses always/process statements to describe a bank of four inverters.</p>
 <ul>
@@ -514,23 +514,23 @@
 </ul>
 <p>The example is poor applications of always/process statements for modeling combinational logic because they require more lines than the equivalent approach with assignment statements. Moreover, they pose the risk of inadvertently implying sequential logic if the inputs are left out of the sensitivity list. However, case and if statements are convenient for modeling more complicated combinational logic. case and if statements must appear within always/process statements and are examined in the next sections.</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 396px;">
 <p>module inv_sv<br />(<br />input logic [3:0] a,<br />output logic[3:0] y<br />);</p>
 <p>always_comb<br />y = ~a;<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>module inv_v <br />(<br />input [3:0] a,<br />output reg [3:0] y<br />);</p>
 <p>always @ (*)<br />y = ~a;</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 581px;">&nbsp;
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity inv_vhd is<br />port<br />(<br />a: in STD_LOGIC_VECTOR(3 downto 0);<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
 <p>architecture proc of inv_vhd is</p>
 <p>begin<br />--process(all) begin -- supported in VHDL 1076-2008<br />process (a) begin<br />y &lt;= not a;<br />end process;<br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;</p>
 <p>HDL Example 4.23 FULL ADDER USING always_process</p>
 <p><span class="fontstyle0">Full adder using intermediate signals<br /></span><span class="fontstyle2">p </span><span class="fontstyle0">and </span><span class="fontstyle2">g </span><span class="fontstyle0">to compute </span><span class="fontstyle2">s </span><span class="fontstyle0">and </span><span class="fontstyle2">cout</span><span class="fontstyle0">. It produces the same circuit from<br />Figure 4.8, but uses </span><span class="fontstyle2">always/process </span><span class="fontstyle0">statements in place of assignment<br />statements.</span></p>
@@ -543,21 +543,21 @@
 </ul>
 <p>The example is poor applications of always/process statements for modeling combinational logic because they require more lines than the equivalent approach with assignment statements. Moreover, they pose the risk of inadvertently implying sequential logic if the inputs are left out of the sensitivity list. However, case and if statements are convenient for modeling more complicated combinational logic. case and if statements must appear within always/process statements and are examined in the next sections.</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>module fulladder_sv<br />(<br />input logic a, b, cin,<br />output logic s, cout<br />);</p>
 <p>logic p, g;</p>
 <p>always_comb<br />begin<br />p = a ^ b; // blocking<br />g = a &amp; b; // blocking<br />s = p ^ cin; // blocking<br />cout = g |(p &amp; cin); // blocking<br />end<br />endmodule</p>
 <p>&nbsp;</p>
 </td>
-<td style="width: 380px;">module fulladder_v<br />(<br />input a, b, cin,<br />output reg s, cout<br />);<br />reg p, g;<br />always @ (*)<br />begin<br />p = a ^ b;// blocking<br />g = a &amp; b;// blocking<br />s = p ^ cin;// blocking<br />cout = g | (p &amp; cin);// blocking<br />end<br />endmodule</td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">module fulladder_v<br />(<br />input a, b, cin,<br />output reg s, cout<br />);<br />reg p, g;<br />always @ (*)<br />begin<br />p = a ^ b;// blocking<br />g = a &amp; b;// blocking<br />s = p ^ cin;// blocking<br />cout = g | (p &amp; cin);// blocking<br />end<br />endmodule</td>
+<td style="width: 581px;">&nbsp;
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity fulladder_vhd is</p>
 <p>port<br />(<br />a, b, cin: in STD_LOGIC;<br />s, cout: out STD_LOGIC<br />);<br />end;</p>
 <p>architecture synth of fulladder_vhd is<br />begin<br />process(all) -- supported in VHDL 1076-2008<br />--process (a, b, cin)<br />variable p, g: STD_LOGIC;<br />begin<br />p := a xor b; -- blocking<br />g := a and b; -- blocking<br />s &lt;= p xor cin;<br />cout &lt;= g or (p and cin);<br />end process;<br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>HDL Example 4.24 SEVEN-SEGMENT DISPLAY DECODER</p>
 <p>A better application of using the always/process statement for combinational logic is a seven-segment display decoder that takes advantage of the case statement that must appear inside an always/process statement.<br />The case statement performs different actions depending on the value of its input. A case statement implies combinational logic if all possible input combinations are defined; otherwise, it implies sequential logic, because the output will keep its old value in the undefined cases.</p>
 <ul>
@@ -568,21 +568,21 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.24%20SEVEN-SEGMENT%20DISPLAY%20DECODER" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>module sevenseg_sv<br />(<br />input logic [3:0] data,<br />output logic [6:0] segments<br />);</p>
 <p>always_comb<br />case(data)<br />// abc_defg<br />0: segments = 7'b111_1110;<br />1: segments = 7'b011_0000;<br />2: segments = 7'b110_1101;<br />3: segments = 7'b111_1001;<br />4: segments = 7'b011_0011;<br />5: segments = 7'b101_1011;<br />6: segments = 7'b101_1111;<br />7: segments = 7'b111_0000;<br />8: segments = 7'b111_1111;<br />9: segments = 7'b111_0011;<br />default: segments = 7'b000_0000;<br />endcase<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>module sevenseg_v <br />(<br />input [3:0] data,<br />output reg [6:0] segments<br />);</p>
 <p>always @ (*)<br />case (data)<br />// abc_defg<br />0: segments = 7'b111_1110;<br />1: segments = 7'b011_0000;<br />2: segments = 7'b110_1101;<br />3: segments = 7'b111_1001;<br />4: segments = 7'b011_0011;<br />5: segments = 7'b101_1011;<br />6: segments = 7'b101_1111;<br />7: segments = 7'b111_0000;<br />8: segments = 7'b111_1111;<br />9: segments = 7'b111_1011;<br />default: segments = 7'b000_0000;<br />endcase<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 581px;">&nbsp;
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity sevenseg_vhd is<br />port<br />(<br />data: in STD_LOGIC_VECTOR(3 downto 0);<br />segments: out STD_LOGIC_VECTOR(6 downto 0)<br />);<br />end;</p>
 <p>architecture synth of sevenseg_vhd is<br />begin<br />process(all) begin --(VHDL 2008)<br />case data is<br />-- abcdefg<br />when X"0" =&gt; segments &lt;= "1111110";<br />when X"1" =&gt; segments &lt;= "0110000";<br />when X"2" =&gt; segments &lt;= "1101101";<br />when X"3" =&gt; segments &lt;= "1111001";<br />when X"4" =&gt; segments &lt;= "0110011";<br />when X"5" =&gt; segments &lt;= "1011011";<br />when X"6" =&gt; segments &lt;= "1011111";<br />when X"7" =&gt; segments &lt;= "1110000";<br />when X"8" =&gt; segments &lt;= "1111111";<br />when X"9" =&gt; segments &lt;= "1110011";<br />when others =&gt; segments &lt;= "0000000";<br />end case;<br />end process;<br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>HDL Example 4.25 3to8 DECODER</p>
 <p><span class="fontstyle0">Ordinary decoders are also commonly written with </span><span class="fontstyle2">case </span><span class="fontstyle0">statements.</span></p>
 <ul>
@@ -595,19 +595,19 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.25%203to8%20DECODER" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">
+<td style="width: 396px;">
 <p>module decoder3_8_sv<br />(<br />input logic [2:0] a,<br />output logic [7:0] y<br />);<br />always_comb<br />case(a)<br />3'b000: y = 8'b00000001;<br />3'b001: y = 8'b00000010;<br />3'b010: y = 8'b00000100;<br />3'b011: y = 8'b00001000;<br />3'b100: y = 8'b00010000;<br />3'b101: y = 8'b00100000;<br />3'b110: y = 8'b01000000;<br />3'b111: y = 8'b10000000;<br />default: y = 8'bxxxxxxxx;<br />endcase<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 365px;">
 <p>module decoder3_8_v <br />(<br /> input [2:0] a,<br /> output reg [7:0] y<br /> );</p>
 <p>always @ (*)<br /> case (a)<br />3'b000: y = 8'b00000001;<br />3'b001: y = 8'b00000010;<br />3'b010: y = 8'b00000100;<br />3'b011: y = 8'b00001000;<br />3'b100: y = 8'b00010000;<br />3'b101: y = 8'b00100000;<br />3'b110: y = 8'b01000000;<br />3'b111: y = 8'b10000000;<br />default: y = 8'bxxxxxxxx;<br /> endcase<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 581px;">
 <p>&nbsp;module decoder3_8_svmodule decoder3_8_sv<br />(<br />input logic [2:0] a,<br />output logic [7:0] y<br />);<br />always_comb case(a)<br />3'b000: y = 8'b00000001; <br />3'b001: y = 8'b00000010; <br />3'b010: y = 8'b00000100; <br />3'b011: y = 8'b00001000; <br />3'b100: y = 8'b00010000; <br />3'b101: y = 8'b00100000; <br />3'b110: y = 8'b01000000; <br />3'b111: y = 8'b10000000; <br />default: y = 8'bxxxxxxxx; <br />end case<br />end module</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.26 PRIORITY CIRCUIT</p>
 <ul>
 <li><a href="HDL Example 4.26 PRIORITY CIRCUIT\HDL Example 4_26 PRIORITY CIRCUIT_RTL (process(a) begin).PNG" target="_blank" rel="noopener">RTL schematics&nbsp;(process(a) begin)</a></li>
@@ -621,14 +621,14 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.26%20PRIORITY%20CIRCUIT" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">module priority_sv<br />(<br />input logic [3:0] a,<br />output logic [3:0] y<br />);<br />always_comb<br />if(a[3])y &lt;= 4'b1000;<br />else if (a[2])y &lt;= 4'b0100;<br />else if (a[1])y &lt;= 4'b0010;<br />else if (a[0])y &lt;= 4'b0001;<br />else y &lt;= 4'b0000;<br />endmodule<br />
+<td style="width: 396px;">module priority_sv<br />(<br />input logic [3:0] a,<br />output logic [3:0] y<br />);<br />always_comb<br />if(a[3])y &lt;= 4'b1000;<br />else if (a[2])y &lt;= 4'b0100;<br />else if (a[1])y &lt;= 4'b0010;<br />else if (a[0])y &lt;= 4'b0001;<br />else y &lt;= 4'b0000;<br />endmodule<br />
 <p>&nbsp;</p>
 </td>
-<td style="width: 380px;">&nbsp;module priority_v <br />(<br />input [3:0] a,<br />output reg [3:0] y<br />);<br />always @ (*)<br />if (a[3]) y = 4'b1000;<br />else if (a[2]) y = 4'b0100;<br />else if (a[1]) y = 4'b0010;<br />else if (a[0]) y = 4'b0001;<br />else y = 4'b0000;<br />endmodule</td>
-<td style="width: 380px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity priority_vhd is<br />port<br />(<br />a: in STD_LOGIC_VECTOR(3 downto 0);<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;<br />architecture synth of priority_vhd is<br />begin<br />--process(all) begin -- VHDL 2008, but --The Condition Operator is not supported yet for simulation (Vivado 2019.1.1)<br />--process (a) begin<br />--if a(3) then y &lt;= "1000";<br />--elsif a(2) then y &lt;= "0100";<br />--elsif a(1) then y &lt;= "0010";<br />--elsif a(0) then y &lt;= "0001";<br />--else y &lt;= "0000";<br />--end if;<br />process (a) begin<br />if a(3) = '1' then y &lt;= "1000";<br />elsif a(2) = '1' then y &lt;= "0100";<br />elsif a(1) = '1' then y &lt;= "0010";<br />elsif a(0) = '1' then y &lt;= "0001";<br />elsey &lt;= "0000";<br />end if;<br />end process;<br />end;</td>
+<td style="width: 365px;">&nbsp;module priority_v <br />(<br />input [3:0] a,<br />output reg [3:0] y<br />);<br />always @ (*)<br />if (a[3]) y = 4'b1000;<br />else if (a[2]) y = 4'b0100;<br />else if (a[1]) y = 4'b0010;<br />else if (a[0]) y = 4'b0001;<br />else y = 4'b0000;<br />endmodule</td>
+<td style="width: 581px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity priority_vhd is<br />port<br />(<br />a: in STD_LOGIC_VECTOR(3 downto 0);<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;<br />architecture synth of priority_vhd is<br />begin<br />--process(all) begin -- VHDL 2008, but --The Condition Operator is not supported yet for simulation (Vivado 2019.1.1)<br />--process (a) begin<br />--if a(3) then y &lt;= "1000";<br />--elsif a(2) then y &lt;= "0100";<br />--elsif a(1) then y &lt;= "0010";<br />--elsif a(0) then y &lt;= "0001";<br />--else y &lt;= "0000";<br />--end if;<br />process (a) begin<br />if a(3) = '1' then y &lt;= "1000";<br />elsif a(2) = '1' then y &lt;= "0100";<br />elsif a(1) = '1' then y &lt;= "0010";<br />elsif a(0) = '1' then y &lt;= "0001";<br />elsey &lt;= "0000";<br />end if;<br />end process;<br />end;</td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;</p>
 <p>&nbsp;HDL Example 4.27 PRIORITY CIRCUIT USING casez</p>
 <p><span class="fontstyle0">Verilog also provides the<br /></span><span class="fontstyle2">casez </span><span class="fontstyle0">statement to describe truth tables with don&rsquo;t cares (indicated with<br /></span><span class="fontstyle2">? </span><span class="fontstyle0">in the </span><span class="fontstyle2">casez </span><span class="fontstyle0">statement).</span> </p>
@@ -643,19 +643,19 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.27%20PRIORITY%20CIRCUIT%20USING%20casez" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;module priority_casez_sv<br />(<br />input logic [3:0] a,<br />output logic [3:0] y<br />);<br />always_comb<br />casez(a)<br />4'b1??? : y &lt;= 4'b1000;<br />4'b01?? : y &lt;= 4'b0100;<br />4'b001? : y &lt;= 4'b0010;<br />4'b0001 : y &lt;= 4'b0001;<br />default : y &lt;= 4'b0000;<br />endcase<br />endmodule</td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;module priority_casez_sv<br />(<br />input logic [3:0] a,<br />output logic [3:0] y<br />);<br />always_comb<br />casez(a)<br />4'b1??? : y &lt;= 4'b1000;<br />4'b01?? : y &lt;= 4'b0100;<br />4'b001? : y &lt;= 4'b0010;<br />4'b0001 : y &lt;= 4'b0001;<br />default : y &lt;= 4'b0000;<br />endcase<br />endmodule</td>
+<td style="width: 365px;">&nbsp;
 <p>module priority_casez_v<br />(<br />input [3:0] a,<br />output reg [3:0] y<br />);</p>
 <p>always @ (*)<br />casez (a)<br />4'b1???: y = 4'b1000;<br />4'b01??: y = 4'b0100;<br />4'b001?: y = 4'b0010;<br />4'b0001: y = 4'b0001;<br />default: y = 4'b0000;<br />endcase<br />endmodule</p>
 </td>
-<td style="width: 380px;">
+<td style="width: 581px;">
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity priority_casez_vhd is<br />port<br />(<br />a: in STD_LOGIC_VECTOR(3 downto 0);<br />y: out STD_LOGIC_VECTOR(3 downto 0)<br />);<br />end;</p>
 <p>architecture dontcare of priority_casez_vhd is</p>
 <p>begin<br />process(all) begin<br />--casez a is -- Wrong syntacs<br />--case a is -- wrong design<br />case? a is -- VHDL 2008 Passed the synthesis, implementation, but not supported in Xilinx simulation tools<br />--ERROR: [XSIM 43-4187] File "C:/Zynq_Book/VHDL_SV_Verilog/HDL Example 4.27 PRIORITY CIRCUIT USING casez/HDL Example 4_27 PRIORITY CIRCUIT USING casez.srcs/sources_1/imports/HDL Example 4.27 PRIORITY CIRCUIT USING casez/priority_casez.vhd" Line 16 : The "Vhdl 2008 Matching Case Statement" is not supported yet for simulation.<br />when "1---" =&gt; <br />y &lt;= "1000";<br />when "01--" =&gt; <br />y &lt;= "0100";<br />when "001-" =&gt; <br />y &lt;= "0010";<br />when "0001" =&gt; <br />y &lt;= "0001";<br />when others =&gt; <br />y &lt;= "0000";<br />--end casez;<br />--end case;<br />end case?;<br />end process;<br />end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>HDL Example 4.28 FULL ADDER USING NONBLOCKING ASSIGNMENTS not recommended use the nonblocking assigment into combination logic</p>
 <p>&nbsp;</p>
 <ul>
@@ -666,18 +666,18 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.28%20FULL%20ADDER%20USING%20NONBLOCKING%20ASSIGNMENTS%20not%20recommended" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>// nonblocking assignments (not recommended)<br />module fulladder_nb_sv<br />(<br />input logic a, b, cin,<br />output logic s, cout<br />);</p>
 <p>logic p, g;</p>
 <p>always_comb<br />begin<br />p &lt;= a ^ b; // nonblocking<br />g &lt;= a &amp; b; // nonblocking<br />s &lt;= p ^ cin;<br />cout &lt;= g | (p &amp; cin);<br />end<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>// nonblocking assignments (not recommended)<br />module fulladder_nb_v <br />(<br />input a, b, cin,<br />output reg s, cout<br />);</p>
 <p>//Because p and g appear on the left hand side of an assignment in an always statement, they must be declared to be reg.<br />reg p, g;</p>
 <p>always @ (*)<br />begin<br />p &lt;= a ^ b; // nonblocking<br />g &lt;= a &amp; b; // nonblocking</p>
 <p>s &lt;= p ^ cin;<br />cout &lt;= g | (p &amp; cin);<br />end<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 581px;">&nbsp;
 <p>-- nonblocking assignments (not recommended)<br />library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity fulladder_nb_vhd is<br />port<br />(<br />a, b, cin: in STD_LOGIC;<br />s, cout: out STD_LOGIC<br />);<br />end;</p>
 <p>architecture nonblocking of fulladder_nb_vhd is</p>
 <p>signal p, g: STD_LOGIC;</p>
@@ -686,7 +686,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.29 BAD SYNC W B_ASS Dont make</p>
 <p><span class="fontstyle0">Because </span><span class="fontstyle2">n1 </span><span class="fontstyle0">is invisible to the outside world and does not influence<br />the behavior of </span><span class="fontstyle2">q</span><span class="fontstyle0">, the synthesizer optimizes it away entirely</span></p>
 <ul>
@@ -697,19 +697,19 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.29%20BAD%20SYNC%20W%20B_ASS%20Dont%20make" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>// Bad implementation of a synchronizer using blocking // assignments<br />module syncbad_sv<br />(<br />input logic clk,<br />input logic d,<br />output logic q<br />);</p>
 <p>logic n1;</p>
 <p>always_ff @(posedge clk)</p>
 <p>begin<br />n1 = d; // blocking<br />q = n1; // blocking<br />end</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>// Bad implementation using blocking assignments<br />module syncbad_v <br />(<br />input clk,<br />input d,<br />output reg q<br />);</p>
 <p>reg n1;</p>
 <p>always @ (posedge clk)<br />begin<br />n1 = d; // blocking<br />q = n1; // blocking<br />end<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 581px;">&nbsp;
 <p>-- Bad implementation of a synchronizer using blocking &ndash;&ndash; assignment<br />library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity syncbad_vhd is<br />port<br />(<br /> clk: in STD_LOGIC;<br /> d: in STD_LOGIC;<br /> q: out STD_LOGIC<br />);<br />end;</p>
 <p>architecture bad of syncbad_vhd is<br />begin</p>
 <p>process(clk)<br />variable n1: STD_LOGIC;<br />begin<br />if rising_edge(clk) then<br /> n1 := d; -- blocking<br /> q &lt;= n1;<br />end if;<br />end process;</p>
@@ -717,7 +717,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE</p>
 <p><span class="fontstyle0">Recall that a finite state machine (FSM) consists of a state register and two<br />blocks of combinational logic to compute the next state and the output<br />given the current state and the input</span> </p>
 <p><span class="fontstyle0">It provides an asynchronous reset to initialize the FSM. The state<br />register uses the ordinary idiom for flip-flops. The next state and output<br />logic blocks are combinational.</span> </p>
@@ -729,7 +729,7 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.30%20DIVIDE-BY-3%20FINITE%20STATE%20MACHINE" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>module divideby3FSM_sv<br />(<br />input logic clk,<br />input logic reset,<br />output logic y<br />);</p>
 <p>typedef enum logic [1:0] {S0, S1, S2} statetype;<br />statetype [1:0] state, nextstate;</p>
 <p>// state register</p>
@@ -737,7 +737,7 @@
 <p>// next state logic<br />always_comb<br />case (state)<br />S0: nextstate &lt;= S1;<br />S1: nextstate &lt;= S2;<br />S2: nextstate &lt;= S0;<br />default: nextstate &lt;= S0;<br />endcase<br />// output logic<br />assign y = (state == S0);</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>module divideby3FSM_v <br />(<br />input clk,<br />input reset,<br />output y<br />);</p>
 <p>reg [1:0] state, nextstate;</p>
 <p>parameter S0 = 2'b00;<br />parameter S1 = 2'b01;<br />parameter S2 = 2'b10;</p>
@@ -745,7 +745,7 @@
 <p>// next state logic<br />always @ (*)<br />case (state)<br />S0: nextstate = S1;<br />S1: nextstate = S2;<br />S2: nextstate = S0;<br />default: nextstate = S0;<br />endcase<br />// output logic<br />assign y = (state == S0);</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 581px;">&nbsp;
 <p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity divideby3FSM_vhd is<br />port<br />(<br />reset : in STD_LOGIC;<br />clk : in STD_LOGIC;<br />y : out STD_LOGIC<br />);<br />end;</p>
 <p>architecture synth of divideby3FSM_vhd is<br />type statetype is (S0, S1, S2);<br />signal state, nextstate: statetype;</p>
 <p>begin<br />-- state register<br />process(clk, reset) <br />begin<br /> --if reset then -- VHDL 2008 [XSIM 43-4187] HDL Example 4.30 DIVIDE-BY-3 FINITE STATE MACHINE/divideby3FSM.vhd" Line 19 : The "Vhdl 2008 Condition Operator" is not supported yet for simulation.<br /> if reset = '1' then -- VHDL <br /> state &lt;= S0;<br /> elsif rising_edge(clk) then<br /> state &lt;= nextstate;<br /> end if;<br />end process;</p>
@@ -755,7 +755,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.31 PATTERN RECOGNIZER MOORE FSM</p>
 <p><span class="fontstyle0">The next two examples describe the snail pattern recognizer FSM<br />&nbsp;The code shows how to use </span><span class="fontstyle2">case </span><span class="fontstyle0">and </span><span class="fontstyle2">if </span><span class="fontstyle0">statements to handle next state and output logic that depend on the inputs<br />as well as the current state. In the Moore machine, the output depends<br />only on the current state</span></p>
 <ul>
@@ -766,7 +766,7 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.31%20PATTERN%20RECOGNIZER%20MOORE%20FSM" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>//The daughter snail smiles whenever she slides over the pattern 1101.<br />module patternMoore_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic a,<br />output logic y<br />);</p>
 <p>typedef enum logic [2:0] {S0, S1, S2, S3, S4} statetype;<br />statetype state, nextstate;</p>
 <p>// state register<br />always_ff @(posedge clk, posedge reset)<br />if (reset) <br />state &lt;= S0;<br />else <br />state &lt;= nextstate;</p>
@@ -774,7 +774,7 @@
 <p>// output logic<br />assign y = (state == S4);</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>//The daughter snail smiles whenever she slides over the pattern 1101.<br />module patternMoore_v <br />(<br />input clk,<br />input reset,<br />input a,<br />output y<br />);</p>
 <p>reg [2:0] state, nextstate;<br />parameter S0 = 3'b000;<br />parameter S1 = 3'b001;<br />parameter S2 = 3'b010;<br />parameter S3 = 3'b011;<br />parameter S4 = 3'b100;</p>
 <p>// state register<br />always @ (posedge clk, posedge reset)<br />if (reset) <br />state &lt;= S0;<br />else <br />state &lt;= nextstate;</p>
@@ -782,7 +782,7 @@
 <p>// output logic<br />assign y = (state == S4);</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 581px;">&nbsp;
 <p>-- The daughter snail smiles whenever she slides over the pattern 1101 or the pattern 1110.<br />library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity patternMoore_vhd is<br />port <br />(<br />reset : in STD_LOGIC;<br />clk : in STD_LOGIC;<br />a : in STD_LOGIC;<br />y : out STD_LOGIC<br />);<br />end;</p>
 <p>architecture synth of patternMoore_vhd is<br />type statetype is (S0, S1, S2, S3, S4);<br />signal state, nextstate: statetype;</p>
 <p>begin<br />-- state register<br />process (clk, reset) begin<br />if reset = '1' then <br />state &lt;= S0;<br />elsif clk'event and clk = '1' then<br />state &lt;= nextstate;<br />end if;<br />end process;</p>
@@ -791,7 +791,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>HDL Example 4.32 PATTERN RECOGNIZER MEALY FSM</p>
 <p><span class="fontstyle0">The next two examples describe the snail pattern recognizer FSM.&nbsp;The code shows how to use </span><span class="fontstyle2">case </span><span class="fontstyle0">and </span><span class="fontstyle2">if </span><span class="fontstyle0">statements to handle next state and output logic that depend on the inputs&nbsp;as well as the current state. In the Mealy machine, the output logic depends on both the current state&nbsp;and inputs.</span> </p>
 <ul>
@@ -802,7 +802,7 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.32%20PATTERN%20RECOGNIZER%20MEALY%20FSM" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>//The daughter snail smiles whenever she slides over the pattern 1101.<br />module patternMealy_sv<br />(<br />input logic clk,<br />input logic reset,<br />input logic a,<br />output logic y<br />);</p>
 <p>typedef enum logic [1:0] {S0, S1, S2, S3} statetype;<br />statetype state, nextstate;</p>
 <p>// state register<br />always_ff @(posedge clk, posedge reset)<br />if (reset) <br />state &lt;= S0;<br />else <br />state &lt;= nextstate;</p>
@@ -810,7 +810,7 @@
 <p>// output logic<br />assign y = (a &amp; state == S3);</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>//The daughter snail smiles whenever she slides over the pattern 1101.<br />module patternMealy_v <br />(<br />input clk,<br />input reset,<br />input a,<br />output y<br />);</p>
 <p>reg [1:0] state, nextstate;<br />parameter S0 = 2'b00;<br />parameter S1 = 2'b01;<br />parameter S2 = 2'b10;<br />parameter S3 = 2'b11;</p>
 <p>// state register<br />always @ (posedge clk, posedge reset)<br />if (reset) <br />state &lt;= S0;<br />else <br />state &lt;= nextstate;</p>
@@ -818,14 +818,15 @@
 <p>// output logic<br />assign y = (a &amp; state == S3);</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">
-<p>&nbsp;--The daughter snail smiles whenever she slides over the pattern 1101.--The daughter snail smiles whenever she slides over the pattern 1101.library IEEE; use IEEE.STD_LOGIC_1164.all;entity patternMealy_vhd isport(reset : in STD_LOGIC;clk : in STD_LOGIC;a : in STD_LOGIC;y : out STD_LOGIC);end;</p>
+<td style="width: 581px;">
+<p>&nbsp;--The daughter snail smiles whenever she slides over the pattern 1101.<br />library IEEE; <br />use IEEE.STD_LOGIC_1164.all;</p>
+<p>entity patternMealy_vhd isport<br />(<br />reset : in STD_LOGIC;<br />clk : in STD_LOGIC;<br />a : in STD_LOGIC;<br />y : out STD_LOGIC<br />);<br />end;</p>
 <p>architecture synth of patternMealy_vhd is<br />type statetype is (S0, S1, S2, S3);<br />signal state, nextstate: statetype;<br />begin<br />-- state register<br />process (clk, reset) begin<br />if reset = '1' then <br />state &lt;= S0;<br />elsif clk'event and clk = '1' then<br />state &lt;= nextstate;<br />end if;<br />end process;</p>
 <p>-- next state logic<br />process(state, a) begin<br /> case state is<br /> when S0 =&gt;<br /> if a = '1' then<br /> nextstate &lt;= S1;<br /> else <br /> nextstate &lt;= S0;<br /> end if;<br /> when S1 =&gt; <br /> if a = '1' then<br /> nextstate &lt;= S2;<br /> else <br /> nextstate &lt;= S0;<br /> end if;<br /> when S2 =&gt; <br /> if a = '1' then<br /> nextstate &lt;= S2;<br /> else <br /> nextstate &lt;= S3;<br /> end if;<br /> when S3 =&gt; <br /> if a = '1' then<br /> nextstate &lt;= S1;<br /> else <br /> nextstate &lt;= S0;<br /> end if;<br /> when others =&gt; <br /> nextstate &lt;= S0;<br /> end case;<br />end process;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.33a unsigned multiplier</p>
 <ul>
 <li><a href="HDL Example 4.33a unsigned multiplier\HDL Example 4.33a unsigned multiplier RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
@@ -838,24 +839,24 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.33a%20unsigned%20multiplier" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>// 4.33(a): unsigned multiplier<br />module multiplier_sv<br />(<br />input logic [3:0] a, b,<br />output logic [7:0] y<br />);</p>
 <p>assign y = a * b;<br />endmodule</p>
 <p>// 5.4(): unsigned multiplier<br />//module multiplier #(parameter N = 8)<br />//(input logic [N&ndash;1:0] a, b,<br />//output logic [2*N&ndash;1:0] y);<br />//assign y = a * b;<br />//endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>// 4.33(a): unsigned multiplier<br />module multiplier_v<br />(<br />input [3:0] a, b,<br />output [7:0] y<br />);<br />assign y = a * b;<br />endmodule</p>
 <p>//HDL Example 5.4 MULTIPLIER<br />//module multiplier # (parameter N 8)<br />//(input [N-1:0] a, b,<br />//output [2*N-1:0] y);<br />//assign y a * b;<br />//endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
-<p>-- 4.33(a): unsigned multiplier<br />library IEEE; use IEEE.STD_LOGIC_1164.all;<br />--use IEEE.NUMERIC_STD_UNSIGNED.all; -- VHDL2008 (but not always work)<br />use IEEE.STD_LOGIC_UNSIGNED.ALL;</p>
+<td style="width: 581px;">&nbsp;-- 4.33(a): unsigned multiplier
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />--use IEEE.NUMERIC_STD_UNSIGNED.all; -- VHDL2008 (but not always work)<br />use IEEE.STD_LOGIC_UNSIGNED.ALL;</p>
 <p>entity multiplier_vhd is<br />port<br />(<br /> a: in STD_LOGIC_VECTOR(3 downto 0);<br /> b: in STD_LOGIC_VECTOR(3 downto 0);<br /> y: out STD_LOGIC_VECTOR(7 downto 0)<br />);<br />end;</p>
 <p>architecture synth of multiplier_vhd is<br />begin<br />y &lt;= a * b;<br />end;</p>
 <p>--library IEEE; use IEEE.STD_LOGIC_1164.ALL;<br />--use IEEE.STD_LOGIC_UNSIGNED.ALL;<br />--entity multiplier is<br />--generic (N: integer : 8);<br />--port (a, b: in STD_LOGIC_VECTOR(N-1 downto 0);<br />--y: out STD_LOGIC_VECTOR(2*N-1 downto 0));<br />--end;<br />--architecture synth of multiplier is<br />--begin<br />--y &lt;= a * b;<br />--end;</p>
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.33b signed multiplier</p>
 <ul>
 <li><a href="HDL Example 4.33b signed multiplier\HDL Example 4.33b signed multiplier RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
@@ -867,15 +868,13 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.33b%20signed%20multiplier" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;// 4.33(b): signed multiplier<br />module multiplier_sv<br />(<br />input logic signed [3:0] a,<br />input logic signed [3:0] b,<br />output logic signed [7:0] y<br />);<br />assign y = a * b;<br />endmodule</td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;// 4.33(b): signed multiplier<br />module multiplier_sv<br />(<br />input logic signed [3:0] a,<br />input logic signed [3:0] b,<br />output logic signed [7:0] y<br />);<br />assign y = a * b;<br />endmodule</td>
+<td style="width: 365px;">&nbsp;
 <p>// 4.33(b): signed multiplier<br />module multiplier_v<br />(<br />input signed [3:0] a,<br />input signed [3:0] b,<br />output signed [7:0] y<br />);</p>
 <p>assign y = a * b;<br />endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>--4.33(b): signed multiplier<br />library IEEE; use IEEE.STD_LOGIC_1164.all;<br />use IEEE.NUMERIC_STD.all;<br />use IEEE.STD_LOGIC_SIGNED.ALL;<br />--use ieee.std_logic_arith.all ;<br />--Use numeric_std or std_logic_arith, but never both</p>
+<td style="width: 581px;">&nbsp;--4.33(b): signed multiplier
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />use IEEE.NUMERIC_STD.all;<br />use IEEE.STD_LOGIC_SIGNED.ALL;<br />--use ieee.std_logic_arith.all ;<br />--Use numeric_std or std_logic_arith, but never both</p>
 <p><br />entity multiplier_vhd is<br />port<br />(<br />-- a: in SIGNED STD_LOGIC_VECTOR(3 downto 0);<br />-- b: in SIGNED STD_LOGIC_VECTOR(3 downto 0);<br />-- y: out SIGNED STD_LOGIC_VECTOR(7 downto 0)<br /> a: in STD_LOGIC_VECTOR(3 downto 0);<br /> b: in STD_LOGIC_VECTOR(3 downto 0);<br /> y: out STD_LOGIC_VECTOR(7 downto 0)<br />);<br />end;</p>
 <p>architecture synth of multiplier_vhd is</p>
 <p>signal a_signed : signed(3 downto 0);<br />signal b_signed : signed(3 downto 0);<br />signal y_signed : signed(7 downto 0);</p>
@@ -885,7 +884,7 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">
+<td style="width: 353px;">
 <p>&nbsp;HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS</p>
 <ul>
 <li><a href="HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS\HDL Example 4.34a PARAMETERIZED N-BIT MULTIPLEXERS RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
@@ -899,20 +898,20 @@
 <li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.34a%20PARAMETERIZED%20N-BIT%20MULTIPLEXERS" target="_blank" rel="noopener">Vivado Project</a></li>
 </ul>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 396px;">&nbsp;
 <p>module mux4_8_sv<br />(<br />input logic [7:0] d0,<br />input logic [7:0] d1,<br />input logic [7:0] d2,<br />input logic [7:0] d3,<br />input logic [1:0] s,<br />output logic [7:0] y<br />);</p>
 <p>logic [7:0] low, hi;</p>
 <p>mux2_sv lowmux(d0, d1, s[0], low);<br />mux2_sv himux(d2, d3, s[0], hi);<br />mux2_sv outmux(low, hi, s[1], y);</p>
 <p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
+<td style="width: 365px;">&nbsp;
 <p>module mux4_8_v <br />(<br />input [7:0] d0,<br />input [7:0] d1, <br />input [7:0] d2,<br />input [7:0] d3,<br />input [1:0] s,<br />output [7:0] y<br />);</p>
 <p>wire [7:0] low, hi;</p>
 <p>mux2_v lowmux (d0, d1, s[0], low);<br />mux2_v himux (d2, d3, s[0], hi);<br />mux2_v outmux (low, hi, s[1], y);</p>
-<p><br />endmodule</p>
+<p>endmodule</p>
 </td>
-<td style="width: 380px;">&nbsp;
-<p>library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity mux4_8_vhd is<br />port<br />(<br />d0: in STD_LOGIC_VECTOR(7 downto 0); <br />d1: in STD_LOGIC_VECTOR(7 downto 0); <br />d2: in STD_LOGIC_VECTOR(7 downto 0);<br />d3: in STD_LOGIC_VECTOR(7 downto 0);<br />s: in STD_LOGIC_VECTOR(1 downto 0);<br />y: out STD_LOGIC_VECTOR(7 downto 0)<br />);<br />end;</p>
+<td style="width: 581px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;
+<p>entity mux4_8_vhd is<br />port<br />(<br />d0: in STD_LOGIC_VECTOR(7 downto 0); <br />d1: in STD_LOGIC_VECTOR(7 downto 0); <br />d2: in STD_LOGIC_VECTOR(7 downto 0);<br />d3: in STD_LOGIC_VECTOR(7 downto 0);<br />s: in STD_LOGIC_VECTOR(1 downto 0);<br />y: out STD_LOGIC_VECTOR(7 downto 0)<br />);<br />end;</p>
 <p>architecture struct of mux4_8_vhd is</p>
 <p>component mux2_vhd<br />generic(width: integer := 8);<br />port(<br />d0: in STD_LOGIC_VECTOR(width-1 downto 0);<br />d1: in STD_LOGIC_VECTOR(width-1 downto 0);<br />s: in STD_LOGIC;<br />y: out STD_LOGIC_VECTOR(width-1 downto 0)<br />);<br />end component;</p>
 <p>signal low, hi: STD_LOGIC_VECTOR(7 downto 0);</p>
@@ -920,46 +919,183 @@
 </td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
+<td style="width: 353px;">
+<p>&nbsp;HDL Example 4.35 PARAMETERIZED Nto2N DECODER</p>
+<ul>
+<li><a href="HDL Example 4.35 PARAMETERIZED Nto2N DECODER\HDL Example 4.35 PARAMETERIZED Nto2N DECODER RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL Example 4.35 PARAMETERIZED Nto2N DECODER\HDL Example 4.35 PARAMETERIZED Nto2N DECODER Synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics</a></li>
+<li><a href="HDL Example 4.35 PARAMETERIZED Nto2N DECODER\HDL Example 4.35 PARAMETERIZED Nto2N DECODER Synthesis Zoom.PNG" target="_blank" rel="noopener">Synthesis schematics Zoom</a></li>
+<li><a href="HDL Example 4.35 PARAMETERIZED Nto2N DECODER\HDL Example 4.35 PARAMETERIZED Nto2N DECODER Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.35 PARAMETERIZED Nto2N DECODER\HDL Example 4.35 PARAMETERIZED Nto2N DECODER Implementation Zoom.PNG" target="_blank" rel="noopener">Implementation schematics Zoom</a></li>
+<li><a href="HDL Example 4.35 PARAMETERIZED Nto2N DECODER\HDL Example 4.35 PARAMETERIZED Nto2N DECODER Simulation Fail in VHDL 2008.PNG" target="_blank" rel="noopener">Simulations waveforms&nbsp; Fail in VHDL 2008</a></li>
+<li><a href="HDL Example 4.35 PARAMETERIZED Nto2N DECODER\HDL Example 4.35 PARAMETERIZED Nto2N DECODER Simulation_VHDL work Correct.PNG" target="_blank" rel="noopener">Simulations waveforms&nbsp; Correct</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.35%20PARAMETERIZED%20Nto2N%20DECODER" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 396px;">&nbsp;
+<p>module decoder_sv<br />#(parameter N = 3)<br />(<br />input logic [N - 1:0] a,<br />output logic [2**N - 1:0] y<br />);</p>
+<p>always_comb<br />begin<br />y = 0;<br />y[a] = 1;<br />end<br />endmodule</p>
+</td>
+<td style="width: 365px;">&nbsp;
+<p>module decoder_v <br />#(parameter N = 3)<br />(<br />input [N - 1:0] a,<br />output reg [2**N - 1:0] y<br />);</p>
+<p>always @ (*)<br />begin<br />y = 0;<br />y[a] = 1;<br />end<br />endmodule</p>
+</td>
+<td style="width: 581px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.all;
+<p>use IEEE. NUMERIC_STD_UNSIGNED.all;</p>
+<p>entity decoder_vhd is<br />generic(N: integer := 3);<br />port<br />(<br />a: in STD_LOGIC_VECTOR(N - 1 downto 0);<br />y: out STD_LOGIC_VECTOR(2**N - 1 downto 0)<br />);<br />end;</p>
+<p>architecture synth of decoder_vhd is</p>
+<p>begin<br />--process(all)-- VHDL 2008<br />process(a)<br />begin<br />y &lt;= (OTHERS =&gt; '0');<br /> y(TO_INTEGER(a)) &lt;= '1';<br />end process;<br />end;</p>
+</td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
+<td style="width: 353px;">
+<p>&nbsp;HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE</p>
+<ul>
+<li><a href="HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE\HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE RTL.PNG" target="_blank" rel="noopener">RTL schematics</a></li>
+<li><a href="HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE\HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE Synthesis.PNG" target="_blank" rel="noopener">Synthesis schematics</a></li>
+<li><a href="HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE\HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE Implementation.PNG" target="_blank" rel="noopener">Implementation schematics</a></li>
+<li><a href="HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE\HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE Simulation Full.PNG" target="_blank" rel="noopener">Simulations waveforms Full</a></li>
+<li><a href="HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE\HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE Simulation 0- 21.PNG" target="_blank" rel="noopener">Simulations waveforms 0- 21</a></li>
+<li><a href="HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE\HDL Example 4.36 PARAMETERIZED N-INPUT AND GATE Simulation E9- FF.PNG" target="_blank" rel="noopener">Simulations waveforms E9- FF</a></li>
+<li><a href="https://github.com/SystemVerilog-VHDL-Verilog/VHDL_SV_Verilog/tree/master/HDL%20Example%204.36%20PARAMETERIZED%20N-INPUT%20AND%20GATE" target="_blank" rel="noopener">Vivado Project</a></li>
+</ul>
+</td>
+<td style="width: 396px;">&nbsp;
+<p>module andN_sv<br />#(parameter width = 8)<br />(<br />input logic [width - 1:0] a,<br />output logic y<br />);</p>
+<p>genvar i;<br />logic [width - 1:0] x;</p>
+<p>generate<br />assign x[0] = a[0];<br />for(i=1; i&lt;width; i=i+1) begin: forloop<br />assign x[i] = a[i] &amp; x[i - 1];<br />end<br />endgenerate<br />assign y = x[width - 1];<br />endmodule</p>
+</td>
+<td style="width: 365px;">&nbsp;module andN_v
+<p># (parameter width = 8)<br />(<br />input [width-1:0] a,<br />output y<br />);</p>
+<p>genvar i;<br />wire [width-1 : 1] x;</p>
+<p>generate<br />for (i=1; i&lt;width; i=i+1) begin:forloop<br />if (i == 1)<br />assign x[1] = a[0] &amp; a[1];<br />else<br />assign x[i] = a[i] &amp; x[i-1];<br />end<br />endgenerate</p>
+<p>assign y = x[width-1];<br />endmodule</p>
+</td>
+<td style="width: 581px;">&nbsp;
+<p>library IEEE; use IEEE.STD_LOGIC_1164.all;</p>
+<p>entity andN_vhd is<br />generic(width: integer := 8);<br />port<br />(<br />a: in STD_LOGIC_VECTOR(width - 1 downto 0);<br />y: out STD_LOGIC<br />);<br />end;</p>
+<p>architecture synth of andN_vhd is</p>
+<p>signal x: STD_LOGIC_VECTOR(width - 1 downto 0);</p>
+<p>begin</p>
+<p>x(0) &lt;= a(0);</p>
+<p>gen: for i in 1 to width-1 generate<br />x(i) &lt;= a(i) and x(i-1);<br />end generate;</p>
+<p>y &lt;= x(width - 1);</p>
+<p>end;</p>
+<p>--architecture synth of andN is<br />--signal i: integer;<br />--signal x: STD_LOGIC_VECTOR (width - 1 downto 1);<br />--begin<br />--AllBits: for i in 1 to width-1 generate<br />--LowBit: if i = 1 generate<br />--A1: x(1) &lt;= a(0) and a(1);<br />--end generate;</p>
+<p>--OtherBits: if i /= 1 generate<br />--Ai: x(i) &lt;= a(i) and x(i-1);<br />--end generate;<br />--end generate;</p>
+<p>--y &lt;= x(width-1);</p>
+<p>--end;</p>
+</td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
+<td style="width: 353px;">&nbsp;HDL Example 5.1 ADDER</td>
+<td style="width: 396px;">&nbsp;module adder <br />#(parameter N = 8)<br />(<br />input logic [N&ndash;1:0] a, b,<br />input logic cin,<br />output logic [N&ndash;1:0] s,<br />output logic cout<br />);<br />assign {cout, s} = a + b + cin;<br />endmodule</td>
+<td style="width: 365px;">&nbsp;
+<p>module adder <br />#(parameter N 8)<br />(<br />input [N-1:0] a, b,<br />input cin,<br />output [N-1:0] s,<br />output cout<br />);</p>
+<p>assign {cout, s} = a + b + cin;<br />endmodule</p>
+</td>
+<td style="width: 581px;">&nbsp;
+<p>library IEEE; use IEEE.STD_LOGIC_1164.ALL;<br />use IEEE.STD_LOGIC_UNSIGNED.ALL;<br />entity adder is<br />generic (N: integer : 8);<br />port <br />(<br />a, b: in STD_LOGIC_VECTOR(N-1 downto 0);<br />cin: in STD_LOGIC;<br />s: out STD_LOGIC_VECTOR(N-1 downto 0);<br />cout: out STD_LOGIC<br />);<br />end;</p>
+<p>architecture synth of adder is</p>
+<p>signal result: STD_LOGIC_VECTOR(N downto 0);</p>
+<p>begin<br />result &lt;= (&ldquo;0&rdquo; &amp; a) + (&ldquo;0&rdquo; &amp; b) + cin;<br />s &lt;= result (N-1 downto 0);<br />cout &lt;= result (N);<br />end;</p>
+</td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
+<td style="width: 353px;">&nbsp;HDL Example 5.2 SUBTRACTOR</td>
+<td style="width: 396px;">&nbsp;module subtractor <br />#(parameter N = 8)<br />(<br />input logic [N&ndash;1:0] a, b,<br />output logic [N&ndash;1:0] y<br />);<br />assign y = a &minus; b;<br />endmodule</td>
+<td style="width: 365px;">&nbsp;module subtractor <br />#(parameter N = 8)<br />(<br />input [N&ndash;1:0] a, b,<br />output [N&ndash;1:0] y<br />);<br />assign y = a &minus; b;<br />endmodule</td>
+<td style="width: 581px;">&nbsp;
+<p>library IEEE; use IEEE.STD_LOGIC_1164.ALL;<br />use IEEE.NUMERIC_STD_UNSIGNED.ALL;</p>
+<p>entity subtractor is<br />generic(N: integer := 8);<br />port<br />(<br />a, b: in STD_LOGIC_VECTOR(N&ndash;1 downto 0);<br />y: out STD_LOGIC_VECTOR(N&ndash;1 downto 0)<br />);<br />end;</p>
+<p>architecture synth of subtractor is<br />begin<br />y &lt;= a &ndash; b;<br />end;</p>
+</td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
+<td style="width: 353px;">&nbsp;HDL Example 5.3 COMPARATORS</td>
+<td style="width: 396px;">&nbsp;module comparator #(parameter N = 8)<br />(<br />input logic [N&ndash;1:0] a, b,<br />output logic eq, neq, lt, lte, gt, gte<br />);<br />assign eq = (a == b);<br />assign neq = (a != b);<br />assign lt = (a &lt;b);<br />assign lte = (a &lt;= b);<br />assign gt = (a &gt;b);<br />assign gte = (a &gt;= b);<br />endmodule</td>
+<td style="width: 365px;">&nbsp;module comparator #(parameter N = 8)<br />(<br />input [N&ndash;1:0] a, b,<br />output eq, neq, lt, lte, gt, gte<br />);<br />assign eq = (a == b);<br />assign neq = (a != b);<br />assign lt = (a &lt;b);<br />assign lte = (a &lt;= b);<br />assign gt = (a &gt;b);<br />assign gte = (a &gt;= b);<br />endmodule</td>
+<td style="width: 581px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.ALL;<br />entity comparators is<br />generic(N: integer : = 8);<br />port<br />(<br />a, b: in STD_LOGIC_VECTOR(N&ndash;1 downto 0);<br />eq, neq, lt, lte, gt, gte: out STD_LOGIC<br />);<br />end;<br />architecture synth of comparator is<br />begin<br />eq &lt;= '1' when (a = b) else '0';<br />neq &lt;= '1' when (a /= b) else '0';<br />lt &lt;= '1' when (a &lt; b) else '0';<br />lte &lt;= '1' when (a &lt;= b) else '0';<br />gt &lt;= '1' when (a &gt; b) else '0';<br />gte &lt;= '1' when (a &gt;= b) else '0';<br />end;</td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
+<td style="width: 353px;">&nbsp;HDL Example 5.4 MULTIPLIER</td>
+<td style="width: 396px;">&nbsp;module multiplier #(parameter N = 8)<br />(input logic [N&ndash;1:0] a, b,<br />output logic [2*N&ndash;1:0] y);<br />assign y = a * b;<br />endmodule</td>
+<td style="width: 365px;">&nbsp;module multiplier #(parameter N = 8)<br />(input [N-1:0] a, b,<br />output [2*N-1:0] y);<br />assign y = a * b;<br />endmodule</td>
+<td style="width: 581px;">&nbsp;
+<p>library IEEE; use IEEE.STD_LOGIC_1164.ALL;<br />use IEEE.NUMERIC_STD_UNSIGNED.ALL;<br />entity multiplier is<br />generic(N: integer := 8);<br />port<br />(<br />a, b: in STD_LOGIC_VECTOR(N&ndash;1 downto 0);<br />y: out STD_LOGIC_VECTOR(2*N&ndash;1 downto 0)<br />);<br />end;</p>
+<p>architecture synth of multiplier is<br />begin<br />y &lt;= a * b;<br />end;</p>
+</td>
 </tr>
 <tr>
-<td style="width: 300px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
-<td style="width: 380px;">&nbsp;</td>
+<td style="width: 353px;">&nbsp;HDL Example 5.5 COUNTER</td>
+<td style="width: 396px;">&nbsp;module counter #(parameter N = 8)<br />(<br />input logic clk,<br />input logic reset,<br />output logic [N&ndash;1:0] q<br />);<br />always_ff @(posedge clk, posedge reset)<br />if (reset)q &lt;= 0;<br />else q &lt;= q + 1;<br />endmodule</td>
+<td style="width: 365px;">&nbsp;module counter #(parameter N = 8)<br />(<br />input clk,<br />input reset,<br />output reg [N&ndash;1:0] q<br />);<br />always @(posedge clk, posedge reset)<br />if (reset)q &lt;= 0;<br />else q &lt;= q + 1;<br />endmodule</td>
+<td style="width: 581px;">&nbsp;library IEEE; use IEEE.STD_LOGIC_1164.ALL;<br />use IEEE.NUMERIC_STD_UNSIGNED.ALL;<br />entity counter is<br />generic(N: integer := 8);<br />port<br />(<br />clk, reset: in STD_LOGIC;<br />q: out STD_LOGIC_VECTOR(N-1 downto 0)<br />);<br />end;<br />architecture synth of counter is<br />begin<br />process(clk, reset) begin<br />if reset then <br />q &lt;= (OTHERS =&gt; '0');<br />elsif rising_edge(clk) then <br />q &lt;= q + '1';<br />end if;<br />end process;<br />end;</td>
+</tr>
+<tr>
+<td style="width: 353px;">HDL Example 5.6 SHIFT REGISTER WITH PARALLEL LOAD</td>
+<td style="width: 396px;">
+<p>module shiftreg <br />#(parameter N = 8)<br />(<br />input logic clk,<br />input logic reset, load,<br />input logic sin,<br />input logic [N&ndash;1:0] d,<br />output logic [N&ndash;1:0] q,<br />output logic sout<br />);<br />always_ff @(posedge clk, posedge reset)<br />if (reset) <br />q &lt;= 0;<br />else if (load) <br />q &lt;= d;<br />else <br />q &lt;= {q[N&ndash;2:0], sin};</p>
+<p>assign sout = q[N&ndash;1];</p>
+<p>endmodule</p>
+</td>
+<td style="width: 365px;">
+<p>module shiftreg <br />#(parameter N = 8)<br />(<br />input clk,<br />input reset, load,<br />input sin,<br />input [N-1:0] d,<br />output reg [N-1:0] q,<br />output sout<br />);</p>
+<p>always @ ((posedge clk, posedge reset)<br />if (reset) <br />q &lt;= 0;<br />else if (load) <br />q &lt;= d;<br />else <br />q &lt;= {q[N&ndash;2:0], sin};</p>
+<p>assign sout = q[N&ndash;1];</p>
+<p>endmodule</p>
+</td>
+<td style="width: 581px;">
+<p>library IEEE; use IEEE.STD_LOGIC_1164.ALL;<br />entity shiftreg is<br />generic(N: integer := 8);<br />port<br />(<br />clk, reset: in STD_LOGIC;<br />load, sin: in STD_LOGIC;<br />d: in STD_LOGIC_VECTOR(N&ndash;1 downto 0);<br />q: out STD_LOGIC_VECTOR(N&ndash;1 downto 0);<br />sout: out STD_LOGIC<br />);<br />end;</p>
+<p>architecture synth of shiftreg is</p>
+<p>begin</p>
+<p>process(clk, reset) begin<br />if reset = '1' then <br />q &lt;= (OTHERS =&gt; '0');<br />elsif rising_edge(clk) then<br />if load then <br />q &lt;= d;<br />else <br />q &lt;= q(N&ndash;2 downto 0) &amp; sin;<br />end if;<br />end if;<br />end process;</p>
+<p>sout &lt;= q(N&ndash;1);</p>
+<p>end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 353px;">HDL Example 5.7 RAM</td>
+<td style="width: 396px;">
+<p>module ram #(parameter N = 6, M = 32)<br />(<br />input logic clk,<br />input logic we,<br />input logic [N&ndash;1:0] adr,<br />input logic [M&ndash;1:0] din,<br />output logic [M&ndash;1:0] dout<br />);</p>
+<p>logic [M&ndash;1:0] mem [2**N&ndash;1:0];</p>
+<p>always_ff @(posedge clk)</p>
+<p>if (we) mem [adr] &lt;= din;</p>
+<p>assign dout = mem[adr];<br />endmodule</p>
+</td>
+<td style="width: 365px;">
+<p>module ram # (parameter N = 6, M = 32)<br />(<br />input clk,<br />input we,<br />input [N-1:0] adr,<br />input [M-1:0] din,<br />output [M-1:0] dout<br />);</p>
+<p>reg [M-1:0] mem [2**N-1:0];</p>
+<p>always @ (posedge clk)<br />if (we) <br />mem [adr] &lt;= din;</p>
+<p>assign dout mem[adr];<br />endmodule</p>
+</td>
+<td style="width: 581px;">
+<p>library IEEE; use IEEE.STD_LOGIC_1164.ALL;<br />use IEEE.NUMERIC_STD_UNSIGNED.ALL;<br />entity ram_array is<br />generic(N: integer := 6; M: integer := 32);<br />port<br />(<br />clk, we: in STD_LOGIC;<br />adr: in STD_LOGIC_VECTOR(N&ndash;1 downto 0);<br />din: in STD_LOGIC_VECTOR(M&ndash;1 downto 0);<br />dout: out STD_LOGIC_VECTOR(M&ndash;1 downto 0)<br />);<br />end;</p>
+<p>architecture synth of ram_array is<br />type mem_array is array ((2**N&ndash;1) downto 0) of STD_LOGIC_VECTOR (M&ndash;1 downto 0);<br />signal mem: mem_array;</p>
+<p>begin<br />process(clk) begin<br />if rising_edge(clk) then<br />if we = '1' then <br />mem(TO_INTEGER(adr)) &lt;= din;<br />end if;<br />end if;<br />end process;<br />dout &lt;= mem(TO_INTEGER(adr));<br />end;</p>
+</td>
+</tr>
+<tr>
+<td style="width: 353px;">HDL Example 5.8 ROM</td>
+<td style="width: 396px;">module rom<br />(<br />input logic [1:0] adr,<br />output logic [2:0] dout<br />);<br />always_comb<br />case(adr)<br />2&rsquo;b00: dout &lt;= 3&rsquo;b011;<br />2&rsquo;b01: dout &lt;= 3&rsquo;b110;<br />2&rsquo;b10: dout &lt;= 3&rsquo;b100;<br />2&rsquo;b11: dout &lt;= 3&rsquo;b010;<br />endcase<br />endmodule</td>
+<td style="width: 365px;">module rom<br />(<br />input [1:0] adr,<br />output [2:0] dout<br />);<br />always @ (adr)<br />case(adr)<br />2&rsquo;b00: dout &lt;= 3&rsquo;b011;<br />2&rsquo;b01: dout &lt;= 3&rsquo;b110;<br />2&rsquo;b10: dout &lt;= 3&rsquo;b100;<br />2&rsquo;b11: dout &lt;= 3&rsquo;b010;<br />endcase<br />endmodule</td>
+<td style="width: 581px;">library IEEE; use IEEE.STD_LOGIC_1164.all;<br />entity rom is<br />port<br />(<br />adr: in STD_LOGIC_VECTOR(1 downto 0);<br />dout: out STD_LOGIC_VECTOR(2 downto 0)<br />);<br />end;<br />architecture synth of rom is<br />begin<br />--process(all) begin--VHDL2008<br />process (adr) begin<br />case adr is<br />when "00" =&gt; dout &lt;= "011";<br />when "01" =&gt; dout &lt;= "110";<br />when "10" =&gt; dout &lt;= "100";<br />when "11" =&gt; dout &lt;= "010";<br />end case;<br />end process;<br />end;</td>
+</tr>
+<tr>
+<td style="width: 353px;">HDL Example 5.30 Shifter</td>
+<td style="width: 396px;">module leftshift2_32<br />(<br />input logic [31:0] a,<br />output logic [31:0] y<br />);<br />assign y = {a[29:0], 2'b0};<br />endmodule</td>
+<td style="width: 365px;">module leftshift2_32<br />(<br />input [31:0] a,<br />output [31:0] y<br />);<br />assign y = {a[29:0], 2'b0};<br />endmodule</td>
+<td style="width: 581px;">library IEEE;<br />use IEEE.STD_LOGIC_1164.all;<br />entity leftshift2_32 is<br />port<br />(<br />a: in STD_LOGIC_VECTOR(31 downto 0);<br />y: out STD_LOGIC_VECTOR(31 downto 0)<br />);<br />end;<br />architecture synth of leftshift2_32 is<br />begin<br />y &lt;= a(29 downto 0) &amp; "00";<br />end;</td>
+</tr>
+<tr>
+<td style="width: 353px;">HDL Example 5.31 4-bit Left and Right Rotator</td>
+<td style="width: 396px;">module ex5_14<br />(<br />input logic [3:0] a;<br />output logic [3:0] right_rotated;<br />output logic [3:0] left_rotated;<br />input logic [1:0] shamt;<br />);<br />// right rotated<br />always_comb<br />case(shamt)<br />2'b00: right_rotated = a;<br />2'b01: right_rotated = {a[0], a[3], a[2], a[1]};<br />2'b10: right_rotated = {a[1], a[0], a[3], a[2]};<br />2'b11: right_rotated = {a[2], a[1], a[0], a[3]};<br />default: right_rotated = 4'bxxxx;<br />endcase<br />// left rotated<br />always_comb<br />case(shamt)<br />2'b00: left_rotated = a;<br />2'b01: left_rotated = {a[2], a[1], a[0], a[3]};<br />2'b10: left_rotated = {a[1], a[0], a[3], a[2]};<br />2'b11: left_rotated = {a[0], a[3], a[2], a[1]};<br />default: left_rotated = 4'bxxxx;<br />endcase<br />endmodule</td>
+<td style="width: 365px;">module ex5_14<br />(<br />input [3:0] a;<br />output [3:0] right_rotated;<br />output [3:0] left_rotated;<br />input [1:0] shamt;<br />);<br />// right rotated<br />always @ (*) // output logic (combinational)<br />case(shamt)<br />2'b00: right_rotated = a;<br />2'b01: right_rotated = {a[0], a[3], a[2], a[1]};<br />2'b10: right_rotated = {a[1], a[0], a[3], a[2]};<br />2'b11: right_rotated = {a[2], a[1], a[0], a[3]};<br />default: right_rotated = 4'bxxxx;<br />endcase<br />// left rotated<br />always @ (*) // output logic (combinational)<br />case(shamt)<br />2'b00: left_rotated = a;<br />2'b01: left_rotated = {a[2], a[1], a[0], a[3]};<br />2'b10: left_rotated = {a[1], a[0], a[3], a[2]};<br />2'b11: left_rotated = {a[0], a[3], a[2], a[1]};<br />default: left_rotated = 4'bxxxx;<br />endcase<br />endmodule</td>
+<td style="width: 581px;">
+<p>library IEEE;<br />use IEEE.STD_LOGIC_1164.all;<br />entity ex5_14 is<br />port<br />(<br />a: in STD_LOGIC_VECTOR(3 downto 0);<br />right_rotated, left_rotated: out STD_LOGIC_VECTOR(3 downto 0);<br />shamt: in STD_LOGIC_VECTOR(1 downto 0)<br />);<br />end;<br />architecture synth of ex5_14 is</p>
+<p>begin<br />architecture synth of ex5_14 is<br />begin<br />-- right-rotated<br />process(all) begin -- VHDL 2008<br />case shamt is<br />when "00" =&gt; right_rotated &lt;= a;<br />when "01" =&gt; right_rotated &lt;= (a(0), a(3), a(2), a(1));<br />when "10" =&gt; right_rotated &lt;= (a(1), a(0), a(3), a(2));<br />when "11" =&gt; right_rotated &lt;= (a(2), a(1), a(0), a(3));<br />when others =&gt; right_rotated &lt;= "XXXX";<br />end case;<br />end process;</p>
+<p>-- left-rotated<br />process(all) begin<br />case shamt is<br />when "00" =&gt; left_rotated &lt;= a;<br />when "01" =&gt; left_rotated &lt;= (a(2), a(1), a(0), a(3));<br />when "10" =&gt; left_rotated &lt;= (a(1), a(0), a(3), a(2));<br />when "11" =&gt; left_rotated &lt;= (a(0), a(3), a(2), a(1));<br />when others =&gt; left_rotated &lt;= "XXXX";<br />end case;<br />end process;<br />end;</p>
+</td>
 </tr>
 </tbody>
 </table>
